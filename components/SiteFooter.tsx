@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="footer-top">
           <Link href="/" className="footer-logo">
             <Image
-              src="/brand/homeloanagents-wordmark-mono-white.svg"
+              src="/brand/homeloanagents-wordmark-color.svg"
               alt="HomeLoanAgents"
               width={180}
               height={28}

@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="header-inner">
         <Link href="/" className="logo-link" onClick={() => setOpen(false)}>
           <Image
-            src="/brand/homeloanagents-lockup-mono-white.svg"
+            src="/brand/homeloanagents-lockup-color.svg"
             alt="HomeLoanAgents"
             width={200}
             height={36}
