@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AI_DISCLOSURE } from "@/lib/constants";
+import { AI_DISCLOSURE, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
 import { licensingPageHeader, stateLicenseBlocks } from "@/lib/licenseStates";
 
 export const metadata: Metadata = {
@@ -25,7 +25,8 @@ export default function LicensingPage() {
           </a>
         </p>
         <p>
-          Principal office: {header.address} · {header.phonePlaceholder}
+          Principal office: {header.address} ·{" "}
+          <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>
         </p>
         <p>
           Loan officer: {header.loName}, MLO, NMLS #{header.loNmls} ·{" "}

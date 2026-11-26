@@ -13,7 +13,6 @@ export const licensingPageHeader = {
   company: "United Fidelity Funding Corp. d/b/a HomeLoanAgents",
   nmlsCompanyUrl: "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/34381",
   address: "1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150",
-  phonePlaceholder: "[UFF CONSUMER PHONE]",
   loName: "Mark Ramirez",
   loNmls: "1192984",
   loNmlsUrl: "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984",
