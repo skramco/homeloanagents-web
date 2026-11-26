@@ -80,7 +80,19 @@ export function MarketingHeader() {
       <header className="site-header">
         <div className="wrap">
           <Link className="brand" href="/" aria-label="HomeLoanAgents home" onClick={() => setMenuOpen(false)}>
-            <Image src="/brand/homeloanagents-lockup-color.svg" alt="HomeLoanAgents" width={125} height={40} priority />
+            <Image
+              src="/brand/homeloanagents-icon-color.svg"
+              alt=""
+              width={42}
+              height={42}
+              priority
+              className="brand-icon"
+              aria-hidden
+            />
+            <span className="brand-wordmark" aria-hidden>
+              <span className="brand-wordmark-home">HomeLoan</span>
+              <span className="brand-wordmark-agents">Agents</span>
+            </span>
           </Link>
           <ul className="nav" aria-label="Primary">
             <li>

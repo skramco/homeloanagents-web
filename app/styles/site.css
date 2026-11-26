@@ -77,8 +77,11 @@ p{margin:0}
 .site-header{position:sticky;top:0;z-index:100;background:rgba(251,249,244,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color var(--dur),box-shadow var(--dur)}
 .site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -14px rgba(11,13,18,.25)}
 .site-header .wrap{display:flex;align-items:center;gap:28px;height:var(--header-h)}
-.brand{display:flex;align-items:center;flex:none}
-.brand img{height:34px;width:auto}
+.brand{display:flex;align-items:center;gap:10px;flex:none;text-decoration:none}
+.brand-icon{height:42px;width:42px;max-width:none;flex-shrink:0}
+.brand-wordmark{display:flex;align-items:baseline;font-weight:700;font-size:.96875rem;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.brand-wordmark-home{color:var(--ink-900)}
+.brand-wordmark-agents{color:var(--emerald-600)}
 .nav{display:flex;align-items:center;gap:2px;flex:1}
 .nav>li{list-style:none;position:relative}
 .nav{margin:0;padding:0}
@@ -296,7 +299,10 @@ body.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
 @media (max-width:760px){
   :root{--header-h:64px}
   .utility .u-left .hide-sm,.utility .sep.hide-sm{display:none}
-  .brand img{height:28px}
+  .site-header .wrap{gap:12px}
+  .brand{gap:8px;min-width:0}
+  .brand-icon{height:34px;width:34px}
+  .brand-wordmark{font-size:.9375rem}
   .header-cta .btn{--h:40px;padding:0 14px;font-size:.9rem}
   .g2,.g3,.g4{grid-template-columns:1fr}
   .f-top{grid-template-columns:1fr 1fr;gap:32px}
@@ -324,8 +330,6 @@ body.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
   .tbl th,.tbl td{padding:10px 10px}
   .tbl td.num{white-space:normal}
 }
-.brand img{height:40px}
 .mega .mega-feature .eyebrow{color:var(--emerald-300)}
 .mega .mega-feature .eyebrow::before{box-shadow:0 0 0 4px rgba(127,227,179,.15)}
 @media (max-width:1080px){.menu-btn{margin-left:10px}}
-@media (max-width:760px){.brand img{height:32px}}
