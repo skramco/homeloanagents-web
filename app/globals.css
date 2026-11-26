@@ -687,12 +687,77 @@ p {
   font-size: 1.1rem;
 }
 
-.footer-legal {
+.footer-disclosure {
   font-size: 0.8125rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--text-muted);
-  margin: 0;
-  max-width: 65ch;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-disclosure p {
+  margin-bottom: 0.85rem;
+}
+
+.footer-ehl-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ehl-logo {
+  flex-shrink: 0;
+  color: var(--text);
+}
+
+.footer-disclaimer-closing {
+  margin-bottom: 0;
+}
+
+.licensing-page .licensing-header-block {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.licensing-header-block h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.state-license-block {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.state-license-block h3 {
+  font-size: 1.0625rem;
+  color: var(--emerald);
+  margin-bottom: 0.75rem;
+}
+
+.state-license-verbatim {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.state-mandatory-verbatim {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--emerald);
+  background: var(--bg-subtle);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.state-license-note {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-muted);
 }
 
 .footer-columns {

@@ -5,7 +5,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { homeFaq } from "@/lib/homeFaq";
 import { loanTypeTiles } from "@/lib/navigation";
 import { flatFeeShortCallout } from "@/lib/pricingCopy";
-import { AI_DISCLOSURE, LAUNCH_STATES, TAGLINE, TAGLINE_SUPPORTING } from "@/lib/constants";
+import { AI_DISCLOSURE, TAGLINE, TAGLINE_SUPPORTING } from "@/lib/constants";
 
 export default function HomePage() {
   return (
@@ -164,16 +164,16 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-inner">
-          <p className="section-label">Availability</p>
+          <p className="section-label">Licensing</p>
           <h2>Licensed mortgage lending</h2>
           <p className="section-lead">
-            Launching in {LAUNCH_STATES.join(", ")}, with more states coming. See licensing and disclosures
-            for NMLS and regulatory information.
+            United Fidelity Funding Corp. (NMLS #34381) holds mortgage licenses in multiple states. See the
+            full state-by-state license list, mandatory notices, and regulatory text on our licensing page.
           </p>
-          <div className="states-pills">
-            {LAUNCH_STATES.map((state) => (
-              <span key={state}>{state}</span>
-            ))}
+          <div className="btn-row">
+            <Link href="/licensing" className="btn btn-secondary">
+              View all licensed states
+            </Link>
           </div>
         </div>
       </section>

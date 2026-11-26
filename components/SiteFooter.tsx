@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AI_DISCLOSURE, FOOTER_LEGAL, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
+import { FooterDisclosure } from "@/components/FooterDisclosure";
+import { AI_DISCLOSURE, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
 
 const footerCols = [
   {
@@ -71,14 +72,7 @@ export function SiteFooter() {
           <Link href="/terms">Terms</Link>
         </div>
 
-        <p className="footer-eho" role="img" aria-label="Equal Housing Opportunity">
-          <span className="eho-icon" aria-hidden="true">
-            ⌂
-          </span>{" "}
-          Equal Housing Opportunity
-        </p>
-
-        <p className="footer-legal">{FOOTER_LEGAL}</p>
+        <FooterDisclosure />
       </div>
     </footer>
   );
