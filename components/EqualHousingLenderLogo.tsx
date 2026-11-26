@@ -9,7 +9,8 @@ export function EqualHousingLenderLogo({
   className?: string;
   variant?: "trust" | "default";
 }) {
-  const equalsFill = variant === "trust" ? "#0B0D12" : "currentColor";
+  /* House uses currentColor; equals cut through with contrasting fill (HUD artwork). */
+  const equalsFill = variant === "trust" ? "#0B0D12" : "var(--bg)";
 
   return (
     <svg

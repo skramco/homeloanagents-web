@@ -711,7 +711,13 @@ p {
 
 .ehl-logo {
   flex-shrink: 0;
-  color: var(--text);
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.footer-ehl-line .ehl-logo {
+  color: var(--ink);
 }
 
 .footer-disclaimer-closing {

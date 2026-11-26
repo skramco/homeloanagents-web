@@ -60,8 +60,13 @@
   z-index: 80;
 }
 
-.eh-trust {
+.home-trust-item .ehl-logo.eh-trust {
   color: var(--door);
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
 }
 
 .card-media {
@@ -527,7 +532,15 @@
   border-bottom: 1px solid var(--line);
 }
 
-.inc-list li::before {
+#fee .inc-list,
+.marketing-block .inc-list {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.inc-list li::before,
+#fee .inc-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
