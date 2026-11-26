@@ -80,7 +80,7 @@ export default function HomePage() {
       <div className="home-trust">
         <div className="marketing-wrap home-trust-inner">
           <div className="home-trust-item">
-            <EqualHousingLenderLogo className="eh-trust" />
+            <EqualHousingLenderLogo className="eh-trust" variant="trust" />
             <span>Equal Housing Lender</span>
           </div>
           <div className="home-trust-item">

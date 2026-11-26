@@ -515,7 +515,32 @@
 
 .inc-list,
 .exc-list {
-  padding-left: 1.2em;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.inc-list li,
+.exc-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+
+.inc-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--emerald);
+  font-weight: 700;
+}
+
+.exc-list li::before {
+  content: "-";
+  position: absolute;
+  left: 2px;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .fee-fine {

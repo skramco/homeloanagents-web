@@ -1,5 +1,16 @@
-/** Simplified Equal Housing Lender mark (house + equal sign) for footer disclosure */
-export function EqualHousingLenderLogo({ className }: { className?: string }) {
+/**
+ * HUD Equal Housing Opportunity insignia (house with equals sign).
+ * Geometry matches HUD print artwork: https://www.hud.gov/contactus/hudgraphics
+ */
+export function EqualHousingLenderLogo({
+  className,
+  variant = "default",
+}: {
+  className?: string;
+  variant?: "trust" | "default";
+}) {
+  const equalsFill = variant === "trust" ? "#0B0D12" : "currentColor";
+
   return (
     <svg
       className={className ? `ehl-logo ${className}` : "ehl-logo"}
@@ -9,12 +20,9 @@ export function EqualHousingLenderLogo({ className }: { className?: string }) {
       role="img"
       aria-label="Equal Housing Lender"
     >
-      <rect width="64" height="64" fill="transparent" />
-      <path
-        fill="currentColor"
-        d="M32 8 L54 26 V56 H10 V26 Z M28 30 H36 V38 H28 Z M28 42 H36 V50 H28 Z"
-      />
-      <path fill="currentColor" d="M14 58 H50 V62 H14 Z" />
+      <path fill="currentColor" d="M32 4 2 28h8v32h44V28h8Z" />
+      <rect x="21" y="31" width="22" height="5" fill={equalsFill} />
+      <rect x="21" y="41" width="22" height="5" fill={equalsFill} />
     </svg>
   );
 }
