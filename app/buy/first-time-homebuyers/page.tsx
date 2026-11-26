@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPage } from "@/components/ContentPage";
+import { pageHeroByPath } from "@/lib/pageHeroImages";
 import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
 
 export const metadata: Metadata = { title: "First-time homebuyers" };
@@ -8,7 +9,8 @@ export default function FirstTimePage() {
   return (
     <ContentPage
       title="First-time homebuyers"
-      lead="Guidance and financing for buyers new to the mortgage process—without promising a specific rate or approval."
+      lead="Guidance and financing for buyers new to the mortgage process, without promising a specific rate or approval."
+      heroImage={pageHeroByPath["/buy/first-time-homebuyers"]}
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <MortgageCompanyIntro />
@@ -20,7 +22,7 @@ export default function FirstTimePage() {
       <h2>Helpful resources</h2>
       <p>
         Explore our learning center for mortgage basics, affordability, and closing costs. Calculators can
-        help you plan—not replace a Loan Estimate.
+        help you plan, not replace a Loan Estimate.
       </p>
       <EligibilityNote />
     </ContentPage>

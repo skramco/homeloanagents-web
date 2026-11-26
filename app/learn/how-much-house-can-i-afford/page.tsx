@@ -8,10 +8,10 @@ export default function LearnArticle() {
   return (
     <ContentPage
       title="How much house can I afford"
-      lead="Use income, debts, and down payment as a starting point—then get a personalized Loan Estimate from your loan officer."
+      lead="Use income, debts, and down payment as a starting point, then get a personalized Loan Estimate from your loan officer."
     >
       <p>
-        This article is educational—not financial or legal advice. HomeLoanAgents is a mortgage lender
+        This article is educational, not financial or legal advice. HomeLoanAgents is a mortgage lender
         (trade name of United Fidelity Funding Corp., NMLS #34381). We do not guarantee rates, approvals, or savings.
       </p>
       <p>

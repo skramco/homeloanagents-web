@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPage } from "@/components/ContentPage";
+import { pageHeroByPath } from "@/lib/pageHeroImages";
 import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
 
 export const metadata: Metadata = { title: "VA loans" };
@@ -9,6 +10,7 @@ export default function LoanPage() {
     <ContentPage
       title="VA loans"
       lead="VA loans serve eligible veterans, active-duty service members, and surviving spouses with distinctive benefits when guidelines are met."
+      heroImage={pageHeroByPath["/loans/va"]}
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <MortgageCompanyIntro />

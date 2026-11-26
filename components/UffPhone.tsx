@@ -1,9 +1,13 @@
 import { Fragment, type ReactNode } from "react";
 import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
 
-export function UffPhoneLink() {
+type UffPhoneLinkProps = { className?: string };
+
+export function UffPhoneLink({ className }: UffPhoneLinkProps) {
   return (
-    <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>
+    <a href={UFF_CONSUMER_PHONE_TEL} className={className}>
+      {UFF_CONSUMER_PHONE}
+    </a>
   );
 }
 

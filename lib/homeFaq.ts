@@ -1,7 +1,7 @@
 export const homeFaq = [
   {
     q: "Is HomeLoanAgents a mortgage lender?",
-    a: "Yes. HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381—a home lender offering purchase and refinance financing with licensed mortgage professionals and underwriters in the loop.",
+    a: "Yes. HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, a home lender offering purchase and refinance financing with licensed mortgage professionals and underwriters in the loop.",
   },
   {
     q: "How do AI agents fit into my loan?",
@@ -9,7 +9,7 @@ export const homeFaq = [
   },
   {
     q: "What does the flat origination fee include?",
-    a: "Flat $3,500 lender origination fee covers underwriting, processing, and the credit report—the same amount whether your loan is about $300,000 or $1,500,000. Third-party costs are separate and shown on your Loan Estimate.",
+    a: "Flat $3,500 lender origination fee covers underwriting, processing, and the credit report, the same amount whether your loan is about $300,000 or $1,500,000. Third-party costs are separate and shown on your Loan Estimate.",
   },
   {
     q: "Do you guarantee a specific rate or fastest closing?",
@@ -17,6 +17,6 @@ export const homeFaq = [
   },
   {
     q: "What loan types do you offer?",
-    a: "We work with conventional, FHA, VA, USDA, jumbo, and other programs for many borrower profiles, including bank statement and self-employed scenarios where available. Eligibility is subject to underwriting—we do not guarantee approval.",
+    a: "We work with conventional, FHA, VA, USDA, jumbo, and other programs for many borrower profiles, including bank statement and self-employed scenarios where available. Eligibility is subject to underwriting; we do not guarantee approval.",
   },
 ];

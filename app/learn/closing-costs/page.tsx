@@ -11,7 +11,7 @@ export default function LearnArticle() {
       lead="Origination, third-party fees, prepaids, and escrows appear on your Loan Estimate; review before you close."
     >
       <p>
-        This article is educational—not financial or legal advice. HomeLoanAgents is a mortgage lender
+        This article is educational, not financial or legal advice. HomeLoanAgents is a mortgage lender
         (trade name of United Fidelity Funding Corp., NMLS #34381). We do not guarantee rates, approvals, or savings.
       </p>
       <p>

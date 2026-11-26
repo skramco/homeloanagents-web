@@ -1,8 +1,8 @@
 /** Simplified Equal Housing Lender mark (house + equal sign) for footer disclosure */
-export function EqualHousingLenderLogo() {
+export function EqualHousingLenderLogo({ className }: { className?: string }) {
   return (
     <svg
-      className="ehl-logo"
+      className={className ? `ehl-logo ${className}` : "ehl-logo"}
       width={28}
       height={28}
       viewBox="0 0 64 64"

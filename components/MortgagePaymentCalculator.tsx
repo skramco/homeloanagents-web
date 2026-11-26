@@ -56,7 +56,7 @@ export function MortgagePaymentCalculator() {
           <strong>Est. monthly P&amp;I:</strong>{" "}
           {result.payment != null
             ? `$${result.payment.toLocaleString(undefined, { maximumFractionDigits: 0 })}`
-            : "—"}
+            : "N/A"}
         </p>
       </div>
     </div>

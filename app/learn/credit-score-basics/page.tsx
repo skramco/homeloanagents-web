@@ -11,7 +11,7 @@ export default function LearnArticle() {
       lead="Scores affect program eligibility and pricing tiers; improving credit before you apply may help when guidelines allow."
     >
       <p>
-        This article is educational—not financial or legal advice. HomeLoanAgents is a mortgage lender
+        This article is educational, not financial or legal advice. HomeLoanAgents is a mortgage lender
         (trade name of United Fidelity Funding Corp., NMLS #34381). We do not guarantee rates, approvals, or savings.
       </p>
       <p>

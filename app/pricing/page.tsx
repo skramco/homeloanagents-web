@@ -14,7 +14,7 @@ export default function PricingPage() {
       <header className="content-page-header">
         <h1>Transparent mortgage pricing</h1>
         <p className="content-page-lead">
-          HomeLoanAgents is a mortgage lender with a flat $3,500 lender origination fee—not a percentage of
+          HomeLoanAgents is a mortgage lender with a flat $3,500 lender origination fee, not a percentage of
           your loan amount. We do not advertise rates or APRs on this site; your pricing depends on your
           loan and market conditions.
         </p>
@@ -34,7 +34,7 @@ export default function PricingPage() {
       </ul>
       <p>
         {FLAT_FEE_LABEL} Using AI agents for routine workflow tasks, with human mortgage professional
-        supervision, is designed to reduce overhead so we can offer this structure—compare your Loan
+        supervision, is designed to reduce overhead so we can offer this structure. Compare your Loan
         Estimate with other offers.
       </p>
 

@@ -8,7 +8,7 @@ export default function MortgagePaymentPage() {
   return (
     <ContentPage
       title="Mortgage payment calculator"
-      lead="Estimate principal and interest for planning—not a quote from HomeLoanAgents."
+      lead="Estimate principal and interest for planning, not a quote from HomeLoanAgents."
     >
       <MortgagePaymentCalculator />
     </ContentPage>

@@ -16,7 +16,7 @@ export function AffordabilityCalculator() {
     const r = (parseFloat(rate) || 0) / 100 / 12;
     const n = (parseInt(years, 10) || 30) * 12;
     const grossMonthly = annual / 12;
-    // Conservative illustrative DTI — not a lending decision
+    // Conservative illustrative DTI, not a lending decision
     const housingBudget = Math.max(0, grossMonthly * 0.28 - debts * 0.1);
     let maxLoan = 0;
     if (r > 0 && n > 0) {
@@ -31,7 +31,7 @@ export function AffordabilityCalculator() {
   return (
     <div className="calculator">
       <p className="calculator-note">
-        Illustrative only—not a pre-approval or affordability guarantee. We use a simple housing
+        Illustrative only, not a pre-approval or affordability guarantee. We use a simple housing
         budget estimate; your situation may differ.
       </p>
       <div className="calculator-grid">
