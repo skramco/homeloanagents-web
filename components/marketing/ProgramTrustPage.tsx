@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AffordabilityCalculator } from "@/components/AffordabilityCalculator";
 import { MortgagePaymentCalculator } from "@/components/MortgagePaymentCalculator";
 import type { ProgramTrustConfig } from "@/lib/programTrustContent";
+import { BORROWER_CONTACT_CHANNELS } from "@/lib/constants";
 import { ProgramDocumentChecklist } from "./ProgramDocumentChecklist";
 import { ProgramSubnav, type ProgramSubnavItem } from "./ProgramSubnav";
 import { MarketingLicensingBlock } from "./MarketingLicensingBlock";
@@ -113,7 +114,7 @@ export function ProgramTrustPage({ config }: ProgramTrustPageProps) {
               <h3>Explore your options</h3>
               <p className="fine">
                 Start online with no obligation. Licensed loan officers compare programs after we learn about your
-                goals, with guidance by email, text, or our voice agent.
+                goals, with guidance by {BORROWER_CONTACT_CHANNELS}. Call our inbound line anytime with questions.
               </p>
               <Link href="/get-started" className="btn btn-mint">
                 Get started

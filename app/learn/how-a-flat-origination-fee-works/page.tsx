@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FeeCalculator } from "@/components/marketing/FeeCalculator";
-import { MLO_NMLS, MLO_NAME, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { UffPhoneLink } from "@/components/UffPhone";
+import { BORROWER_CONTACT_CHANNELS, MLO_NMLS, MLO_NAME } from "@/lib/constants";
 
 const MLO_NMLS_URL = `https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/${MLO_NMLS}`;
 
@@ -204,16 +205,9 @@ export default function Page() {
               <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
                 NMLS #{MLO_NMLS}
               </a>
-              , supervises your file. We follow up by email, text, or our voice agent.
+              , supervises your file. We follow up by {BORROWER_CONTACT_CHANNELS}.
             </p>
-            <a
-              className="btn btn-ghost btn-sm"
-              href={UFF_CONSUMER_PHONE_TEL}
-              style={{ justifySelf: "start" }}
-              aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}
-            >
-              Voice agent · {UFF_CONSUMER_PHONE}
-            </a>
+            <UffPhoneLink voiceAgent className="btn btn-ghost btn-sm" style={{ justifySelf: "start" }} />
           </div>
         </aside>
       </div>

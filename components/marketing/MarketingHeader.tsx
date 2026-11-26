@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { buyMega, drawerSections, loansMega, primaryNavSimple, refiMega } from "@/lib/megaMenuNav";
-import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { UffPhoneLink } from "@/components/UffPhone";
 import { HeaderScrollEffect } from "./HeaderScrollEffect";
 
 function Chevron() {
@@ -142,9 +142,7 @@ export function MarketingHeader() {
             ))}
           </ul>
           <div className="header-cta">
-            <a className="tel" href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
-              Voice agent · {UFF_CONSUMER_PHONE}
-            </a>
+            <UffPhoneLink voiceAgent className="tel" />
             <Link className="btn btn-primary btn-sm" href="/get-started">
               Get started
             </Link>
@@ -192,9 +190,7 @@ export function MarketingHeader() {
           <Link className="btn btn-primary btn-lg" href="/get-started" onClick={() => setMenuOpen(false)}>
             Get started
           </Link>
-          <a className="btn btn-ghost btn-lg" href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
-            Voice agent · {UFF_CONSUMER_PHONE}
-          </a>
+          <UffPhoneLink voiceAgent className="btn btn-ghost btn-lg" />
         </div>
         <p className="d-legal">HomeLoanAgents is a DBA of United Fidelity Funding, NMLS #34381. Equal Housing Opportunity.</p>
       </nav>

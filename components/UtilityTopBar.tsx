@@ -1,4 +1,4 @@
-import { BORROWER_CONTACT_CHANNELS, COMPANY_NMLS } from "@/lib/constants";
+import { BORROWER_OUTBOUND_SUMMARY, COMPANY_NMLS } from "@/lib/constants";
 
 export function UtilityTopBar() {
   return (
@@ -7,7 +7,7 @@ export function UtilityTopBar() {
         <span className="util-bar-legal">
           A trade name of United Fidelity Funding Corp., NMLS #{COMPANY_NMLS}
         </span>
-        <span className="util-bar-phone">We reach you by {BORROWER_CONTACT_CHANNELS}.</span>
+        <span className="util-bar-phone">{BORROWER_OUTBOUND_SUMMARY}</span>
       </div>
     </div>
   );

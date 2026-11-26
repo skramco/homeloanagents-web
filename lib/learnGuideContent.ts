@@ -73,7 +73,7 @@ export const mortgageProcessGuide: LearnGuideConfig = {
       title: "Processing and verification",
       paragraphs: [
         "Processors and agents verify income, assets, and employment; order appraisal when required; and coordinate title and insurance.",
-        "You receive updates by email, text, or our voice agent. Missing documents are the most common source of delay.",
+        `You receive updates by ${BORROWER_CONTACT_CHANNELS}. Missing documents are the most common source of delay.`,
       ],
     },
     {
@@ -190,7 +190,7 @@ export const whatAffectsRateGuide: LearnGuideConfig = {
       title: "Market conditions and rate locks",
       paragraphs: [
         "Mortgage-backed securities markets move daily. A rate lock protects you from increases for a stated period if you qualify and pay any lock fees disclosed upfront.",
-        "Licensed loan officers explain lock policies by email, text, or our voice agent—not through unsolicited rate ads.",
+        `Licensed loan officers explain lock policies by ${BORROWER_CONTACT_CHANNELS}—not through unsolicited rate ads.`,
       ],
     },
   ],

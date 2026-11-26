@@ -1,4 +1,9 @@
-import { AI_DISCLOSURE, BORROWER_CONTACT_CHANNELS } from "./constants";
+import {
+  AI_DISCLOSURE,
+  BORROWER_COMMUNICATION_POLICY,
+  BORROWER_CONTACT_CHANNELS,
+  BORROWER_CONTACT_CHANNELS_DETAIL,
+} from "./constants";
 import { finishPage, type SiblingLink } from "./programTrustContent";
 
 const closingCompliance =
@@ -45,7 +50,7 @@ export const buyHubProcessTrust = finishPage({
   hero: {
     eyebrow: "Purchase",
     h1: "Buy a home with a supervised, agent-assisted mortgage process.",
-    lead: "Whether you are upgrading, relocating, or buying your first home, we structure purchase financing with clear status updates by email, text, or our voice agent. We do not guarantee approvals, rates, or closing timelines.",
+    lead: `Whether you are upgrading, relocating, or buying your first home, we structure purchase financing with clear status updates by ${BORROWER_CONTACT_CHANNELS}. We do not guarantee approvals, rates, or closing timelines.`,
     secondaryCta: { href: "/buy/pre-approval", label: "Pre-approval overview" },
   },
   keyFacts: [
@@ -56,7 +61,7 @@ export const buyHubProcessTrust = finishPage({
       highlight: true,
     },
     { k: "Supervision", v: "Humans decide", d: "Licensed loan officers and underwriters supervise lending decisions." },
-    { k: "Updates", v: BORROWER_CONTACT_CHANNELS, d: "Borrower communication is by email, text, or voice agent." },
+    { k: "Updates", v: BORROWER_CONTACT_CHANNELS, d: BORROWER_CONTACT_CHANNELS_DETAIL },
     { k: "Programs", v: "Conventional, FHA, VA, USDA+", d: "Program fit depends on credit, income, property, and investor guidelines." },
   ],
   fit: {
@@ -88,7 +93,10 @@ export const buyHubProcessTrust = finishPage({
     { q: "Can agents see my documents?", a: "AI agents organize uploads in your secure file. Licensed staff access documents for underwriting and compliance." },
     { q: "Will I get rate quotes on this website?", a: "No. Rates and payments appear on formal disclosures after you apply, subject to lock policies and market conditions." },
     { q: "Who makes the approval decision?", a: "A human underwriter issues the credit decision after reviewing income, assets, credit, and property." },
-    { q: "How do I get updates?", a: `We provide status updates by ${BORROWER_CONTACT_CHANNELS}.` },
+    {
+      q: "How do I get updates?",
+      a: `We provide status updates by ${BORROWER_CONTACT_CHANNELS}. Call our inbound line anytime with questions.`,
+    },
     { q: "Do you work with first-time buyers?", a: "Yes, when program guidelines are met. See our first-time buyer page for milestone-oriented education." },
   ],
   closingCompliance,
@@ -130,7 +138,7 @@ export const preApprovalProcessTrust = finishPage({
     bodyParagraphs: [
       "Sellers and agents often ask for a pre-approval letter with an offer. We review your documentation and credit within program guidelines, then issue a letter stating conditions.",
       "If your scenario changes, job, debts, or scores, refresh the pre-approval before you raise your offer price.",
-      "We follow up by email, text, or our voice agent with document requests and status. We do not promise instant approval.",
+      `We follow up by ${BORROWER_CONTACT_CHANNELS} with document requests and status. We do not promise instant approval.`,
     ],
     siblings: buySiblings("/buy/pre-approval"),
   },
@@ -195,7 +203,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
     bodyParagraphs: [
       "Many first-time buyers use FHA or low-down conventional programs when guidelines allow. Mortgage insurance or FHA premiums may apply depending on structure.",
       "Down payment assistance may exist locally; we do not guarantee availability. Your Loan Estimate shows cash needed to close.",
-      "We provide updates by email, text, or our voice agent as your file moves from application to closing.",
+      `We provide updates by ${BORROWER_CONTACT_CHANNELS} as your file moves from application to closing.`,
     ],
     siblings: buySiblings("/buy/first-time-homebuyers"),
   },
@@ -230,7 +238,7 @@ export const howItWorksProcessTrust = finishPage({
   metadata: {
     title: "How it works",
     description:
-      "How HomeLoanAgents combines AI workflow agents with licensed loan officers and underwriters: documents, disclosures, flat $3,500 lender fee, and borrower updates by email, text, or voice agent.",
+      `How HomeLoanAgents combines AI workflow agents with licensed loan officers and underwriters: documents, disclosures, flat $3,500 lender fee, and borrower updates by ${BORROWER_CONTACT_CHANNELS}.`,
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -251,7 +259,7 @@ export const howItWorksProcessTrust = finishPage({
     },
     { k: "Agents", v: "Workflow automation", d: "Document labeling, checklist nudges, and status visibility." },
     { k: "Humans", v: "Credit decisions", d: "Licensed loan officers and underwriters approve, suspend, or deny." },
-    { k: "Contact", v: BORROWER_CONTACT_CHANNELS, d: "Status and questions go through these channels." },
+    { k: "Contact", v: BORROWER_CONTACT_CHANNELS, d: BORROWER_CONTACT_CHANNELS_DETAIL },
   ],
   fit: {
     headline: "Who this model serves",
@@ -302,11 +310,20 @@ export const howItWorksProcessTrust = finishPage({
       },
     ],
   },
+  programNotes: [
+    {
+      title: "How we communicate",
+      body: BORROWER_COMMUNICATION_POLICY,
+    },
+  ],
   faqs: [
     { q: "Do AI agents approve loans?", a: "No. Agents organize workflow. Human underwriters make lending decisions." },
-    { q: "How will you contact me?", a: `Updates and questions go through ${BORROWER_CONTACT_CHANNELS}.` },
+    { q: "How will you contact me?", a: BORROWER_COMMUNICATION_POLICY },
     { q: "Is the origination fee a percentage?", a: "No. Our lender origination fee is $3,500 flat on loans we originate, subject to your Loan Estimate." },
-    { q: "Can I see file status?", a: "Your borrower portal experience will show milestones when launched; until then, updates arrive through our contact channels." },
+    {
+      q: "Can I see file status?",
+      a: `Your borrower portal experience will show milestones when launched; until then, updates arrive by ${BORROWER_CONTACT_CHANNELS}.`,
+    },
     { q: "Who handles rate locks?", a: "Licensed loan officers explain lock policies and disclose terms on formal documents." },
     { q: "What if my file is complex?", a: "Self-employed, jumbo, and non-QM scenarios may need extra documentation; humans review each exception." },
     { q: "Are you a bank?", a: "HomeLoanAgents is a DBA of United Fidelity Funding Corp., NMLS #34381, a licensed mortgage lender." },
@@ -373,7 +390,10 @@ export const refinanceHubProcessTrust = finishPage({
     { q: "What is the difference between cash-out and rate-and-term?", a: "Cash-out increases your loan balance to deliver funds at closing when allowed. Rate-and-term focuses on rate or term without large cash back." },
     { q: "Will you quote rates here?", a: "No. Formal disclosures show rate and APR after you apply." },
     { q: "Who approves my refinance?", a: "A human underwriter issues the credit decision." },
-    { q: "How do I start?", a: "Use Get started when the borrower portal launches, or request next steps by email, text, or our voice agent." },
+    {
+      q: "How do I start?",
+      a: `Use Get started when the borrower portal launches, or request next steps by ${BORROWER_CONTACT_CHANNELS}.`,
+    },
   ],
   closingCompliance,
 });
@@ -453,7 +473,10 @@ export const usdaProgramTrust = finishPage({
     { q: "Can I use USDA on a refinance?", a: "USDA offers refinance options when guidelines are met; availability depends on your current loan and occupancy." },
     { q: "Do you guarantee approval?", a: "No. USDA guarantee does not replace underwriting. We must verify income, credit, and property." },
     { q: "Who makes the decision?", a: "A human underwriter at our company issues the credit decision." },
-    { q: "How do I ask questions?", a: `Licensed staff respond by ${BORROWER_CONTACT_CHANNELS}.` },
+    {
+      q: "How do I ask questions?",
+      a: `Licensed staff respond by ${BORROWER_CONTACT_CHANNELS}. Call our inbound line anytime with questions.`,
+    },
   ],
   closingCompliance,
 });
@@ -565,7 +588,7 @@ export const calculatorsHubProcessTrust = finishPage({
     bodyParagraphs: [
       "Payment calculators estimate principal and interest from price, down payment, term, and a rate you type in.",
       "Affordability calculators use simplified income and debt assumptions. Lenders use verified income and full guidelines.",
-      "We follow up on applications by email, text, or our voice agent—calculators do not submit personal data.",
+      `We follow up on applications by ${BORROWER_CONTACT_CHANNELS}—calculators do not submit personal data.`,
     ],
     siblings: [
       { href: "/calculators/mortgage-payment", title: "Payment calculator", description: "Principal and interest estimator" },

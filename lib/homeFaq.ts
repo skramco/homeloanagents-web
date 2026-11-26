@@ -1,3 +1,5 @@
+import { BORROWER_COMMUNICATION_POLICY, BORROWER_CONTACT_CHANNELS } from "./constants";
+
 export const homeFaq = [
   {
     q: "Is HomeLoanAgents a mortgage lender?",
@@ -5,7 +7,11 @@ export const homeFaq = [
   },
   {
     q: "How do AI agents fit into my loan?",
-    a: "Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. We follow up by email, text, or our voice agent—not live sales calls.",
+    a: `Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. We follow up by ${BORROWER_CONTACT_CHANNELS}; we do not make live outbound phone calls.`,
+  },
+  {
+    q: "How we communicate",
+    a: BORROWER_COMMUNICATION_POLICY,
   },
   {
     q: "What does the flat origination fee include?",
