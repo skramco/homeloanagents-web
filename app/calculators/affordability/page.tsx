@@ -1,16 +1,7 @@
-import type { Metadata } from "next";
-import { ContentPage } from "@/components/ContentPage";
-import { AffordabilityCalculator } from "@/components/AffordabilityCalculator";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { affordabilityCalculatorTrust } from "@/lib/processTrustContent";
 
-export const metadata: Metadata = { title: "Affordability calculator" };
+const { metadata, ProgramPage } = createProgramPage(affordabilityCalculatorTrust);
 
-export default function AffordabilityPage() {
-  return (
-    <ContentPage
-      title="Affordability calculator"
-      lead="A rough planning range, not an affordability guarantee or pre-approval."
-    >
-      <AffordabilityCalculator />
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;

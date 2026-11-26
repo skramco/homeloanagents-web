@@ -1,21 +1,7 @@
-import type { Metadata } from "next";
-import { ContentPage } from "@/components/ContentPage";
-import { pageHeroByPath } from "@/lib/pageHeroImages";
-import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { usdaProgramTrust } from "@/lib/processTrustContent";
 
-export const metadata: Metadata = { title: "USDA loans" };
+const { metadata, ProgramPage } = createProgramPage(usdaProgramTrust);
 
-export default function LoanPage() {
-  return (
-    <ContentPage
-      title="USDA loans"
-      lead="USDA programs support eligible rural and suburban properties for income-qualified borrowers in designated areas."
-      heroImage={pageHeroByPath["/loans/usda"]}
-      cta={{ href: "/get-started", label: "Get Started" }}
-    >
-      <MortgageCompanyIntro />
-      <p>USDA programs support eligible rural and suburban properties for income-qualified borrowers in designated areas.</p>
-      <EligibilityNote />
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;

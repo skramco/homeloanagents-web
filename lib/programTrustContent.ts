@@ -98,6 +98,7 @@ export type ProgramTrustConfig = {
   programNotes?: ProgramNote[];
   closingCompliance: string;
   subnavCta?: { href: string; label: string };
+  embedIllustrativeTool?: "mortgage-payment" | "affordability";
 };
 
 const flatFeeAmount = `$${FLAT_ORIGINATION_FEE.toLocaleString()}`;
@@ -246,6 +247,12 @@ function loanSiblings(current: string): SiblingLink[] {
     { href: "/loans/jumbo", title: "Jumbo", description: "Loan amounts above conforming limits" },
     { href: "/loans/fixed", title: "Fixed-rate", description: "Stable principal and interest payments" },
     { href: "/loans/arm-vs-fixed", title: "ARM vs. fixed", description: "Compare adjustable and fixed structures" },
+    { href: "/loans/usda", title: "USDA", description: "Rural and suburban areas for income-qualified borrowers" },
+    {
+      href: "/loans/non-qm",
+      title: "Bank statement & self-employed",
+      description: "Alternative documentation when programs are available",
+    },
   ];
   return links.map((link) => ({ ...link, current: link.href === current }));
 }
@@ -295,7 +302,7 @@ function heroPhotoForPath(path: string, fallback?: MarketingPhoto): MarketingPho
   throw new Error(`Program trust page "${path}" needs a hero photo or an entry in programPhotoByPath.`);
 }
 
-function finishPage(seed: PageSeed): ProgramTrustConfig {
+export function finishPage(seed: PageSeed): ProgramTrustConfig {
   return {
     ...seed,
     hero: {

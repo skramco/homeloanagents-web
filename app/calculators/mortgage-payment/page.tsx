@@ -1,16 +1,7 @@
-import type { Metadata } from "next";
-import { ContentPage } from "@/components/ContentPage";
-import { MortgagePaymentCalculator } from "@/components/MortgagePaymentCalculator";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { mortgagePaymentCalculatorTrust } from "@/lib/processTrustContent";
 
-export const metadata: Metadata = { title: "Mortgage payment calculator" };
+const { metadata, ProgramPage } = createProgramPage(mortgagePaymentCalculatorTrust);
 
-export default function MortgagePaymentPage() {
-  return (
-    <ContentPage
-      title="Mortgage payment calculator"
-      lead="Estimate principal and interest for planning, not a quote from HomeLoanAgents."
-    >
-      <MortgagePaymentCalculator />
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;
