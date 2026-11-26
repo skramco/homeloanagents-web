@@ -192,7 +192,9 @@ export function MarketingHeader() {
           </Link>
           <UffPhoneLink voiceAgent className="btn btn-ghost btn-lg" />
         </div>
-        <p className="d-legal">HomeLoanAgents is a DBA of United Fidelity Funding, NMLS #34381. Equal Housing Opportunity.</p>
+        <p className="d-legal">
+          HomeLoanAgents is a DBA of United Fidelity Funding Corp., NMLS #34381. Equal Housing Lender.
+        </p>
       </nav>
 
       <MegaMenuEffects expandedId={expandedMega} onClose={closeMega} />

@@ -6,6 +6,7 @@ import {
   NMLS_CONSUMER_ACCESS,
   UFF_PRINCIPAL_OFFICE,
 } from "@/lib/constants";
+import { licensingPageHeader } from "@/lib/licenseStates";
 
 const MLO_NMLS_URL = `https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/${MLO_NMLS}`;
 
@@ -27,7 +28,7 @@ export function MarketingLicensingBlock() {
               <dt>Lender</dt>
               <dd>United Fidelity Funding Corp.</dd>
               <dt>Doing business as</dt>
-              <dd>HomeLoanAgents (a DBA of United Fidelity Funding)</dd>
+              <dd>HomeLoanAgents (a DBA of United Fidelity Funding Corp.)</dd>
               <dt>Company NMLS</dt>
               <dd>
                 <a href={NMLS_CONSUMER_ACCESS} target="_blank" rel="noopener noreferrer">
@@ -44,21 +45,16 @@ export function MarketingLicensingBlock() {
               <dt>Office</dt>
               <dd>{UFF_PRINCIPAL_OFFICE}</dd>
               <dt>Fair lending</dt>
-              <dd>Equal Housing Opportunity</dd>
+              <dd>Equal Housing Lender</dd>
             </dl>
-            <p className="fine">
-              Not a commitment to lend. Programs are not available in all states, and a loan originator may originate
-              loans only where both the company and originator are licensed.
-            </p>
+            <p className="fine">{licensingPageHeader.originatorNote}</p>
           </div>
-          <div className="lic-pending" role="note">
-            <span className="pending-badge">Pending Sentinel compliance review</span>
-            <h3>State license disclosures</h3>
+          <div className="lic-card">
+            <h3>State license details</h3>
             <p>
-              Placeholder. Licensed states, state license names and numbers, and any required verbatim state notices will
-              be published here after Sentinel compliance review. See{" "}
-              <Link href="/licensing">Licensing &amp; disclosures</Link> for Texas, California, Colorado, and other
-              state lines we publish today.
+              Texas SML Consumer Complaint Notice, California CFL language, Colorado DRE, and per-state license
+              numbers are on our{" "}
+              <Link href="/licensing">Licensing &amp; Disclosures</Link> page.
             </p>
           </div>
         </div>
