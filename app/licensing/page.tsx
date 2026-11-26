@@ -34,7 +34,7 @@ export default function LicensingPage() {
           <a href={header.loNmlsUrl} target="_blank" rel="noopener noreferrer">
             View NMLS record
           </a>
-          . Licensed in {header.licensedStates}.
+          . Licensed MLO in {header.licensedStates}.
         </p>
         <p>
           <em>{header.publicLine}</em>
