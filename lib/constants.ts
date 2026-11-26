@@ -18,8 +18,14 @@ export const MLO_NAME = "Mark Ramirez";
 
 export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas City, MO 64150";
 
-export const UFF_CONSUMER_PHONE = "(855) 953-2453";
-export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";
+/** Inbound voice agent line (HomeLoanAgents consumer contact). */
+export const UFF_CONSUMER_PHONE = "(213) 668-5711";
+export const UFF_CONSUMER_PHONE_E164 = "+12136685711";
+export const UFF_CONSUMER_PHONE_TEL = "tel:+12136685711";
+
+/** UFF corporate number of record on file with some state regulators (not the inbound voice line). */
+export const UFF_CORPORATE_PHONE_OF_RECORD = "(855) 953-2453";
+export const UFF_CORPORATE_PHONE_TEL = "tel:+18559532453";
 
 /** Day-to-day outbound borrower updates (not live phone calls). */
 export const BORROWER_CONTACT_CHANNELS = "email or text";
