@@ -129,11 +129,11 @@ export default function HomePage() {
       <section className="section" id="pricing-preview">
         <div className="section-inner">
           <p className="section-label">Pricing</p>
-          <h2>Transparent flat fee—not a percentage</h2>
+          <h2>Flat lender origination fee—not a percentage</h2>
           <p className="section-lead">
-            Percentage origination fees meant larger loans paid more to originate. We use one flat fee
-            instead, made possible in part because agents handle routine work with human mortgage
-            supervision.
+            Percentage origination fees meant larger loans paid more to originate. We use a flat $3,500
+            lender origination fee instead, made possible in part because agents handle routine work with
+            human mortgage supervision.
           </p>
           <FlatFeeCallout compact />
         </div>

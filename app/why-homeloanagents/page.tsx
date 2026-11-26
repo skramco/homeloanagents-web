@@ -36,7 +36,7 @@ export default function WhyPage() {
       <h2>Transparency you can see</h2>
       <p>
         We are upfront that you&apos;ll work with AI agents, supervised by people—including our flat
-        origination fee instead of a percentage that scales with loan size.
+        flat $3,500 lender origination fee instead of a percentage that scales with loan size.
       </p>
       <FlatFeeCallout showWhy={false} />
       <EligibilityNote />

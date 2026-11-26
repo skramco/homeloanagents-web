@@ -12,7 +12,7 @@ export default function LearnArticle() {
     >
       <p>
         This article is educational—not financial or legal advice. HomeLoanAgents is a mortgage lender
-        (DBA of United Fidelity Funding, NMLS #34381). We do not guarantee rates, approvals, or savings.
+        (trade name of United Fidelity Funding Corp., NMLS #34381). We do not guarantee rates, approvals, or savings.
       </p>
       <p>
         For interactive planning, try our{" "}

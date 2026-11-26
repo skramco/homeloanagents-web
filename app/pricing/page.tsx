@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FlatFeeCallout } from "@/components/FlatFeeCallout";
+import { FLAT_FEE_LABEL } from "@/lib/constants";
 import { flatFeeCoverageParagraph, flatFeeWhyParagraph } from "@/lib/pricingCopy";
 
 export const metadata: Metadata = {
@@ -13,9 +14,9 @@ export default function PricingPage() {
       <header className="content-page-header">
         <h1>Transparent mortgage pricing</h1>
         <p className="content-page-lead">
-          HomeLoanAgents is a mortgage lender with a flat origination fee—not a percentage of your loan
-          amount. We do not advertise rates or APRs on this site; your pricing depends on your loan and
-          market conditions.
+          HomeLoanAgents is a mortgage lender with a flat $3,500 lender origination fee—not a percentage of
+          your loan amount. We do not advertise rates or APRs on this site; your pricing depends on your
+          loan and market conditions.
         </p>
       </header>
 
@@ -32,9 +33,9 @@ export default function PricingPage() {
         <li>Credit report</li>
       </ul>
       <p>
-        Using AI agents for routine workflow tasks, with human mortgage professional supervision, is
-        designed to reduce overhead so we can offer this structure—but we do not guarantee the lowest
-        total cost for every scenario.
+        {FLAT_FEE_LABEL} Using AI agents for routine workflow tasks, with human mortgage professional
+        supervision, is designed to reduce overhead so we can offer this structure—compare your Loan
+        Estimate with other offers.
       </p>
 
       <h2>Third-party costs (separate)</h2>

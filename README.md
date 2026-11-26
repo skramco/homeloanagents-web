@@ -1,6 +1,6 @@
 # HomeLoanAgents Web
 
-Marketing and education site for [HomeLoanAgents](https://homeloanagents.com)—a mortgage lender (DBA of United Fidelity Funding, NMLS #34381) using AI agents with human mortgage professional supervision.
+Marketing and education site for [HomeLoanAgents](https://homeloanagents.com)—a trade name of United Fidelity Funding Corp., NMLS #34381—using AI agents with human mortgage professional supervision.
 
 ## Stack
 
@@ -50,4 +50,4 @@ npm run dev
 
 ## Pricing
 
-Flat **$3,500** origination fee (underwriting, processing, credit report)—not a percentage of loan amount. Third-party costs are disclosed on the Loan Estimate.
+**Flat $3,500 lender origination fee** (underwriting, processing, credit report)—not a percentage of loan amount. Third-party costs are disclosed on the Loan Estimate.

@@ -32,6 +32,10 @@ export default function LicensingPage() {
           <a href={header.loNmlsUrl} target="_blank" rel="noopener noreferrer">
             View NMLS record
           </a>
+          . Licensed in {header.licensedStates}.
+        </p>
+        <p>
+          <em>{header.publicLine}</em>
         </p>
         <p>{header.footerPhrase}</p>
         <p>{header.originatorNote}</p>
@@ -57,11 +61,6 @@ export default function LicensingPage() {
                 <strong>Where:</strong> {state.where}
               </p>
             ) : null}
-            {state.notes?.map((note) => (
-              <p key={note} className="state-license-note">
-                {note}
-              </p>
-            ))}
           </article>
         ))}
       </section>

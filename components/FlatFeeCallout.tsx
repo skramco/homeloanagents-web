@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FLAT_FEE_LABEL } from "@/lib/constants";
 import { flatFeeAmountLabel, flatFeeCoverageParagraph, flatFeeWhyParagraph } from "@/lib/pricingCopy";
 
 type FlatFeeCalloutProps = {
@@ -10,10 +11,10 @@ export function FlatFeeCallout({ showWhy = true, compact = false }: FlatFeeCallo
   return (
     <div className={`pricing-highlight flat-fee-callout ${compact ? "flat-fee-callout--compact" : ""}`}>
       <div className="pricing-box pricing-box--featured">
-        <h3>Flat origination fee</h3>
+        <h3>Lender origination fee</h3>
         <p className="pricing-fee">{flatFeeAmountLabel}</p>
         <p className="text-muted" style={{ margin: 0 }}>
-          Covers underwriting, processing, and the credit report.
+          {FLAT_FEE_LABEL} Covers underwriting, processing, and the credit report.
         </p>
       </div>
       {showWhy ? (
@@ -22,7 +23,7 @@ export function FlatFeeCallout({ showWhy = true, compact = false }: FlatFeeCallo
           <p style={{ marginBottom: 0 }}>{flatFeeCoverageParagraph}</p>
           {!compact ? (
             <p className="text-muted" style={{ marginTop: "1rem", fontSize: "0.875rem", marginBottom: 0 }}>
-              We do not guarantee the lowest total cost. Compare your Loan Estimate and Closing
+              Compare your Loan Estimate and Closing
               Disclosure with other offers.
             </p>
           ) : null}

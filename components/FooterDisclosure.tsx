@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
-import {
-  COMPANY_NMLS,
-  MLO_NMLS,
-  MLO_NAME,
-  NMLS_CONSUMER_ACCESS,
-} from "@/lib/constants";
+import { COMPANY_NMLS, MLO_NMLS, MLO_NAME, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
+import { LICENSED_STATES } from "@/lib/licenseStates";
 
 const MLO_NMLS_URL = "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984";
 
@@ -13,9 +9,7 @@ export function FooterDisclosure() {
   return (
     <div className="footer-disclosure">
       <p>
-        <strong>
-          HomeLoanAgents is a trade name (DBA) of United Fidelity Funding Corp., NMLS #{COMPANY_NMLS}
-        </strong>{" "}
+        <strong>HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #{COMPANY_NMLS}</strong>{" "}
         (
         <a href={NMLS_CONSUMER_ACCESS} target="_blank" rel="noopener noreferrer">
           www.nmlsconsumeraccess.org
@@ -28,20 +22,23 @@ export function FooterDisclosure() {
         ). For licensing information, go to: www.nmlsconsumeraccess.org.
       </p>
       <p className="footer-ehl-line">
-        <EqualHousingLenderLogo /> Equal Housing Lender. Licensed in [LIST OF STATES WHERE BOTH UFF AND
-        THE HOMELOANAGENTS DBA ARE APPROVED]. State license details:{" "}
-        <Link href="/licensing">Licensing &amp; Disclosures</Link>.
+        <EqualHousingLenderLogo /> Equal Housing Lender. Licensed in {LICENSED_STATES}. State license
+        details: <Link href="/licensing">Licensing &amp; Disclosures</Link>.
       </p>
       <p>
         <strong>Texas residents:</strong> see the{" "}
         <Link href="/licensing#texas">Texas Consumer Complaint Notice</Link>. <strong>California:</strong>{" "}
         Loans made or arranged pursuant to a California Financing Law license. <strong>New Jersey:</strong>{" "}
         Licensed by the N.J. Department of Banking and Insurance. <strong>Colorado:</strong> Regulated by
-        the Division of Real Estate.
+        the Division of Real Estate. <strong>Massachusetts:</strong> Mortgage Lender License #ML34381.{" "}
+        <strong>Arizona:</strong> Mortgage Banker License #[UFF AZ LICENSE #]. <strong>Washington:</strong>{" "}
+        Consumer Loan Company License #CL-34381. <strong>Virginia:</strong> NMLS ID # 34381
+        (www.nmlsconsumeraccess.org).
       </p>
       <p className="footer-disclaimer-closing">
         Not a commitment to lend. All loans are subject to credit and property approval. Rates, terms and
-        programs are subject to change without notice.
+        programs are subject to change without notice and may not be available at commitment, lock-in, or
+        closing.
       </p>
     </div>
   );
