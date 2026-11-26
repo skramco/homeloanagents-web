@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContentPage } from "@/components/ContentPage";
-import { AI_DISCLOSURE } from "@/lib/constants";
+import { AI_DISCLOSURE, BORROWER_CONTACT_CHANNELS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "How it works",
@@ -25,7 +25,9 @@ export default function HowItWorksPage() {
         <li>Agents assist with documents, disclosures support, processing tasks, and vendor coordination.</li>
         <li>Mortgage professionals review flagged items; underwriters apply guidelines.</li>
         <li>Licensed loan officers approve rate-related communications before you see them.</li>
-        <li>Disclosures, processing, underwriting, and closing, with ongoing updates.</li>
+        <li>
+          Disclosures, processing, underwriting, and closing, with status updates by {BORROWER_CONTACT_CHANNELS}.
+        </li>
       </ol>
       <p>
         <Link href="/why-homeloanagents">Why HomeLoanAgents</Link> ·{" "}

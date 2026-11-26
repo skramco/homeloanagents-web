@@ -3,7 +3,14 @@ import Link from "next/link";
 import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { IntentTabs } from "@/components/marketing/IntentTabs";
 import { SampleFileFeed } from "@/components/marketing/SampleFileFeed";
-import { COMPANY_NMLS, FLAT_ORIGINATION_FEE, NMLS_CONSUMER_ACCESS, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import {
+  BORROWER_CONTACT_CHANNELS,
+  COMPANY_NMLS,
+  FLAT_ORIGINATION_FEE,
+  NMLS_CONSUMER_ACCESS,
+  UFF_CONSUMER_PHONE,
+  UFF_CONSUMER_PHONE_TEL,
+} from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
 import { programPhotoByPath, type ProgramTilePath } from "@/lib/programTilePhotos";
 
@@ -36,7 +43,7 @@ export function HomePage() {
               Licensed mortgage lender · NMLS #{COMPANY_NMLS}
             </span>
             <h1 className="h-display">
-              AI does the paperwork. <span className="em">People make the call.</span>
+              AI does the paperwork. <span className="em">People make the decisions.</span>
             </h1>
             <p className="lead">
               HomeLoanAgents is a mortgage lender for buying and refinancing. Specialized AI agents organize and check
@@ -281,7 +288,7 @@ function WhoColumns() {
             <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
               NMLS #1192984
             </a>
-            . Talks through your options and your Loan Estimate with you.
+            . Reviews your options and Loan Estimate; updates by {BORROWER_CONTACT_CHANNELS}.
           </p>
         </div>
         <div className="role">
@@ -314,9 +321,17 @@ function HomeHowSection() {
   const steps = [
     { title: "Start online", body: "Tell us your goal. See the fee and process up front, without a credit impact.", owners: ["You", "Intake agent"] },
     { title: "Apply & upload", body: "Submit your application and documents. Agents check each one as it arrives.", owners: ["You", "Document agent"] },
-    { title: "Processing", body: "Worksheets are drafted, verified by a mortgage pro, and any questions come to you at once.", owners: ["Agents", "Mortgage pro"] },
+    {
+      title: "Processing",
+      body: `Worksheets are drafted, verified by a mortgage pro, and questions reach you by ${BORROWER_CONTACT_CHANNELS}.`,
+      owners: ["Agents", "Mortgage pro"],
+    },
     { title: "Underwriting", body: "A human underwriter reviews the full file and issues the credit decision and conditions.", owners: ["Underwriter"] },
-    { title: "Closing", body: "Review your Closing Disclosure with your loan officer, then sign with your settlement agent.", owners: ["Loan officer", "You"] },
+    {
+      title: "Closing",
+      body: "Your licensed loan officer shares your Closing Disclosure for review, then you sign with your settlement agent.",
+      owners: ["Loan officer", "You"],
+    },
   ];
   return (
     <section className="section section-warm" id="how">
@@ -463,7 +478,10 @@ function HomeFaqSection() {
     ["Does AI decide whether I'm approved?", "No. AI agents gather, organize and check documents and draft worksheets. A human underwriter reviews your complete file and makes the credit decision."],
     ["Will starting online affect my credit?", "Exploring and starting online doesn't affect your credit score. If you apply, we'll tell you before a credit report is pulled as part of underwriting."],
     ["How fast can I close?", "Our process is designed to move faster because agents work on your file in parallel and around the clock. We don't promise a closing date, because timing also depends on your documents, the property, the appraisal and title."],
-    ["Why don't you show rates on the site?", "A rate depends on your credit, loan amount, property, down payment and the market on the day you lock. Instead of a teaser number, your loan officer walks you through real options and your Loan Estimate shows the terms."],
+    [
+      "Why don't you show rates on the site?",
+      `A rate depends on your credit, loan amount, property, down payment and the market on the day you lock. Instead of a teaser number, your Loan Estimate and updates from your licensed loan team by ${BORROWER_CONTACT_CHANNELS} show real options and terms.`,
+    ],
   ];
   return (
     <section className="section section-warm">
@@ -472,7 +490,11 @@ function HomeFaqSection() {
           <span className="eyebrow">Questions</span>
           <h2 className="h2">Straight answers.</h2>
           <p className="lead muted">
-            Can&apos;t find yours? Call <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a> and talk to a person.
+            Can&apos;t find yours?{" "}
+            <a href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
+              Reach our voice agent at {UFF_CONSUMER_PHONE}
+            </a>
+            , or start online for follow-up by {BORROWER_CONTACT_CHANNELS}.
           </p>
         </div>
         <div className="faq">
@@ -498,13 +520,20 @@ function HomeCtaSection() {
           <div className="cb-copy">
             <span className="eyebrow">Ready when you are</span>
             <h2 className="h2">See your options, with the fee already on the table.</h2>
-            <p className="muted">Start online in a few minutes, or talk to a licensed loan officer first.</p>
+            <p className="muted">
+              Start online in a few minutes. Licensed mortgage professionals supervise your file and follow up by{" "}
+              {BORROWER_CONTACT_CHANNELS}.
+            </p>
             <div className="actions">
               <Link className="btn btn-mint btn-lg" href="/get-started">
                 Get started <span className="arr">→</span>
               </Link>
-              <a className="btn btn-ghost btn-lg" href={UFF_CONSUMER_PHONE_TEL}>
-                Call {UFF_CONSUMER_PHONE}
+              <a
+                className="btn btn-ghost btn-lg"
+                href={UFF_CONSUMER_PHONE_TEL}
+                aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}
+              >
+                Voice agent · {UFF_CONSUMER_PHONE}
               </a>
             </div>
           </div>

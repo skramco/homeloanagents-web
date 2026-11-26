@@ -108,10 +108,10 @@ export function ProgramTrustPage({ config }: ProgramTrustPageProps) {
               ))}
             </div>
             <aside className="side-cta">
-              <h3>Talk through your options</h3>
+              <h3>Explore your options</h3>
               <p className="fine">
-                Start online with no obligation. A licensed loan officer can help you compare programs after we learn
-                about your goals.
+                Start online with no obligation. Licensed loan officers compare programs after we learn about your
+                goals, with guidance by email, text, or our voice agent.
               </p>
               <Link href="/get-started" className="btn btn-mint">
                 Get started

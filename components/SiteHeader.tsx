@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { headerNavLinks } from "@/lib/headerNav";
 import { UffPhoneLink } from "@/components/UffPhone";
+import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
 
 function PhoneIcon() {
   return (
@@ -49,9 +50,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="nav-marketing-end">
-          <a href="tel:+18559532453" className="nav-marketing-phone">
+          <a
+            href={UFF_CONSUMER_PHONE_TEL}
+            className="nav-marketing-phone"
+            aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}
+          >
             <PhoneIcon />
-            <span className="nav-phone-label">(855) 953-2453</span>
+            <span className="nav-phone-label">Voice agent · {UFF_CONSUMER_PHONE}</span>
           </a>
           <Link href="/get-started" className="btn btn-marketing">
             Get started
@@ -77,7 +82,7 @@ export function SiteHeader() {
             {item.label}
           </Link>
         ))}
-        <UffPhoneLink className="mobile-nav-phone" />
+        <UffPhoneLink voiceAgent className="mobile-nav-phone" />
         <Link href="/get-started" className="btn btn-marketing" onClick={() => setOpen(false)}>
           Get started
         </Link>

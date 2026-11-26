@@ -15,7 +15,8 @@ export function MortgageCompanyIntro() {
       HomeLoanAgents is a trade name of United Fidelity Funding Corp., a mortgage company helping borrowers with{" "}
       <strong>purchase and refinance</strong> home financing. AI agents assist with workflow speed and
       transparency; mortgage professionals, including underwriters and licensed loan officers, remain
-      accountable for supervised lending decisions.
+      accountable for supervised lending decisions. Borrower updates are delivered by email, text, or our
+      voice agent.
     </p>
   );
 }

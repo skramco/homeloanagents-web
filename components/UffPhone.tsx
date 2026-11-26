@@ -1,12 +1,22 @@
 import { Fragment, type ReactNode } from "react";
 import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
 
-type UffPhoneLinkProps = { className?: string };
+type UffPhoneLinkProps = { className?: string; voiceAgent?: boolean };
 
-export function UffPhoneLink({ className }: UffPhoneLinkProps) {
+export function UffPhoneLink({ className, voiceAgent }: UffPhoneLinkProps) {
   return (
-    <a href={UFF_CONSUMER_PHONE_TEL} className={className}>
-      {UFF_CONSUMER_PHONE}
+    <a
+      href={UFF_CONSUMER_PHONE_TEL}
+      className={className}
+      aria-label={voiceAgent ? `Voice agent, ${UFF_CONSUMER_PHONE}` : undefined}
+    >
+      {voiceAgent ? (
+        <>
+          Voice agent · {UFF_CONSUMER_PHONE}
+        </>
+      ) : (
+        UFF_CONSUMER_PHONE
+      )}
     </a>
   );
 }

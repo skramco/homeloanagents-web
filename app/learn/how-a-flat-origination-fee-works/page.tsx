@@ -198,16 +198,21 @@ export default function Page() {
             </div>
           </div>
           <div className="card">
-            <h3>Prefer to talk?</h3>
+            <h3>Questions?</h3>
             <p className="small">
               Licensed loan officer {MLO_NAME},{" "}
               <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
                 NMLS #{MLO_NMLS}
               </a>
-              .
+              , supervises your file. We follow up by email, text, or our voice agent.
             </p>
-            <a className="btn btn-ghost btn-sm" href={UFF_CONSUMER_PHONE_TEL} style={{ justifySelf: "start" }}>
-              {UFF_CONSUMER_PHONE}
+            <a
+              className="btn btn-ghost btn-sm"
+              href={UFF_CONSUMER_PHONE_TEL}
+              style={{ justifySelf: "start" }}
+              aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}
+            >
+              Voice agent · {UFF_CONSUMER_PHONE}
             </a>
           </div>
         </aside>

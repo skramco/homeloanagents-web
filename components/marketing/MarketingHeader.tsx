@@ -130,8 +130,8 @@ export function MarketingHeader() {
             ))}
           </ul>
           <div className="header-cta">
-            <a className="tel" href={UFF_CONSUMER_PHONE_TEL}>
-              {UFF_CONSUMER_PHONE}
+            <a className="tel" href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
+              Voice agent · {UFF_CONSUMER_PHONE}
             </a>
             <Link className="btn btn-primary btn-sm" href="/get-started">
               Get started
@@ -180,8 +180,8 @@ export function MarketingHeader() {
           <Link className="btn btn-primary btn-lg" href="/get-started" onClick={() => setMenuOpen(false)}>
             Get started
           </Link>
-          <a className="btn btn-ghost btn-lg" href={UFF_CONSUMER_PHONE_TEL}>
-            Call {UFF_CONSUMER_PHONE}
+          <a className="btn btn-ghost btn-lg" href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
+            Voice agent · {UFF_CONSUMER_PHONE}
           </a>
         </div>
         <p className="d-legal">HomeLoanAgents is a DBA of United Fidelity Funding, NMLS #34381. Equal Housing Opportunity.</p>

@@ -16,8 +16,8 @@ export default function RefinancePage() {
     >
       <MortgageCompanyIntro />
       <p>
-        Refinancing can help you pursue a new rate or term, or access equity for goals you define with
-        your loan officer. Savings are not guaranteed; compare your Loan Estimate to your current loan.
+        Refinancing can help you pursue a new rate or term, or access equity for goals you share in your
+        application. Savings are not guaranteed; compare your Loan Estimate to your current loan.
       </p>
       <ul>
         <li>
