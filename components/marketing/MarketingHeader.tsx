@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { buyMega, drawerSections, loansMega, primaryNavSimple, refiMega } from "@/lib/megaMenuNav";
+import { HeaderInboundPhoneLink } from "@/components/HeaderInboundPhoneLink";
 import { UffPhoneLink } from "@/components/UffPhone";
 import { HeaderScrollEffect } from "./HeaderScrollEffect";
 
@@ -142,7 +143,7 @@ export function MarketingHeader() {
             ))}
           </ul>
           <div className="header-cta">
-            <UffPhoneLink voiceAgent className="tel" />
+            <HeaderInboundPhoneLink />
             <Link className="btn btn-primary btn-sm" href="/get-started">
               Get started
             </Link>
