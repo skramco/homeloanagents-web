@@ -21,11 +21,11 @@ export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas Ci
 export const UFF_CONSUMER_PHONE = "(855) 953-2453";
 export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";
 
-/** Outbound borrower updates (we do not make outbound phone calls). */
+/** Day-to-day outbound borrower updates (not live phone calls). */
 export const BORROWER_CONTACT_CHANNELS = "email or text";
 
 export const BORROWER_OUTBOUND_SUMMARY =
-  "We reach you by email or text only—we do not make outbound phone calls.";
+  "We reach you by email or text for updates—no live calls to reach you.";
 
 /** CTA copy for the inbound line, answered by our voice agent. */
 export const INBOUND_VOICE_AGENT_LABEL = "Questions? Call our voice agent anytime";
@@ -36,7 +36,7 @@ export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent with questio
 export const INBOUND_VOICE_AGENT_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE}`;
 
 export const BORROWER_COMMUNICATION_POLICY =
-  "We communicate with clients by email or text only—we do not make outbound phone calls, which keeps everything efficient. Prefer not to get texts? We'll follow up by email. If you call our inbound voice agent and decline texting, we use email instead—nobody receives an outbound phone call. The only outbound voice you may hear is a recorded message from Mark after your loan officially locks and again after it officially closes. You can call our inbound line anytime with questions or concerns; it is answered by our voice agent.";
+  "We communicate with clients by email or text. Prefer not to get texts? We'll follow up by email. If you call our inbound voice agent and decline texting, we use email instead. The only time you ever get a call from us is a recorded voice message to your phone when your loan is officially locked and when it officially closes. You can call our inbound line anytime with questions or concerns; it is answered by our voice agent.";
 
 export const BORROWER_CONTACT_CHANNELS_DETAIL =
   "Outbound status and follow-up by email or text; inbound questions on our voice-agent line anytime.";

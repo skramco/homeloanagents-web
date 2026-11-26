@@ -7,7 +7,7 @@ export const homeFaq = [
   },
   {
     q: "How do AI agents fit into my loan?",
-    a: `Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. We follow up by ${BORROWER_CONTACT_CHANNELS} only—we do not make outbound phone calls.`,
+    a: `Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. We follow up by ${BORROWER_CONTACT_CHANNELS}; we do not make live outbound phone calls.`,
   },
   {
     q: "How we communicate",
