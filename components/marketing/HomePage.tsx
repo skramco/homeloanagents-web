@@ -5,19 +5,25 @@ import { IntentTabs } from "@/components/marketing/IntentTabs";
 import { SampleFileFeed } from "@/components/marketing/SampleFileFeed";
 import { COMPANY_NMLS, FLAT_ORIGINATION_FEE, NMLS_CONSUMER_ACCESS, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
+import { programPhotoByPath, type ProgramTilePath } from "@/lib/programTilePhotos";
 
 const MLO_NMLS_URL = "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984";
 
-const programTiles = [
-  { href: "/loans/conventional", photo: marketingPhotos.buyPorch, tag: "Buy", title: "Conventional", blurb: "The most common home loan for buyers with steady credit." },
-  { href: "/loans/fha", photo: marketingPhotos.ctaDoorway, tag: "Buy", title: "FHA", blurb: "Flexible credit and down payment guidelines." },
-  { href: "/loans/va", photo: marketingPhotos.programVa, tag: "Buy · Refi", title: "VA", blurb: "For eligible veterans, service members and surviving spouses." },
-  { href: "/loans/jumbo", photo: marketingPhotos.programJumbo, tag: "Buy · Refi", title: "Jumbo", blurb: "For loan amounts above conforming limits." },
-  { href: "/loans/fixed", photo: marketingPhotos.programFixed, tag: "Any goal", title: "Fixed-rate", blurb: "Principal and interest that stay the same." },
-  { href: "/loans/arm-vs-fixed", photo: marketingPhotos.advisorMeeting, tag: "Any goal", title: "Adjustable-rate", blurb: "A fixed period first, then periodic adjustments." },
-  { href: "/refinance/rate-and-term", photo: marketingPhotos.refiTable, tag: "Refinance", title: "Rate-and-term", blurb: "Change your rate, your term or both." },
-  { href: "/refinance/cash-out", photo: marketingPhotos.familyLiving, tag: "Refinance", title: "Cash-out", blurb: "Turn part of your equity into cash." },
+const programTileMeta: { href: ProgramTilePath; tag: string; title: string; blurb: string }[] = [
+  { href: "/loans/conventional", tag: "Buy", title: "Conventional", blurb: "The most common home loan for buyers with steady credit." },
+  { href: "/loans/fha", tag: "Buy", title: "FHA", blurb: "Flexible credit and down payment guidelines." },
+  { href: "/loans/va", tag: "Buy · Refi", title: "VA", blurb: "For eligible veterans, service members and surviving spouses." },
+  { href: "/loans/jumbo", tag: "Buy · Refi", title: "Jumbo", blurb: "For loan amounts above conforming limits." },
+  { href: "/loans/fixed", tag: "Any goal", title: "Fixed-rate", blurb: "Principal and interest that stay the same." },
+  { href: "/loans/arm-vs-fixed", tag: "Any goal", title: "Adjustable-rate", blurb: "A fixed period first, then periodic adjustments." },
+  { href: "/refinance/rate-and-term", tag: "Refinance", title: "Rate-and-term", blurb: "Change your rate, your term or both." },
+  { href: "/refinance/cash-out", tag: "Refinance", title: "Cash-out", blurb: "Turn part of your equity into cash." },
 ];
+
+const programTiles = programTileMeta.map((tile) => ({
+  ...tile,
+  photo: programPhotoByPath[tile.href],
+}));
 
 export function HomePage() {
   return (
