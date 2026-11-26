@@ -15,4 +15,16 @@ export const marketingPhotos = {
     src: "/photos/cta-doorway.webp",
     alt: "A family gathering in the entryway of a home, carrying a moving box together.",
   },
+  programVa: {
+    src: "/photos/program-va.webp",
+    alt: "A veteran and his wife on their front porch while their son pets the family dog.",
+  },
+  programFixed: {
+    src: "/photos/program-fixed.webp",
+    alt: "A family sharing breakfast at their kitchen table.",
+  },
+  programJumbo: {
+    src: "/photos/program-jumbo.webp",
+    alt: "A couple outside a large two-story home at dusk.",
+  },
 } as const;

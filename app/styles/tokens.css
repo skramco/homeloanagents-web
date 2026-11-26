@@ -1,0 +1,120 @@
+/* =====================================================================
+   HomeLoanAgents design tokens — redesign concept, 25 Nov 2026
+   Emerald-anchored, cream kept as a warm supporting neutral.
+   Brand constants come from the final logo kit
+   (/workspace/homeloanagents-logo/final-flat-door-2026-11-25/).
+   ===================================================================== */
+:root {
+  /* ---- Brand constants (from logo kit; do not change) ---- */
+  --brand-emerald: #007A51;   /* badge + "Agents" */
+  --brand-door:    #B8F6D5;   /* flat door dot */
+  --brand-ink:     #0B0D12;   /* "HomeLoan" */
+
+  /* ---- Emerald scale (anchor = 600) ---- */
+  --emerald-50:  #EEFBF4;
+  --emerald-100: #DDF7EA;
+  --emerald-200: #B8F6D5;   /* = door mint */
+  --emerald-300: #7FE3B3;
+  --emerald-400: #3CC98A;
+  --emerald-500: #12A06A;
+  --emerald-600: #007A51;   /* = brand emerald; primary actions */
+  --emerald-700: #006443;   /* hover / pressed */
+  --emerald-800: #004D34;
+  --emerald-900: #023826;   /* deep sections */
+  --emerald-950: #01241A;
+
+  /* ---- Neutrals: ink (cool) + cream (warm support) ---- */
+  --ink-900: #0B0D12;
+  --ink-800: #1A1E27;
+  --ink-700: #2C323D;
+  --ink-600: #474F5C;
+  --ink-500: #626B79;   /* muted text on light (AA on paper) */
+  --ink-400: #8C94A1;
+  --ink-300: #C3C8D0;
+  --ink-200: #E3E6EA;
+  --ink-100: #F1F3F5;
+
+  --cream-300: #E6DDCB;
+  --cream-200: #EFE8DA;
+  --cream-100: #F6F1E7;   /* supporting warm ground (from current site) */
+  --paper:     #FBF9F4;   /* default page ground */
+  --white:     #FFFFFF;
+
+  /* ---- Signal (used sparingly: status chips, highlights) ---- */
+  --amber-500: #E2A33B;
+  --amber-100: #FBF0DA;
+  --info-600:  #2F6FDB;
+
+  /* ---- Semantic roles ---- */
+  --bg:            var(--paper);
+  --bg-warm:       var(--cream-100);
+  --bg-deep:       var(--emerald-900);
+  --surface:       var(--white);
+  --surface-sunk:  var(--ink-100);
+  --text:          var(--ink-900);
+  --text-body:     var(--ink-700);
+  --text-muted:    var(--ink-500);
+  --text-on-deep:  #EAF7F0;
+  --text-on-deep-muted: #A9C9B9;
+  --line:          #E4E0D6;
+  --line-strong:   #CFC8B8;
+  --line-on-deep:  rgba(184, 246, 213, 0.16);
+  --accent:        var(--emerald-600);
+  --accent-hover:  var(--emerald-700);
+  --accent-soft:   var(--emerald-50);
+  --focus:         #3CC98A;
+
+  /* ---- Type ---- */
+  --font-sans:  "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;   /* editorial accents only */
+  --font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; /* agent/status UI */
+
+  --fs-display: clamp(2.5rem, 1.6rem + 3.6vw, 4.4rem);
+  --fs-h1:      clamp(2.2rem, 1.5rem + 3vw, 3.75rem);
+  --fs-h2:      clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --fs-h3:      clamp(1.2rem, 1.1rem + .4vw, 1.4rem);
+  --fs-lead:    clamp(1.08rem, 1rem + .35vw, 1.3rem);
+  --fs-body:    1.0625rem;
+  --fs-sm:      .9375rem;
+  --fs-xs:      .8125rem;
+  --fs-micro:   .75rem;
+  --lh-tight:   1.04;
+  --lh-snug:    1.2;
+  --lh-body:    1.6;
+  --tracking-display: -0.035em;
+  --tracking-heading: -0.022em;
+  --tracking-caps: 0.08em;
+
+  /* ---- Space (4px base) ---- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px; --sp-16: 64px;
+  --sp-20: 80px; --sp-24: 96px; --sp-32: 128px;
+  --section-y: clamp(64px, 5vw + 32px, 120px);
+
+  /* ---- Shape & depth ---- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(11,13,18,.06), 0 1px 1px rgba(11,13,18,.04);
+  --shadow-md: 0 8px 24px -8px rgba(11,13,18,.14), 0 2px 6px rgba(11,13,18,.05);
+  --shadow-lg: 0 30px 60px -20px rgba(1,36,26,.30), 0 8px 20px -8px rgba(11,13,18,.12);
+  --ring: 0 0 0 3px rgba(60,201,138,.45);
+
+  /* ---- Layout ---- */
+  --max: 1240px;
+  --max-text: 720px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --header-h: 72px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 480ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur: 0ms; --dur-slow: 0ms; }
+}

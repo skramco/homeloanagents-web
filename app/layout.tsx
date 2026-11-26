@@ -1,22 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter_Tight } from "next/font/google";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
-import { UtilityTopBar } from "@/components/UtilityTopBar";
+import { MarketingFooter } from "@/components/marketing/MarketingFooter";
+import { MarketingHeader } from "@/components/marketing/MarketingHeader";
+import { MarketingUtilityBar } from "@/components/marketing/MarketingUtilityBar";
+import { fraunces, interTight, jetbrainsMono } from "@/lib/fonts";
 import { TAGLINE } from "@/lib/constants";
 import "./globals.css";
-
-const interTight = Inter_Tight({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter-tight",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-fraunces",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s · HomeLoanAgents",
   },
   description:
-    "HomeLoanAgents is a licensed mortgage lender and a trade name of United Fidelity Funding Corp., NMLS #34381. Buy or refinance with AI agents that organize your file and human mortgage professionals and underwriters who review and decide.",
+    "HomeLoanAgents is a licensed mortgage lender and a DBA of United Fidelity Funding Corp., NMLS #34381. Buy or refinance with AI agents that organize your file and human mortgage professionals and underwriters who review and decide.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -42,18 +30,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="theme-marketing">
-      <body className={`${interTight.variable} ${fraunces.variable}`}>
-        <a className="skip-link" href="#main">
+    <html
+      lang="en"
+      className={`${interTight.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}
+    >
+      <body>
+        <a className="skip" href="#main">
           Skip to content
         </a>
         <div className="site-shell">
-          <UtilityTopBar />
-          <SiteHeader />
+          <MarketingUtilityBar />
+          <MarketingHeader />
           <main className="site-main" id="main">
             {children}
           </main>
-          <SiteFooter />
+          <MarketingFooter />
         </div>
       </body>
     </html>

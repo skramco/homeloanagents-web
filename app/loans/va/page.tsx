@@ -1,21 +1,7 @@
-import type { Metadata } from "next";
-import { ContentPage } from "@/components/ContentPage";
-import { pageHeroByPath } from "@/lib/pageHeroImages";
-import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { vaProgramTrust } from "@/lib/programTrustContent";
 
-export const metadata: Metadata = { title: "VA loans" };
+const { metadata, ProgramPage } = createProgramPage(vaProgramTrust);
 
-export default function LoanPage() {
-  return (
-    <ContentPage
-      title="VA loans"
-      lead="VA loans serve eligible veterans, active-duty service members, and surviving spouses with distinctive benefits when guidelines are met."
-      heroImage={pageHeroByPath["/loans/va"]}
-      cta={{ href: "/get-started", label: "Get Started" }}
-    >
-      <MortgageCompanyIntro />
-      <p>VA loans serve eligible veterans, active-duty service members, and surviving spouses with distinctive benefits when guidelines are met.</p>
-      <EligibilityNote />
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;

@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
         destination: "/licensing",
         permanent: true,
       },
+      {
+        source: "/why-homeloanagents",
+        destination: "/pricing#why",
+        permanent: true,
+      },
+      {
+        source: "/programs/conventional-purchase",
+        destination: "/loans/conventional",
+        permanent: true,
+      },
     ];
   },
 };
