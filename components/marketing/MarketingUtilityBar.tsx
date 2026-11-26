@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { COMPANY_NMLS, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
+import { LICENSED_STATES } from "@/lib/licenseStates";
 
 export function MarketingUtilityBar() {
   return (
@@ -13,9 +14,9 @@ export function MarketingUtilityBar() {
             </a>
           </span>
           <span className="sep hide-sm">|</span>
-          <span className="hide-sm">A DBA of United Fidelity Funding</span>
+          <span className="hide-sm">A DBA of United Fidelity Funding Corp.</span>
           <span className="sep hide-sm">|</span>
-          <span className="hide-sm">Equal Housing Opportunity</span>
+          <span className="hide-sm">Loans available in {LICENSED_STATES}</span>
         </div>
         <div className="u-right">
           <span className="hide-sm text-muted" style={{ fontSize: "var(--fs-xs)" }}>
