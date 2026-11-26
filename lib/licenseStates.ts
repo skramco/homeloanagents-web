@@ -1,4 +1,4 @@
-import { UFF_CONSUMER_PHONE } from "./constants";
+import { UFF_CONSUMER_PHONE, UFF_PRINCIPAL_OFFICE } from "./constants";
 
 export type StateLicenseBlock = {
   id: string;
@@ -14,7 +14,7 @@ export const LICENSED_STATES =
 export const licensingPageHeader = {
   company: "United Fidelity Funding Corp. d/b/a HomeLoanAgents",
   nmlsCompanyUrl: "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/34381",
-  address: "1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150",
+  address: UFF_PRINCIPAL_OFFICE,
   loName: "Mark Ramirez",
   loNmls: "1192984",
   loNmlsUrl: "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984",
@@ -44,11 +44,11 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "arizona",
     title: "Arizona",
     licenseLines: [
-      "Arizona: United Fidelity Funding Corp. d/b/a HomeLoanAgents, Arizona Mortgage Banker License No. [UFF AZ LICENSE # – confirm BK-1027005 vs 2178465], issued by the Arizona Department of Insurance and Financial Institutions. NMLS #34381.",
+      "Arizona: United Fidelity Funding Corp. d/b/a HomeLoanAgents, Arizona Mortgage Banker License No. BK-2015110, issued by the Arizona Department of Insurance and Financial Institutions. NMLS #34381.",
       lo("AZ"),
     ],
     where:
-      'On every advertisement, so in practice the footer of every page. Include the AZ license number in the global footer once confirmed: "AZ Mortgage Banker License #[ ]".',
+      "On every advertisement, so in practice the footer of every page. The AZ license number BK-2015110 is in the global footer.",
   },
   {
     id: "california",
@@ -110,7 +110,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "indiana",
     title: "Indiana",
     licenseLines: [
-      "Indiana: United Fidelity Funding Corp., First Lien Mortgage Lending License No. 11139, issued by the Indiana Department of Financial Institutions. NMLS #34381.",
+      "Indiana: United Fidelity Funding Corp., Mortgage Lending License No. 11139 (NMLS regulator: Indiana-DFI), issued by the Indiana Department of Financial Institutions. NMLS #34381.",
       lo("IN"),
     ],
     where: "Licensing page; NMLS IDs in footer.",
@@ -138,7 +138,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "missouri",
     title: "Missouri",
     licenseLines: [
-      "Missouri: United Fidelity Funding Corp., Missouri Mortgage Company/Residential Mortgage Loan Broker License No. [UFF MO LICENSE # – confirm 34381 vs 17-1765], issued by the Missouri Division of Finance. NMLS #34381.",
+      "Missouri: United Fidelity Funding Corp., Mortgage Company License No. 34381, issued by the Missouri Division of Finance. NMLS #34381.",
       lo("MO"),
     ],
     where: "NMLS IDs on every page.",
@@ -147,7 +147,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "nevada",
     title: "Nevada",
     licenseLines: [
-      `Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. 4944, issued by the Nevada Division of Mortgage Lending. NMLS #34381. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · ${UFF_CONSUMER_PHONE}.`,
+      `Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. NMC-1197589, issued by the Nevada Division of Mortgage Lending. NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CONSUMER_PHONE}.`,
       lo("NV"),
     ],
     where:
@@ -157,7 +157,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "new-jersey",
     title: "New Jersey",
     licenseLines: [
-      `New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License No. [UFF NJ LICENSE #]. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · ${UFF_CONSUMER_PHONE}. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.`,
+      `New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License, NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CONSUMER_PHONE}. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.`,
       lo("NJ"),
     ],
     where: "Every advertisement, so the footer (included).",
@@ -166,7 +166,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "new-mexico",
     title: "New Mexico",
     licenseLines: [
-      "New Mexico: United Fidelity Funding Corp., Mortgage Loan Company License No. [UFF NM LICENSE #], issued by the New Mexico Regulation and Licensing Department, Financial Institutions Division. NMLS #34381.",
+      "New Mexico: United Fidelity Funding Corp., Mortgage Loan Company License, NMLS #34381, issued by the New Mexico Regulation and Licensing Department, Financial Institutions Division. NMLS #34381.",
       lo("NM"),
     ],
     where: "NMLS IDs on every page.",
@@ -175,7 +175,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "oregon",
     title: "Oregon",
     licenseLines: [
-      'Oregon: United Fidelity Funding Corp., Oregon Mortgage Lending License No. [UFF OR LICENSE # – UFF site shows "34381"], issued by the Oregon Division of Financial Regulation. NMLS #34381.',
+      "Oregon: United Fidelity Funding Corp., Oregon Mortgage Lending License No. 34381, issued by the Oregon Division of Financial Regulation. NMLS #34381.",
       lo("OR"),
     ],
     where: "NMLS IDs on every page; name rule on every ad.",

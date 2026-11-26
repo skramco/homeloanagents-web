@@ -16,5 +16,7 @@ export const COMPANY_NMLS = "34381";
 export const MLO_NMLS = "1192984";
 export const MLO_NAME = "Mark Ramirez";
 
+export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas City, MO 64150";
+
 export const UFF_CONSUMER_PHONE = "(855) 953-2453";
 export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";

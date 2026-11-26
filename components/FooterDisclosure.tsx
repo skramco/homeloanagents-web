@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
 import { UffPhoneLink } from "@/components/UffPhone";
-import { COMPANY_NMLS, MLO_NMLS, MLO_NAME, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
+import {
+  COMPANY_NMLS,
+  MLO_NMLS,
+  MLO_NAME,
+  NMLS_CONSUMER_ACCESS,
+  UFF_PRINCIPAL_OFFICE,
+} from "@/lib/constants";
 import { LICENSED_STATES } from "@/lib/licenseStates";
 
 const MLO_NMLS_URL = "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984";
@@ -15,7 +21,7 @@ export function FooterDisclosure() {
         <a href={NMLS_CONSUMER_ACCESS} target="_blank" rel="noopener noreferrer">
           www.nmlsconsumeraccess.org
         </a>
-        ). 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150.{" "}
+        ). {UFF_PRINCIPAL_OFFICE}.{" "}
         <UffPhoneLink />. Loan officer:{" "}
         {MLO_NAME}, NMLS #{MLO_NMLS} (
         <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
@@ -33,7 +39,7 @@ export function FooterDisclosure() {
         Loans made or arranged pursuant to a California Financing Law license. <strong>New Jersey:</strong>{" "}
         Licensed by the N.J. Department of Banking and Insurance. <strong>Colorado:</strong> Regulated by
         the Division of Real Estate. <strong>Massachusetts:</strong> Mortgage Lender License #ML34381.{" "}
-        <strong>Arizona:</strong> Mortgage Banker License #[UFF AZ LICENSE #]. <strong>Washington:</strong>{" "}
+        <strong>Arizona:</strong> Mortgage Banker License #BK-2015110. <strong>Washington:</strong>{" "}
         Consumer Loan Company License #CL-34381. <strong>Virginia:</strong> NMLS ID # 34381
         (www.nmlsconsumeraccess.org).
       </p>
