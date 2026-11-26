@@ -18,13 +18,19 @@ export function SiteHeader() {
       <div className="header-inner">
         <Link href="/" className="logo-link" onClick={() => setOpen(false)}>
           <Image
-            src="/brand/homeloanagents-lockup-color.svg"
-            alt="HomeLoanAgents"
-            width={200}
-            height={36}
+            src="/brand/homeloanagents-icon-color.svg"
+            alt=""
+            width={48}
+            height={48}
             priority
-            className="logo-lockup"
+            className="logo-icon"
+            aria-hidden
           />
+          <span className="logo-wordmark" aria-hidden>
+            <span className="logo-wordmark-home">HomeLoan</span>
+            <span className="logo-wordmark-agents">Agents</span>
+          </span>
+          <span className="sr-only">HomeLoanAgents</span>
         </Link>
 
         <nav className={`nav ${open ? "nav-open" : ""}`} aria-label="Main">

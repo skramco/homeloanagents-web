@@ -11,8 +11,9 @@ export function SiteFooter() {
             <Image
               src="/brand/homeloanagents-wordmark-color.svg"
               alt="HomeLoanAgents"
-              width={180}
-              height={28}
+              width={244}
+              height={36}
+              className="footer-wordmark"
             />
           </Link>
           <p className="footer-ai">{AI_DISCLOSURE}</p>

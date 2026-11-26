@@ -14,7 +14,7 @@
   --radius: 12px;
   --radius-lg: 20px;
   --max-width: 1120px;
-  --header-h: 72px;
+  --header-h: 88px;
 
   /* Dark hero band (homepage only) */
   --hero-bg: #0b0d12;
@@ -114,12 +114,49 @@ p {
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 0.625rem;
   text-decoration: none;
 }
 
-.logo-lockup {
-  height: 32px;
-  width: auto;
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.logo-icon {
+  display: block;
+  height: 48px;
+  width: 48px;
+  flex-shrink: 0;
+}
+
+.logo-wordmark {
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.logo-wordmark-home {
+  color: var(--ink);
+}
+
+.logo-wordmark-agents {
+  color: var(--emerald);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .nav {
@@ -552,6 +589,12 @@ p {
   margin-bottom: 0.75rem;
 }
 
+.footer-wordmark {
+  display: block;
+  height: 36px;
+  width: auto;
+}
+
 .footer-ai {
   font-size: 0.9375rem;
   color: var(--emerald);
@@ -597,6 +640,23 @@ p {
 
 /* Mobile nav */
 @media (max-width: 768px) {
+  :root {
+    --header-h: 80px;
+  }
+
+  .logo-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-wordmark {
+    font-size: 1.1875rem;
+  }
+
+  .footer-wordmark {
+    height: 30px;
+  }
+
   .menu-toggle {
     display: flex;
   }
