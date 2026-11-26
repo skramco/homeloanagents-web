@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContentPage } from "@/components/ContentPage";
 import { AI_DISCLOSURE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -8,52 +9,28 @@ export const metadata: Metadata = {
 
 export default function HowItWorksPage() {
   return (
-    <article className="prose-page">
-      <h1>How it works</h1>
+    <ContentPage
+      title="How it works"
+      lead="A mortgage workflow designed for speed and transparency—with AI agents and human mortgage professionals."
+      cta={{ href: "/get-started", label: "Get Started" }}
+    >
       <p>{AI_DISCLOSURE}</p>
       <p>
-        HomeLoanAgents is designed to combine AI agents with human supervision so borrowers can work
-        through their loan at homeloanagents.com with clear workflow and pricing. We do not guarantee
-        approvals, rates, or savings—outcomes depend on your application, program guidelines, and
-        market conditions.
+        HomeLoanAgents is a mortgage company helping with purchase and refinance loans. We do not guarantee
+        approvals, rates, or closing timelines.
       </p>
-
-      <h2>1. Apply online</h2>
+      <h2>Steps</h2>
+      <ol>
+        <li>Apply online at homeloanagents.com.</li>
+        <li>Agents assist with documents, disclosures support, processing tasks, and vendor coordination.</li>
+        <li>Mortgage professionals review flagged items; underwriters apply guidelines.</li>
+        <li>Licensed loan officers approve rate-related communications before you see them.</li>
+        <li>Disclosures, processing, underwriting, and closing—with ongoing updates.</li>
+      </ol>
       <p>
-        You begin online at homeloanagents.com. We are upfront that specialized AI agents assist with
-        intake and application steps—no surprise bots behind the scenes.
+        <Link href="/why-homeloanagents">Why HomeLoanAgents</Link> ·{" "}
+        <Link href="/pricing">Pricing</Link>
       </p>
-
-      <h2>2. Agents work your file</h2>
-      <p>
-        Agents can handle remedial tasks across intake, the application, disclosures support,
-        processing coordination, vendor orders, and closing logistics. This is designed to move
-        routine work efficiently while staying compliant and secure.
-      </p>
-
-      <h2>3. Human review</h2>
-      <p>
-        People review agent work and step in when something is flagged or needs judgment. Licensed
-        professionals remain accountable for supervised activities.
-      </p>
-
-      <h2>4. Rate options</h2>
-      <p>
-        When rate-related information is prepared for you, a licensed loan officer approves it before
-        it goes out. Presenting options is not a guarantee of eligibility or final terms.
-      </p>
-
-      <h2>5. Disclosures, processing, underwriting, closing</h2>
-      <p>
-        The loan proceeds through disclosures, processing, underwriting, and closing—with agents
-        assisting on operational tasks and humans overseeing exceptions and required reviews.
-      </p>
-
-      <div className="cta-panel">
-        <Link href="/get-started" className="btn btn-primary">
-          Apply
-        </Link>
-      </div>
-    </article>
+    </ContentPage>
   );
 }

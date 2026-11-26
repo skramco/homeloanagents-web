@@ -2,6 +2,34 @@ import Link from "next/link";
 import Image from "next/image";
 import { AI_DISCLOSURE, FOOTER_LEGAL, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
 
+const footerCols = [
+  {
+    title: "Buy",
+    links: [
+      { href: "/buy", label: "Buying a home" },
+      { href: "/buy/first-time-homebuyers", label: "First-time buyers" },
+      { href: "/buy/pre-approval", label: "Pre-approval" },
+    ],
+  },
+  {
+    title: "Refinance",
+    links: [
+      { href: "/refinance", label: "Overview" },
+      { href: "/refinance/rate-and-term", label: "Rate-and-term" },
+      { href: "/refinance/cash-out", label: "Cash-out" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { href: "/learn", label: "Learning center" },
+      { href: "/calculators", label: "Calculators" },
+      { href: "/why-homeloanagents", label: "Why HomeLoanAgents" },
+      { href: "/pricing", label: "Pricing" },
+    ],
+  },
+];
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -17,6 +45,21 @@ export function SiteFooter() {
             />
           </Link>
           <p className="footer-ai">{AI_DISCLOSURE}</p>
+        </div>
+
+        <div className="footer-columns">
+          {footerCols.map((col) => (
+            <div key={col.title}>
+              <h3>{col.title}</h3>
+              <ul>
+                {col.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="footer-links">

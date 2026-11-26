@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FOOTER_LEGAL, LAUNCH_STATES, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
+import {
+  FOOTER_LEGAL,
+  LAUNCH_STATES,
+  MLO_NAME,
+  MLO_NMLS,
+  COMPANY_NMLS,
+  NMLS_CONSUMER_ACCESS,
+} from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Licensing & disclosures",
@@ -14,8 +21,10 @@ export default function LicensingPage() {
 
       <h2>Company &amp; loan officer NMLS</h2>
       <ul>
-        <li>United Fidelity Funding (DBA HomeLoanAgents): NMLS #34381</li>
-        <li>Designated loan officer: Mark Ramirez, NMLS #1192984 (MLO)</li>
+        <li>United Fidelity Funding (DBA HomeLoanAgents): NMLS #{COMPANY_NMLS}</li>
+        <li>
+          Designated loan officer: {MLO_NAME}, NMLS #{MLO_NMLS} (MLO)
+        </li>
       </ul>
       <p>
         Verify licensure at{" "}
