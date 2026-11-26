@@ -1,3 +1,5 @@
+@import "./marketing-home.css";
+
 :root {
   --emerald: #007a51;
   --emerald-bright: #006341;
@@ -302,7 +304,7 @@ p {
   margin-top: 1.5rem;
 }
 
-/* Hero — sole dark band (homepage) */
+/* Hero: sole dark band (homepage) */
 .page-hero {
   position: relative;
   padding: 3.5rem 1.25rem 4rem;
@@ -709,7 +711,13 @@ p {
 
 .ehl-logo {
   flex-shrink: 0;
-  color: var(--text);
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.footer-ehl-line .ehl-logo {
+  color: var(--ink);
 }
 
 .footer-disclaimer-closing {

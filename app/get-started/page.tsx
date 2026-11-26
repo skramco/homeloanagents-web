@@ -13,7 +13,7 @@ export default function GetStartedPage() {
       <p>{AI_DISCLOSURE}</p>
       <p>
         The HomeLoanAgents borrower experience at homeloanagents.com is under construction. When it
-        launches, you will apply and work your loan here—with transparency about agent-assisted steps
+        launches, you will apply and work your loan here, with transparency about agent-assisted steps
         and human supervision.
       </p>
       <p>

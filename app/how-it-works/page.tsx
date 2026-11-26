@@ -11,7 +11,7 @@ export default function HowItWorksPage() {
   return (
     <ContentPage
       title="How it works"
-      lead="A mortgage workflow designed for speed and transparency—with AI agents and human mortgage professionals."
+      lead="A mortgage workflow designed for speed and transparency, with AI agents and human mortgage professionals."
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <p>{AI_DISCLOSURE}</p>
@@ -25,7 +25,7 @@ export default function HowItWorksPage() {
         <li>Agents assist with documents, disclosures support, processing tasks, and vendor coordination.</li>
         <li>Mortgage professionals review flagged items; underwriters apply guidelines.</li>
         <li>Licensed loan officers approve rate-related communications before you see them.</li>
-        <li>Disclosures, processing, underwriting, and closing—with ongoing updates.</li>
+        <li>Disclosures, processing, underwriting, and closing, with ongoing updates.</li>
       </ol>
       <p>
         <Link href="/why-homeloanagents">Why HomeLoanAgents</Link> ·{" "}

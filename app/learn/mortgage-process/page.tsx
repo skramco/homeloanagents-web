@@ -8,10 +8,10 @@ export default function LearnArticle() {
   return (
     <ContentPage
       title="Mortgage process steps"
-      lead="From application through underwriting, clear disclosure, and closing—the major milestones on a typical home loan."
+      lead="From application through underwriting, clear disclosure, and closing: the major milestones on a typical home loan."
     >
       <p>
-        This article is educational—not financial or legal advice. HomeLoanAgents is a mortgage lender
+        This article is educational, not financial or legal advice. HomeLoanAgents is a mortgage lender
         (trade name of United Fidelity Funding Corp., NMLS #34381). We do not guarantee rates, approvals, or savings.
       </p>
       <p>

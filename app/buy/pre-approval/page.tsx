@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContentPage } from "@/components/ContentPage";
+import { pageHeroByPath } from "@/lib/pageHeroImages";
 import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
 
 export const metadata: Metadata = { title: "Pre-approval" };
@@ -8,7 +9,8 @@ export default function PreApprovalPage() {
   return (
     <ContentPage
       title="Pre-approval"
-      lead="Understand what you may be able to borrow before you shop—subject to full underwriting and documentation."
+      lead="Understand what you may be able to borrow before you shop, subject to full underwriting and documentation."
+      heroImage={pageHeroByPath["/buy/pre-approval"]}
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <MortgageCompanyIntro />

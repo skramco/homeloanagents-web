@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContentPage } from "@/components/ContentPage";
+import { pageHeroByPath } from "@/lib/pageHeroImages";
 import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
 
 export const metadata: Metadata = { title: "Buy a home" };
@@ -10,6 +11,7 @@ export default function BuyPage() {
     <ContentPage
       title="Buy a home"
       lead="Purchase mortgages with agent-assisted speed and licensed mortgage professionals at every critical step."
+      heroImage={pageHeroByPath["/buy"]}
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <MortgageCompanyIntro />

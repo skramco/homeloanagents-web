@@ -8,7 +8,7 @@ export default function AffordabilityPage() {
   return (
     <ContentPage
       title="Affordability calculator"
-      lead="A rough planning range—not an affordability guarantee or pre-approval."
+      lead="A rough planning range, not an affordability guarantee or pre-approval."
     >
       <AffordabilityCalculator />
     </ContentPage>

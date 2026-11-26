@@ -11,13 +11,13 @@ export default function WhyPage() {
   return (
     <ContentPage
       title="Why HomeLoanAgents"
-      lead="A mortgage lender built around speed, transparency, and supervised AI agents—because it's in our name."
+      lead="A mortgage lender built around speed, transparency, and supervised AI agents, because it's in our name."
       cta={{ href: "/get-started", label: "Get Started" }}
     >
       <MortgageCompanyIntro />
       <h2>Mortgage intelligence + super intelligence</h2>
       <p>
-        Our agents are trained on every part of the mortgage process—intake, application, disclosures,
+        Our agents are trained on every part of the mortgage process: intake, application, disclosures,
         processing, vendor orders, and closing coordination. They handle repetitive work quickly and
         keep communication flowing. Mortgage professionals, including underwriters and licensed loan
         officers, review exceptions, apply guidelines, and approve rate-related information.
@@ -35,7 +35,7 @@ export default function WhyPage() {
       </ul>
       <h2>Transparency you can see</h2>
       <p>
-        We are upfront that you&apos;ll work with AI agents, supervised by people—including our flat
+        We are upfront that you&apos;ll work with AI agents, supervised by people, including our flat
         flat $3,500 lender origination fee instead of a percentage that scales with loan size.
       </p>
       <FlatFeeCallout showWhy={false} />
