@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
-import {
-  COMPANY_NMLS,
-  MLO_NMLS,
-  MLO_NAME,
-  NMLS_CONSUMER_ACCESS,
-  UFF_CONSUMER_PHONE,
-  UFF_CONSUMER_PHONE_TEL,
-} from "@/lib/constants";
+import { UffPhoneLink } from "@/components/UffPhone";
+import { COMPANY_NMLS, MLO_NMLS, MLO_NAME, NMLS_CONSUMER_ACCESS } from "@/lib/constants";
 import { LICENSED_STATES } from "@/lib/licenseStates";
 
 const MLO_NMLS_URL = "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984";
@@ -22,7 +16,7 @@ export function FooterDisclosure() {
           www.nmlsconsumeraccess.org
         </a>
         ). 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150.{" "}
-        <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>. Loan officer:{" "}
+        <UffPhoneLink />. Loan officer:{" "}
         {MLO_NAME}, NMLS #{MLO_NMLS} (
         <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
           NMLS Consumer Access

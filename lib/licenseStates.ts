@@ -1,3 +1,5 @@
+import { UFF_CONSUMER_PHONE } from "./constants";
+
 export type StateLicenseBlock = {
   id: string;
   title: string;
@@ -66,7 +68,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "colorado",
     title: "Colorado",
     licenseLines: [
-      "Colorado: United Fidelity Funding Corp., Mortgage Company Registration, NMLS #34381. Responsible party: Mark Ramirez, NMLS #1192984, [BUSINESS PHONE]. Regulated by the Division of Real Estate.",
+      `Colorado: United Fidelity Funding Corp., Mortgage Company Registration, NMLS #34381. Responsible party: Mark Ramirez, NMLS #1192984, ${UFF_CONSUMER_PHONE}. Regulated by the Division of Real Estate.`,
       lo("CO"),
     ],
     mandatoryVerbatim: [
@@ -145,7 +147,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "nevada",
     title: "Nevada",
     licenseLines: [
-      "Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. 4944, issued by the Nevada Division of Mortgage Lending. NMLS #34381. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · [PHONE ON FILE WITH NV MLD].",
+      `Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. 4944, issued by the Nevada Division of Mortgage Lending. NMLS #34381. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · ${UFF_CONSUMER_PHONE}.`,
       lo("NV"),
     ],
     where:
@@ -155,7 +157,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     id: "new-jersey",
     title: "New Jersey",
     licenseLines: [
-      "New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License No. [UFF NJ LICENSE #]. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · [PHONE]. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.",
+      `New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License No. [UFF NJ LICENSE #]. 1300 NW Briarcliff Pkwy #275, Kansas City, MO 64150 · ${UFF_CONSUMER_PHONE}. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.`,
       lo("NJ"),
     ],
     where: "Every advertisement, so the footer (included).",

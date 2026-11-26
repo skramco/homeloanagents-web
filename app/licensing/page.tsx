@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AI_DISCLOSURE, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { UffPhoneLink, withUffPhoneLinks } from "@/components/UffPhone";
+import { AI_DISCLOSURE } from "@/lib/constants";
 import { licensingPageHeader, stateLicenseBlocks } from "@/lib/licenseStates";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function LicensingPage() {
         </p>
         <p>
           Principal office: {header.address} ·{" "}
-          <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>
+          <UffPhoneLink />
         </p>
         <p>
           Loan officer: {header.loName}, MLO, NMLS #{header.loNmls} ·{" "}
@@ -49,7 +50,7 @@ export default function LicensingPage() {
             <h3>{state.title}</h3>
             {state.licenseLines.map((line) => (
               <p key={line} className="state-license-verbatim">
-                {line}
+                {withUffPhoneLinks(line)}
               </p>
             ))}
             {state.mandatoryVerbatim?.map((text) => (
