@@ -56,28 +56,45 @@ npm run dev
 
 xAI documents a **signed `realtime.call.incoming` webhook** when a SIP call arrives ([SIP docs](https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech/sip)). It does **not** document a native **call-ended** or post-call HTTP webhook; transcripts live on the realtime WebSocket session.
 
-**Smallest alternative:** when your voice session handler closes the WebSocket (caller hang-up or `POST /v1/realtime/calls/{call_id}/hangup`), have it `POST` the transcript and captured fields to this site:
+**Production path (xAI Builder “API request” tool):** when the call ends, POST a **flat JSON** body with `Authorization: Bearer $XAI_WEBHOOK_SECRET`. The `transcript` field should be a **short summary the agent wrote**, not a raw transcript.
 
 | Item | Value |
 | --- | --- |
 | **URL** | `https://homeloanagents.com/api/webhooks/xai/call-ended` |
-| **Auth** | Standard Webhooks headers (`webhook-id`, `webhook-timestamp`, `webhook-signature`) with `XAI_WEBHOOK_SECRET`, **or** `Authorization: Bearer <same secret>`, **or** `X-Homeloanagents-Signature: sha256=<hmac_sha256_hex(body)>` |
-| **Body** | JSON event with `type: "realtime.call.ended"` and `data.call_id`, optional `phone`, `email`, `name`, `transcript`, `sip_headers` |
+| **Auth** | `Authorization: Bearer <XAI_WEBHOOK_SECRET>` (also supports Standard Webhooks headers or `X-Homeloanagents-Signature`) |
+| **Body (flat)** | `{ "call_id"?, "phone"?, "name"?, "email"?, "transcript"? }` |
+| **Body (wrapped)** | `{ "type": "realtime.call.ended", "data": { …same fields, optional sip_headers } }` |
 
-Example body:
+If `call_id` is missing or empty, the server derives one as `derived_<sha256(email|phone|UTC-date)>` so retries the same day stay idempotent.
+
+Example flat body (Builder tool):
 
 ```json
 {
-  "type": "realtime.call.ended",
-  "data": {
-    "call_id": "00000000-0000-0000-0000-000000000000",
-    "phone": "+12136685711",
-    "email": "borrower@example.com",
-    "name": "Alex Rivera",
-    "transcript": "…"
-  }
+  "call_id": "00000000-0000-0000-0000-000000000000",
+  "phone": "+12136685711",
+  "email": "borrower@example.com",
+  "name": "Alex Rivera",
+  "transcript": "Borrower asked about our flat fee and which documents to gather for a refinance application."
 }
 ```
+
+Sample curl (local or preview URL):
+
+```bash
+curl -sS -X POST "http://localhost:3000/api/webhooks/xai/call-ended" \
+  -H "Authorization: Bearer $XAI_WEBHOOK_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "call_id": "test-call-1",
+    "phone": "+12135550100",
+    "email": "you@example.com",
+    "name": "Alex Rivera",
+    "transcript": "Discussed starting an application and gathering pay stubs and tax returns."
+  }'
+```
+
+Run payload parser tests: `npm test`.
 
 Recap email sends only when `email` is present; repeats for the same `call_id` are ignored after `recap_sent_at` is set.
 

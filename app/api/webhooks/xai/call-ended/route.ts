@@ -1,19 +1,11 @@
 import { Resend } from "resend";
 import { buildRecapEmailDocument } from "@/lib/call-recap/emailTemplate";
 import { generateRecapHtml } from "@/lib/call-recap/generateRecap";
-import type { CallEndedWebhookBody } from "@/lib/call-recap/types";
 import { getSupabaseAdmin, type CallLeadRow } from "@/lib/supabase/admin";
-import { parseCallerPhoneFromSipHeaders, verifyXaiWebhookRequest } from "@/lib/webhooks/verifyXaiWebhook";
+import { parseCallEndedPayload } from "@/lib/webhooks/parseCallEndedPayload";
+import { verifyXaiWebhookRequest } from "@/lib/webhooks/verifyXaiWebhook";
 
 export const runtime = "nodejs";
-
-function normalizeEmail(value: string | null | undefined): string | null {
-  if (!value) {
-    return null;
-  }
-  const trimmed = value.trim().toLowerCase();
-  return trimmed.includes("@") ? trimmed : null;
-}
 
 export async function POST(request: Request) {
   const secret = process.env.XAI_WEBHOOK_SECRET;
@@ -29,32 +21,28 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid signature" }, { status: 401 });
   }
 
-  let body: CallEndedWebhookBody;
+  let json: unknown;
   try {
-    body = JSON.parse(rawBody) as CallEndedWebhookBody;
+    json = JSON.parse(rawBody) as unknown;
   } catch {
     return Response.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  if (body.type !== "realtime.call.ended" || !body.data?.call_id) {
+  const parsed = parseCallEndedPayload(json);
+  if (!parsed) {
     return Response.json(
       {
-        error:
-          "Unsupported event type. xAI documents only realtime.call.incoming; post-call recaps expect type realtime.call.ended from your voice session bridge.",
-        supported_type: "realtime.call.ended",
+        error: "Unsupported body shape",
+        accepted: [
+          "flat: { call_id?, phone?, name?, email?, transcript? }",
+          'wrapped: { type: "realtime.call.ended", data: { … } }',
+        ],
       },
       { status: 400 },
     );
   }
 
-  const callId = body.data.call_id.trim();
-  const email = normalizeEmail(body.data.email);
-  const phone =
-    body.data.phone?.trim() ||
-    parseCallerPhoneFromSipHeaders(body.data.sip_headers) ||
-    null;
-  const name = body.data.name?.trim() || null;
-  const transcript = body.data.transcript?.trim() || null;
+  const { callId, phone, email, name, callSummary } = parsed;
 
   const supabase = getSupabaseAdmin();
 
@@ -73,14 +61,14 @@ export async function POST(request: Request) {
     return Response.json({ status: "already_sent", call_id: callId }, { status: 200 });
   }
 
-  const recapHtml = await generateRecapHtml({ name, transcript });
+  const recapHtml = await generateRecapHtml({ name, callSummary });
 
   const upsertPayload = {
     call_id: callId,
     phone,
     email,
     name,
-    transcript,
+    transcript: callSummary,
     summary: recapHtml,
     recap_sent_at: null as string | null,
   };
@@ -141,5 +129,12 @@ export async function POST(request: Request) {
     console.error("recap_sent_at update failed", markSentError);
   }
 
-  return Response.json({ status: "sent", call_id: callId, recap_sent_at: sentAt }, { status: 200 });
+  return Response.json(
+    {
+      status: "sent",
+      call_id: callId,
+      recap_sent_at: sentAt,
+    },
+    { status: 200 },
+  );
 }

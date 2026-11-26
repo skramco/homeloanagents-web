@@ -3,12 +3,13 @@ import { buildGenericRecapHtml } from "@/lib/call-recap/genericRecap";
 
 type GenerateRecapInput = {
   name: string | null;
-  transcript: string | null;
+  /** Short summary written by the voice agent, not a raw transcript. */
+  callSummary: string | null;
 };
 
 export async function generateRecapHtml(input: GenerateRecapInput): Promise<string> {
   const apiKey = process.env.XAI_API_KEY;
-  if (!apiKey || !input.transcript?.trim()) {
+  if (!apiKey || !input.callSummary?.trim()) {
     return buildGenericRecapHtml(input.name);
   }
 
@@ -22,8 +23,8 @@ NEVER mention interest rates, APR, specific percentages, approvals, pre-approval
 End with one sentence that this is informational only, not a loan offer or commitment to lend.`;
 
   const userPrompt = `Caller name: ${input.name ?? "unknown"}
-Transcript:
-${input.transcript}`;
+Short call summary from the voice agent (not a raw transcript):
+${input.callSummary}`;
 
   try {
     const response = await fetch("https://api.x.ai/v1/chat/completions", {
