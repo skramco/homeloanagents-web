@@ -3,13 +3,13 @@ import Link from "next/link";
 import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { IntentTabs } from "@/components/marketing/IntentTabs";
 import { SampleFileFeed } from "@/components/marketing/SampleFileFeed";
+import { UffPhoneLink } from "@/components/UffPhone";
 import {
+  BORROWER_COMMUNICATION_POLICY,
   BORROWER_CONTACT_CHANNELS,
   COMPANY_NMLS,
   FLAT_ORIGINATION_FEE,
   NMLS_CONSUMER_ACCESS,
-  UFF_CONSUMER_PHONE,
-  UFF_CONSUMER_PHONE_TEL,
 } from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
 import { programPhotoByPath, type ProgramTilePath } from "@/lib/programTilePhotos";
@@ -482,6 +482,7 @@ function HomeFaqSection() {
       "Why don't you show rates on the site?",
       `A rate depends on your credit, loan amount, property, down payment and the market on the day you lock. Instead of a teaser number, your Loan Estimate and updates from your licensed loan team by ${BORROWER_CONTACT_CHANNELS} show real options and terms.`,
     ],
+    ["How we communicate", BORROWER_COMMUNICATION_POLICY],
   ];
   return (
     <section className="section section-warm">
@@ -490,11 +491,8 @@ function HomeFaqSection() {
           <span className="eyebrow">Questions</span>
           <h2 className="h2">Straight answers.</h2>
           <p className="lead muted">
-            Can&apos;t find yours?{" "}
-            <a href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
-              Reach our voice agent at {UFF_CONSUMER_PHONE}
-            </a>
-            , or start online for follow-up by {BORROWER_CONTACT_CHANNELS}.
+            Can&apos;t find yours? <UffPhoneLink voiceAgent />, or start online for follow-up by{" "}
+            {BORROWER_CONTACT_CHANNELS}.
           </p>
         </div>
         <div className="faq">
@@ -528,13 +526,7 @@ function HomeCtaSection() {
               <Link className="btn btn-mint btn-lg" href="/get-started">
                 Get started <span className="arr">→</span>
               </Link>
-              <a
-                className="btn btn-ghost btn-lg"
-                href={UFF_CONSUMER_PHONE_TEL}
-                aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}
-              >
-                Voice agent · {UFF_CONSUMER_PHONE}
-              </a>
+              <UffPhoneLink voiceAgent className="btn btn-ghost btn-lg" />
             </div>
           </div>
           <div className="cb-photo">

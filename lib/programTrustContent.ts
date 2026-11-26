@@ -318,7 +318,7 @@ export function finishPage(seed: PageSeed): ProgramTrustConfig {
     },
     documentChecklist: {
       headline: "Documents you may be asked for",
-      lead: "Exact items depend on your employment, assets, and transaction type. Use this list to prepare; your licensed loan team confirms what applies via email, text, or our voice agent.",
+      lead: "Exact items depend on your employment, assets, and transaction type. Use this list to prepare; your licensed loan team confirms what applies via email or text.",
       groups: standardDocumentGroups,
       footnote:
         "Checking items is for your planning only. Uploads and verification happen in your secure loan file after you apply.",
@@ -389,7 +389,7 @@ export const conventionalProgramTrust: ProgramTrustConfig = finishPage({
     lead: "Conventional loans work well when you have verifiable income, manageable debt levels, and funds to close that meet agency rules.",
     bodyParagraphs: [
       "Borrowers with solid credit often use conventional loans to buy a primary home, refinance an existing mortgage, or finance a second home. Loan limits follow conforming caps unless you move to a jumbo program.",
-      "If your down payment is below 20% on a primary residence, private mortgage insurance may apply until you reach sufficient equity. We explain how that affects your payment by email, text, or our voice agent.",
+      "If your down payment is below 20% on a primary residence, private mortgage insurance may apply until you reach sufficient equity. We explain how that affects your payment by email or text.",
       "We do not quote rates on marketing pages. After you share your scenario, disclosures will show payments, costs, and whether private mortgage insurance or other conditions apply.",
     ],
     siblings: loanSiblings("/loans/conventional"),
@@ -430,7 +430,7 @@ export const conventionalProgramTrust: ProgramTrustConfig = finishPage({
     },
     {
       q: "Will starting online hurt my credit?",
-      a: "Exploring options and creating a file does not pull credit. A full application includes credit authorization, which we explain first by email, text, or our voice agent.",
+      a: "Exploring options and creating a file does not pull credit. A full application includes credit authorization, which we explain first by email or text.",
     },
     {
       q: "Who makes the approval decision?",
@@ -530,7 +530,7 @@ export const vaProgramTrust: ProgramTrustConfig = finishPage({
     bodyParagraphs: [
       "Eligible veterans and active-duty members frequently use VA for a first purchase, a subsequent home with restored entitlement, or a VA streamline refinance (IRRRL) when available.",
       "You may need a Certificate of Eligibility and must occupy the home as your primary residence for most VA purchase loans.",
-      "Seller concessions and VA appraisal requirements can affect your transaction; we cover those early by email, text, or our voice agent.",
+      "Seller concessions and VA appraisal requirements can affect your transaction; we cover those early by email or text.",
     ],
     siblings: loanSiblings("/loans/va"),
   },
@@ -749,7 +749,7 @@ export const armProgramTrust: ProgramTrustConfig = finishPage({
     { q: "Is an ARM cheaper than fixed?", a: "Introductory ARM rates are often lower than fixed rates at the same time, but long-term cost depends on adjustments and how long you keep the loan." },
     { q: "Do you charge the same lender fee on ARMs?", a: `Yes. Our ${flatFeeAmount} flat lender origination fee applies to ARMs and fixed-rate loans we originate.` },
     { q: "How do I compare offers?", a: "Review the Loan Estimate, note rate, APR, caps, and projected payments. We do not provide rate quotes on this page." },
-    { q: "Who explains caps and indexes?", a: "Your licensed loan officer shares program disclosures and adjustable-rate details by email, text, or our voice agent before you lock." },
+    { q: "Who explains caps and indexes?", a: "Your licensed loan officer shares program disclosures and adjustable-rate details by email or text before you lock." },
     { q: "Can I refinance out of an ARM later?", a: "Refinancing may be available if you qualify and market conditions allow; it is not guaranteed before adjustments begin." },
     { q: "Which is better for a first-time buyer?", a: "Many first-time buyers prefer fixed rates for predictability, but the best choice depends on your timeline and budget stress tests." },
   ],
@@ -858,7 +858,7 @@ export const cashOutRefiProgramTrust: ProgramTrustConfig = finishPage({
   },
   faqs: [
     { q: "How much cash can I take out?", a: "It depends on appraised value, existing liens, program LTV limits, and closing costs. Your Loan Estimate shows cash to borrower." },
-    { q: "Is cash-out the same as a HELOC?", a: "No. Cash-out replaces your first mortgage with a new loan. A HELOC is a separate line of credit; licensed mortgage professionals help you compare options by email, text, or our voice agent when you apply." },
+    { q: "Is cash-out the same as a HELOC?", a: "No. Cash-out replaces your first mortgage with a new loan. A HELOC is a separate line of credit; licensed mortgage professionals help you compare options by email or text when you apply." },
     { q: "Are there tax implications?", a: "We do not provide tax advice. Consult a tax professional about deductibility of mortgage interest on cash-out proceeds." },
     { q: "What is the lender fee?", a: `Our ${flatFeeAmount} flat origination fee applies to cash-out refinances we originate, in addition to third-party closing costs.` },
     { q: "Can I use cash-out on an investment property?", a: "Some programs allow it with lower LTV limits and stricter reserves. Availability varies by investor." },

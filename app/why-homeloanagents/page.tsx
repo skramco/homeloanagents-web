@@ -19,7 +19,8 @@ export default function WhyPage() {
       <p>
         Our agents are trained on every part of the mortgage process: intake, application, disclosures,
         processing, vendor orders, and closing coordination. They handle repetitive work quickly and
-        keep communication flowing by email, text, and our voice agent. Mortgage professionals, including
+        keep communication flowing by email or text—you can call our inbound line anytime with questions. Mortgage
+        professionals, including
         underwriters and licensed loan officers, review exceptions, apply guidelines, and approve
         rate-related information.
       </p>

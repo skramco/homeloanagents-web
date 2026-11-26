@@ -1,22 +1,22 @@
-import { Fragment, type ReactNode } from "react";
-import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
+import {
+  INBOUND_VOICE_AGENT_ARIA_LABEL,
+  INBOUND_VOICE_AGENT_CTA,
+  UFF_CONSUMER_PHONE,
+  UFF_CONSUMER_PHONE_TEL,
+} from "@/lib/constants";
 
-type UffPhoneLinkProps = { className?: string; voiceAgent?: boolean };
+type UffPhoneLinkProps = { className?: string; voiceAgent?: boolean; style?: CSSProperties };
 
-export function UffPhoneLink({ className, voiceAgent }: UffPhoneLinkProps) {
+export function UffPhoneLink({ className, voiceAgent, style }: UffPhoneLinkProps) {
   return (
     <a
       href={UFF_CONSUMER_PHONE_TEL}
       className={className}
-      aria-label={voiceAgent ? `Voice agent, ${UFF_CONSUMER_PHONE}` : undefined}
+      style={style}
+      aria-label={voiceAgent ? INBOUND_VOICE_AGENT_ARIA_LABEL : undefined}
     >
-      {voiceAgent ? (
-        <>
-          Voice agent · {UFF_CONSUMER_PHONE}
-        </>
-      ) : (
-        UFF_CONSUMER_PHONE
-      )}
+      {voiceAgent ? INBOUND_VOICE_AGENT_CTA : UFF_CONSUMER_PHONE}
     </a>
   );
 }

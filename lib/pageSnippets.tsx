@@ -1,5 +1,7 @@
 /** Shared compliance-friendly copy blocks for product pages */
 
+import { BORROWER_CONTACT_CHANNELS } from "./constants";
+
 export function EligibilityNote() {
   return (
     <p className="compliance-note">
@@ -15,8 +17,8 @@ export function MortgageCompanyIntro() {
       HomeLoanAgents is a trade name of United Fidelity Funding Corp., a mortgage company helping borrowers with{" "}
       <strong>purchase and refinance</strong> home financing. AI agents assist with workflow speed and
       transparency; mortgage professionals, including underwriters and licensed loan officers, remain
-      accountable for supervised lending decisions. Borrower updates are delivered by email, text, or our
-      voice agent.
+      accountable for supervised lending decisions. Outbound updates go by {BORROWER_CONTACT_CHANNELS}; you can call
+      our inbound line anytime with questions—it is answered by our voice agent.
     </p>
   );
 }

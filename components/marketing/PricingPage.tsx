@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { MarketingLicensingBlock } from "@/components/marketing/MarketingLicensingBlock";
-import { BORROWER_CONTACT_CHANNELS, FLAT_ORIGINATION_FEE, UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { UffPhoneLink } from "@/components/UffPhone";
+import { BORROWER_CONTACT_CHANNELS, FLAT_ORIGINATION_FEE } from "@/lib/constants";
 
 const comparisonRows = [
   ["$300,000", "$3,000", "$3,500", "1% is $500 less"],
@@ -192,11 +193,8 @@ export function PricingPage() {
             <span className="eyebrow">Pricing FAQs</span>
             <h2 className="h2">About the fee.</h2>
             <p className="lead muted">
-              Questions about a Loan Estimate? Get updates by {BORROWER_CONTACT_CHANNELS}, or reach our{" "}
-              <a href={UFF_CONSUMER_PHONE_TEL} aria-label={`Voice agent, ${UFF_CONSUMER_PHONE}`}>
-                voice agent at {UFF_CONSUMER_PHONE}
-              </a>
-              .
+              Questions about a Loan Estimate? Get updates by {BORROWER_CONTACT_CHANNELS}, or{" "}
+              <UffPhoneLink voiceAgent />.
             </p>
           </div>
           <PricingFaqs />
