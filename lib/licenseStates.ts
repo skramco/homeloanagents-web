@@ -27,8 +27,32 @@ export const licensingPageHeader = {
 
 export const TEXAS_SML_NOTICE = `TEXAS RESIDENTS: CONSUMERS WISHING TO FILE A COMPLAINT AGAINST A MORTGAGE BANKER OR RESIDENTIAL MORTGAGE LOAN ORIGINATOR LICENSEED IN TEXAS SHOULD SEND A COMPLETED COMPLAINT FORM TO THE DEPARTMENT OF SAVINGS AND MORTGAGE LENDING (SML): 2601 N. LAMAR BLVD., SUITE 201, AUSTIN, TEXAS 78705; TEL: 1-877-276-5550. INFORMATION AND FORMS ARE AVAILABLE ON SML'S WEBSITE: SML.TEXAS.GOV.`;
 
-const lo = (st: string) =>
-  `Loan officer: Mark Ramirez, NMLS #1192984, ${st} MLO License No. [MARK ${st} LICENSE #].`;
+const MARK_MLO_LINE_PREFIX = "Loan officer: Mark Ramirez, NMLS #1192984";
+
+const markMloLicenseDetail: Record<string, string> = {
+  AL: "TA Approved (temporary authority), license # pending state",
+  AZ: "Loan Originator License LO-1034683",
+  CA: "Mortgage Loan Originator License CA-DBO1192984",
+  CO: "TA Approved (temporary authority), license # pending state",
+  FL: "Mortgage Loan Originator License LO105507",
+  ID: "Mortgage Loan Originator License MLO-2081192984",
+  IL: "Mortgage Loan Originator License 031.0096925",
+  IN: "Mortgage Loan Originator License 71837",
+  KY: "TA Approved (temporary authority), license # pending state",
+  MA: "TA Approved (temporary authority), license # pending state",
+  MO: "TA Approved (temporary authority), license # pending state",
+  NV: "Mortgage Loan Originator License NMLO-101021",
+  NJ: "TA Approved (temporary authority), license # pending state",
+  NM: "TA Approved (temporary authority), license # pending state",
+  OR: "Mortgage Loan Originator License, NMLS #1192984 (state uses NMLS ID)",
+  SD: "Mortgage Loan Originator License 1192984.MLO",
+  TX: "Mortgage Loan Originator, NMLS #1192984 (state uses NMLS ID)",
+  VA: "TA Approved (temporary authority), license # pending state",
+  WA: "Mortgage Loan Originator License MLO-1192984",
+  WI: "Mortgage Loan Originator License 1192984",
+};
+
+const lo = (st: string) => `${MARK_MLO_LINE_PREFIX}, ${markMloLicenseDetail[st]}.`;
 
 export const stateLicenseBlocks: StateLicenseBlock[] = [
   {
@@ -214,7 +238,7 @@ export const stateLicenseBlocks: StateLicenseBlock[] = [
     title: "Washington",
     licenseLines: [
       "Washington: United Fidelity Funding Corp. d/b/a UFF West Funding Corp. and d/b/a HomeLoanAgents, Consumer Loan Company License No. CL-34381, issued by the Washington Department of Financial Institutions. NMLS #34381.",
-      "Loan officer: Mark Ramirez, NMLS #1192984, WA MLO License No. [MARK WA LICENSE #].",
+      lo("WA"),
     ],
     where:
       "Primary landing page (home page) and any page that names the LO. The footer covers both once the WA license number is added.",
