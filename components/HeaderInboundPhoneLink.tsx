@@ -1,0 +1,42 @@
+import {
+  INBOUND_VOICE_AGENT_ARIA_LABEL,
+  INBOUND_VOICE_AGENT_CTA,
+  UFF_CONSUMER_PHONE,
+  UFF_CONSUMER_PHONE_TEL,
+} from "@/lib/constants";
+
+function PhoneIcon() {
+  return (
+    <svg
+      className="header-tel-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path
+        stroke="currentColor"
+        d="M6.5 4.5h3l1.5 4-2 1.2a12 12 0 0 0 5.3 5.3l1.2-2 4 1.5v3A2 2 0 0 1 17.5 19 14.5 14.5 0 0 1 4.5 6a2 2 0 0 1 2-1.5z"
+      />
+    </svg>
+  );
+}
+
+type HeaderInboundPhoneLinkProps = { className?: string };
+
+/** Header phone CTA: full sentence at 2xl+, icon + number between xl and 2xl. */
+export function HeaderInboundPhoneLink({ className }: HeaderInboundPhoneLinkProps) {
+  return (
+    <a
+      href={UFF_CONSUMER_PHONE_TEL}
+      className={className ? `header-tel ${className}` : "header-tel tel"}
+      aria-label={INBOUND_VOICE_AGENT_ARIA_LABEL}
+    >
+      <PhoneIcon />
+      <span className="header-tel-full">{INBOUND_VOICE_AGENT_CTA}</span>
+      <span className="header-tel-compact">{UFF_CONSUMER_PHONE}</span>
+    </a>
+  );
+}

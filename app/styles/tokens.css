@@ -109,6 +109,10 @@
   --gutter: clamp(20px, 4vw, 40px);
   --header-h: 72px;
 
+  /* Header responsive breakpoints (align with xl / 2xl) */
+  --bp-header-drawer: 1279px;
+  --bp-header-cta-full: 1536px;
+
   /* ---- Motion ---- */
   --ease: cubic-bezier(.2,.7,.2,1);
   --dur-fast: 140ms;
