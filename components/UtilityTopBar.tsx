@@ -1,5 +1,4 @@
-import { COMPANY_NMLS } from "@/lib/constants";
-import { UffPhoneLink } from "@/components/UffPhone";
+import { BORROWER_CONTACT_CHANNELS, COMPANY_NMLS } from "@/lib/constants";
 
 export function UtilityTopBar() {
   return (
@@ -8,7 +7,7 @@ export function UtilityTopBar() {
         <span className="util-bar-legal">
           A trade name of United Fidelity Funding Corp., NMLS #{COMPANY_NMLS}
         </span>
-        <UffPhoneLink className="util-bar-phone" />
+        <span className="util-bar-phone">We reach you by {BORROWER_CONTACT_CHANNELS}.</span>
       </div>
     </div>
   );

@@ -19,8 +19,9 @@ export default function WhyPage() {
       <p>
         Our agents are trained on every part of the mortgage process: intake, application, disclosures,
         processing, vendor orders, and closing coordination. They handle repetitive work quickly and
-        keep communication flowing. Mortgage professionals, including underwriters and licensed loan
-        officers, review exceptions, apply guidelines, and approve rate-related information.
+        keep communication flowing by email, text, and our voice agent. Mortgage professionals, including
+        underwriters and licensed loan officers, review exceptions, apply guidelines, and approve
+        rate-related information.
       </p>
       <h2>What agents do vs what humans do</h2>
       <ul>

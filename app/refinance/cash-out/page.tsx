@@ -16,8 +16,8 @@ export default function CashOutPage() {
       <MortgageCompanyIntro />
       <p>
         Cash-out refinances pay off your existing loan and give you funds at closing based on available
-        equity, credit, and program limits. Your loan balance and payment may increase. Talk with a
-        licensed loan officer about whether it fits your plan.
+        equity, credit, and program limits. Your loan balance and payment may increase. Licensed mortgage
+        professionals can help you weigh whether it fits your plan via email, text, or our voice agent.
       </p>
       <EligibilityNote />
     </ContentPage>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { EqualHousingLenderLogo } from "@/components/EqualHousingLenderLogo";
 import { UffPhoneLink } from "@/components/UffPhone";
-import { COMPANY_NMLS, NMLS_CONSUMER_ACCESS, TAGLINE } from "@/lib/constants";
+import { BORROWER_CONTACT_CHANNELS, COMPANY_NMLS, NMLS_CONSUMER_ACCESS, TAGLINE } from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
 import { LICENSED_STATES } from "@/lib/licenseStates";
 
@@ -33,7 +33,7 @@ const homeFaqContent = [
   },
   {
     q: "Is there a cost or obligation to start?",
-    a: "There is no cost or obligation to start online and talk through your options. If you move forward with an application, third-party costs such as an appraisal may apply, and they will be disclosed before you are asked to pay them.",
+    a: `There is no cost or obligation to start online and explore your options. Licensed mortgage professionals supervise your file and follow up by ${BORROWER_CONTACT_CHANNELS}. If you move forward with an application, third-party costs such as an appraisal may apply, and they will be disclosed before you are asked to pay them.`,
   },
 ];
 
@@ -156,7 +156,8 @@ export default function HomePage() {
           <h2 className="marketing-section-h">AI organizes. Humans decide.</h2>
           <p className="marketing-section-sub">
             Software helps collect and organize documents so nothing sits in a black box. Licensed mortgage
-            professionals guide you. Human underwriters make the credit decision.
+            professionals supervise your file and keep you updated by {BORROWER_CONTACT_CHANNELS}. Human
+            underwriters make the credit decision.
           </p>
           <div className="diff-grid">
             <article className="diff-card">
@@ -185,8 +186,11 @@ export default function HomePage() {
                 />
               </div>
               <div className="card-body">
-                <h3>Guidance from a professional</h3>
-                <p>A licensed person reviews your goals and options and stays with you through the process.</p>
+                <h3>Guidance from licensed pros</h3>
+                <p>
+                  Licensed mortgage professionals review your goals and options behind the scenes and send next
+                  steps by {BORROWER_CONTACT_CHANNELS}.
+                </p>
               </div>
             </article>
             <article className="diff-card">
@@ -367,8 +371,11 @@ export default function HomePage() {
               <p>Tell us whether you are buying or refinancing and share a few basics. Starting does not affect your credit score.</p>
             </article>
             <article className="step-card">
-              <h3>Review with a professional</h3>
-              <p>A mortgage professional looks at your goals and options with you and explains what comes next.</p>
+              <h3>Review and next steps</h3>
+              <p>
+                Licensed mortgage professionals review your goals and options and explain what comes next by{" "}
+                {BORROWER_CONTACT_CHANNELS}.
+              </p>
             </article>
             <article className="step-card">
               <h3>Share your documents</h3>
@@ -389,14 +396,14 @@ export default function HomePage() {
       <section className="marketing-block alt" id="people">
         <div className="marketing-wrap">
           <p className="marketing-kicker">People in the process</p>
-          <h2 className="marketing-section-h">You work with people, not only a form.</h2>
+          <h2 className="marketing-section-h">Licensed people supervise your loan, not only a form.</h2>
           <p className="marketing-section-sub">Photos are illustrative.</p>
           <div className="people-grid">
             <figure className="portrait">
               <Image src={marketingPhotos.advisorMeeting.src} alt={marketingPhotos.advisorMeeting.alt} width={800} height={560} />
               <figcaption>
                 <strong>Mortgage professionals</strong>
-                Licensed people who help you understand options, documents, and next steps.
+                Licensed people who review options and documents and send guidance by {BORROWER_CONTACT_CHANNELS}.
               </figcaption>
             </figure>
             <figure className="portrait">
@@ -479,15 +486,15 @@ export default function HomePage() {
         />
         <div className="cta-veil" aria-hidden />
         <div className="home-final-panel">
-          <h2>When you are ready, start online or call.</h2>
+          <h2>When you are ready, start online.</h2>
           <p>
-            A mortgage professional will review your goals with you. Starting does not affect your credit score, and it
-            is not a commitment to lend.
+            Licensed mortgage professionals supervise your file and follow up by {BORROWER_CONTACT_CHANNELS}. Starting
+            does not affect your credit score, and it is not a commitment to lend.
           </p>
           <Link href="/get-started" className="btn-marketing btn-lg-marketing">
             Get started
           </Link>
-          <UffPhoneLink className="phone-lg-marketing" />
+          <UffPhoneLink voiceAgent className="phone-lg-marketing" />
         </div>
       </section>
       </section>

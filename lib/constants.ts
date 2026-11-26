@@ -20,3 +20,7 @@ export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas Ci
 
 export const UFF_CONSUMER_PHONE = "(855) 953-2453";
 export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";
+
+/** How borrowers hear from HomeLoanAgents (no live human phone calls for sales). */
+export const BORROWER_CONTACT_CHANNELS =
+  "email, text, or our voice agent";

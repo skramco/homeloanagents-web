@@ -5,7 +5,7 @@ export const homeFaq = [
   },
   {
     q: "How do AI agents fit into my loan?",
-    a: "Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. You'll know you're working with agent-assisted tools.",
+    a: "Specialized agents are trained on mortgage workflow tasks to help move your file forward with speed and transparency. People supervise agents, review exceptions, and licensed loan officers handle rate-related approvals. We follow up by email, text, or our voice agent—not live sales calls.",
   },
   {
     q: "What does the flat origination fee include?",

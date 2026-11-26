@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AI_DISCLOSURE } from "@/lib/constants";
+import { AI_DISCLOSURE, BORROWER_CONTACT_CHANNELS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Get started",
@@ -13,8 +13,8 @@ export default function GetStartedPage() {
       <p>{AI_DISCLOSURE}</p>
       <p>
         The HomeLoanAgents borrower experience at homeloanagents.com is under construction. When it
-        launches, you will apply and work your loan here, with transparency about agent-assisted steps
-        and human supervision.
+        launches, you will apply and work your loan here, with transparency about agent-assisted steps,
+        human supervision, and updates by {BORROWER_CONTACT_CHANNELS}.
       </p>
       <p>
         This page is a placeholder. We are not collecting applications or personal information on this

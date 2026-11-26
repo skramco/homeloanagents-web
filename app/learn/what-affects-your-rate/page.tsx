@@ -17,7 +17,7 @@ export default function LearnArticle() {
       <p>
         For interactive planning, try our{" "}
         <Link href="/calculators">calculators</Link> or <Link href="/get-started">get started</Link> when
-        you&apos;re ready to talk about a real Loan Estimate.
+        you&apos;re ready to get started and receive a personalized Loan Estimate.
       </p>
     </ContentPage>
   );
