@@ -30,15 +30,16 @@ export function FooterDisclosure() {
         ). For licensing information, go to: www.nmlsconsumeraccess.org.
       </p>
       <p className="footer-ehl-line">
-        <EqualHousingLenderLogo /> Equal Housing Lender. Licensed in {LICENSED_STATES}. State license
+        <EqualHousingLenderLogo /> Equal Housing Lender. Loans available in {LICENSED_STATES}. State license
         details: <Link href="/licensing">Licensing &amp; Disclosures</Link>.
       </p>
       <p>
         <strong>Texas residents:</strong> see the{" "}
         <Link href="/licensing#texas">Texas Consumer Complaint Notice</Link>. <strong>California:</strong>{" "}
         Loans made or arranged pursuant to a California Financing Law license. <strong>New Jersey:</strong>{" "}
-        Licensed by the N.J. Department of Banking and Insurance. <strong>Colorado:</strong> Regulated by
-        the Division of Real Estate. <strong>Massachusetts:</strong> Mortgage Lender License #ML34381.{" "}
+        Licensed by the N.J. Department of Banking and Insurance. <strong>Colorado:</strong> Responsible
+        party: {MLO_NAME}, NMLS #{MLO_NMLS}, <UffPhoneLink />. Regulated by the Division of Real Estate.{" "}
+        <strong>Massachusetts:</strong> Mortgage Lender License #ML34381.{" "}
         <strong>Arizona:</strong> Mortgage Banker License #BK-2015110. <strong>Washington:</strong>{" "}
         Consumer Loan Company License #CL-34381. <strong>Virginia:</strong> NMLS ID # 34381
         (www.nmlsconsumeraccess.org).
