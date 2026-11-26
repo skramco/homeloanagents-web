@@ -275,7 +275,7 @@ export function ProgramTrustPage({ config }: ProgramTrustPageProps) {
               <p className="eyebrow">Illustrative example only</p>
               <h2 className="h2">Try the calculator</h2>
               <p className="lead">
-                This tool is for education only. It is not a loan offer, pre-approval, or rate quote. Actual payments and
+                This tool is for education only. It is not a loan offer, readiness letter, or rate quote. Actual payments and
                 affordability depend on underwriting, taxes, insurance, and program guidelines.
               </p>
             </header>

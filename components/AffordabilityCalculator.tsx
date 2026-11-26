@@ -31,7 +31,7 @@ export function AffordabilityCalculator() {
   return (
     <div className="calculator">
       <p className="calculator-note">
-        Illustrative only, not a pre-approval or affordability guarantee. We use a simple housing
+        Illustrative only, not a readiness letter or affordability promise. We use a simple housing
         budget estimate; your situation may differ.
       </p>
       <div className="calculator-grid">

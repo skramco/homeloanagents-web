@@ -7,8 +7,8 @@ const tabs = [
   {
     id: "t-buy",
     label: "Buy a home",
-    body: "Get a pre-approval reviewed by a person before you start making offers.",
-    primary: { href: "/buy/pre-approval", label: "Start my pre-approval" },
+    body: "Have a person review where you stand before you start making offers.",
+    primary: { href: "/buy/pre-approval", label: "Get started" },
     secondary: { href: "/loans/conventional", label: "Compare purchase loans" },
   },
   {

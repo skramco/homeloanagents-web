@@ -107,7 +107,7 @@ export const mortgageProcessGuide: LearnGuideConfig = {
   related: [
     { href: "/how-it-works", title: "How AI and humans share the work" },
     { href: "/learn/closing-costs", title: "Closing costs explained" },
-    { href: "/buy/pre-approval", title: "Pre-approval overview" },
+    { href: "/buy/pre-approval", title: "Check your readiness overview" },
   ],
   sideCta: {
     eyebrow: "Flat fee",
@@ -248,7 +248,7 @@ export const closingCostsGuide: LearnGuideConfig = {
       title: "Third-party and government charges",
       paragraphs: [
         "Appraisal, credit (if passed through), title, escrow, settlement, recording, and transfer taxes go to third parties or agencies.",
-        "FHA UFMIP, VA funding fees, and USDA guarantee fees are program-specific and separate from our lender fee.",
+        "FHA UFMIP, VA funding fees, and USDA program fees are program-specific and separate from our lender fee.",
       ],
     },
     {
@@ -308,13 +308,13 @@ export const affordGuide: LearnGuideConfig = {
     { id: "dti", label: "Debt-to-income" },
     { id: "down", label: "Down payment" },
     { id: "payment", label: "Total payment" },
-    { id: "preapproval", label: "Pre-approval vs. wish list" },
+    { id: "readiness", label: "Readiness vs. wish list" },
     { id: "tools", label: "Illustrative tools" },
   ],
   tldr: [
     "Lenders compare housing payment and total debts to gross income using program limits.",
     "Taxes, insurance, HOA, and mortgage insurance belong in the payment you stress-test.",
-    "Pre-approval letters reflect verified docs; calculators do not.",
+    "Readiness letters reflect verified docs; calculators do not.",
   ],
   blocks: [
     {
@@ -345,10 +345,10 @@ export const affordGuide: LearnGuideConfig = {
     },
     {
       type: "h2",
-      id: "preapproval",
-      title: "Pre-approval vs. shopping wish list",
+      id: "readiness",
+      title: "Readiness vs. shopping wish list",
       paragraphs: [
-        "A pre-approval review may issue a conditional maximum price. It is not a guarantee to lend at that amount on any home.",
+        "A readiness review may issue a conditional maximum price. It is subject to underwriting on the home you choose.",
         "Leave cushion for maintenance, savings, and life changes rather than shopping at the absolute maximum.",
       ],
     },
@@ -363,21 +363,21 @@ export const affordGuide: LearnGuideConfig = {
       id: "tools",
       title: "Next steps",
       paragraphs: [
-        `Use calculators for rough scenarios, then read about pre-approval. Questions go through ${BORROWER_CONTACT_CHANNELS}.`,
+        `Use calculators for rough scenarios, then read about readiness review. Questions go through ${BORROWER_CONTACT_CHANNELS}.`,
       ],
     },
   ],
   related: [
     { href: "/calculators/affordability", title: "Affordability calculator (illustrative)" },
-    { href: "/buy/pre-approval", title: "Pre-approval overview" },
+    { href: "/buy/pre-approval", title: "Check your readiness overview" },
     { href: "/learn/credit-score-basics", title: "Credit score basics" },
   ],
   sideCta: {
-    eyebrow: "Pre-approval",
+    eyebrow: "Readiness",
     title: "Budget before you shop",
-    body: "See how human-reviewed pre-approval fits our process.",
+    body: "See how human-reviewed readiness review fits our process.",
     href: "/buy/pre-approval",
-    linkLabel: "Pre-approval page →",
+    linkLabel: "Check your readiness →",
   },
 };
 
@@ -386,7 +386,7 @@ export const creditScoreGuide: LearnGuideConfig = {
   metadata: {
     title: "Credit score basics",
     description:
-      "How credit scores affect mortgage program eligibility and pricing tiers—with no score guarantees or rate offers.",
+      "How credit scores affect mortgage program eligibility and pricing tiers—with no score promises or rate offers.",
   },
   crumbLabel: "Credit scores",
   eyebrow: "Guide · Credit",

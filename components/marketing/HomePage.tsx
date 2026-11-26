@@ -475,7 +475,7 @@ function HomeFaqSection() {
   const faqs = [
     ["Are you a lender or a marketplace?", "We're a mortgage lender. HomeLoanAgents is a DBA of United Fidelity Funding Corp., NMLS #34381. We don't shop your information to a list of other lenders."],
     ["What does the $3,500 fee cover?", "Our flat lender origination fee covers underwriting, processing and the credit report. Third-party services (such as appraisal, title and settlement), government recording fees, prepaid items and escrow deposits are separate and itemized on your Loan Estimate."],
-    ["Does AI decide whether I'm approved?", "No. AI agents gather, organize and check documents and draft worksheets. A human underwriter reviews your complete file and makes the credit decision."],
+    ["Does AI decide whether I'm ready to close?", "No. AI agents gather, organize and check documents and draft worksheets. A human underwriter reviews your complete file and makes the credit decision."],
     ["Will starting online affect my credit?", "Exploring and starting online doesn't affect your credit score. If you apply, we'll tell you before a credit report is pulled as part of underwriting."],
     ["How fast can I close?", "Our process is designed to move faster because agents work on your file in parallel and around the clock. We don't promise a closing date, because timing also depends on your documents, the property, the appraisal and title."],
     [

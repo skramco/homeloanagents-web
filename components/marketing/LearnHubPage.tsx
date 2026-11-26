@@ -18,8 +18,8 @@ export function LearnHubPage() {
             <p className="eyebrow">Learning center</p>
             <h1 className="h1">Mortgage guides when you want them—not rate ads.</h1>
             <p className="lead">
-              Education on process, fees, credit, and affordability. These articles are not loan offers, pre-approvals, or
-              guarantees of approval or pricing.
+              Education on process, fees, credit, and affordability. These articles are not loan offers, readiness letters, or
+              promises of specific outcomes or pricing.
             </p>
             <div className="hero-actions">
               <Link href="/how-it-works" className="btn btn-primary">

@@ -5,8 +5,8 @@ import { BORROWER_CONTACT_CHANNELS } from "./constants";
 export function EligibilityNote() {
   return (
     <p className="compliance-note">
-      All programs are subject to underwriting and investor guidelines. We do not guarantee approval,
-      rates, or terms.
+      All programs are subject to underwriting and investor guidelines. Credit outcomes depend on documentation,
+      property, and market conditions; rates and terms vary.
     </p>
   );
 }

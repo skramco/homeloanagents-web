@@ -40,7 +40,7 @@ export function MarketingFooter() {
                 <Link href="/loans/jumbo">Jumbo</Link>
               </li>
               <li>
-                <Link href="/buy/pre-approval">Pre-approval</Link>
+                <Link href="/buy/pre-approval">Check your readiness</Link>
               </li>
             </ul>
           </div>
