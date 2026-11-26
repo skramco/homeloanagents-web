@@ -1,5 +1,6 @@
 import { FLAT_ORIGINATION_FEE } from "./constants";
 import { marketingPhotos } from "./marketingPhotos";
+import { programPhotoByPath, type ProgramTilePath } from "./programTilePhotos";
 
 export type MarketingPhoto = (typeof marketingPhotos)[keyof typeof marketingPhotos];
 
@@ -277,15 +278,30 @@ function baseRefiBreadcrumbs(programLabel: string): Breadcrumb[] {
 
 type PageSeed = Omit<
   ProgramTrustConfig,
-  "howItWorks" | "documentChecklist" | "timeline" | "reviewers" | "fees" | "faqLead"
+  "howItWorks" | "documentChecklist" | "timeline" | "reviewers" | "fees" | "faqLead" | "hero"
 > & {
+  hero: Omit<ProgramTrustConfig["hero"], "photo"> & { photo?: MarketingPhoto };
   fees?: Partial<ProgramTrustConfig["fees"]>;
   howItWorks?: Partial<ProgramTrustConfig["howItWorks"]>;
 };
 
+function heroPhotoForPath(path: string, fallback?: MarketingPhoto): MarketingPhoto {
+  if (path in programPhotoByPath) {
+    return programPhotoByPath[path as ProgramTilePath];
+  }
+  if (fallback) {
+    return fallback;
+  }
+  throw new Error(`Program trust page "${path}" needs a hero photo or an entry in programPhotoByPath.`);
+}
+
 function finishPage(seed: PageSeed): ProgramTrustConfig {
   return {
     ...seed,
+    hero: {
+      ...seed.hero,
+      photo: heroPhotoForPath(seed.path, seed.hero.photo),
+    },
     howItWorks: {
       headline: seed.howItWorks?.headline ?? "AI keeps the file moving. Humans decide.",
       lead:
@@ -341,7 +357,6 @@ export const conventionalProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Agency conventional",
     h1: "Conventional loans for buyers and homeowners who fit agency guidelines.",
     lead: "Conventional financing is the most common path for borrowers with documented income, acceptable credit, and a down payment that meets investor requirements. We help you see how agency guidelines apply before you shop or refinance.",
-    photo: marketingPhotos.familyLiving,
     secondaryCta: { href: "/pricing", label: "See flat lender fee" },
   },
   keyFacts: [
@@ -431,7 +446,6 @@ export const fhaProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "FHA insured",
     h1: "FHA loans when you want flexible down payment guidelines.",
     lead: "FHA loans are insured by the Federal Housing Administration and originated by licensed lenders like us. They can help qualified borrowers purchase or refinance with down payments that are often lower than many conventional options.",
-    photo: marketingPhotos.familyLiving,
   },
   keyFacts: [
     flatFeeFact,
@@ -493,7 +507,6 @@ export const vaProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "VA benefit",
     h1: "VA loans for borrowers with eligible military service.",
     lead: "VA loans are guaranteed by the U.S. Department of Veterans Affairs for qualifying borrowers. Benefits can include no down payment on many purchases and no monthly mortgage insurance, subject to program rules and lender guidelines.",
-    photo: marketingPhotos.buyPorch,
   },
   keyFacts: [
     {
@@ -569,7 +582,6 @@ export const jumboProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Above conforming limits",
     h1: "Jumbo loans when your balance exceeds agency caps.",
     lead: "Jumbo financing is designed for high-balance mortgages that do not fit conforming loan limits. Underwriting is often documentation-heavy, with emphasis on reserves, credit depth, and property type.",
-    photo: marketingPhotos.ctaDoorway,
   },
   keyFacts: [
     flatFeeFact,
@@ -636,7 +648,6 @@ export const fixedProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Payment stability",
     h1: "Fixed-rate mortgages with the same principal and interest each month.",
     lead: "A fixed-rate loan locks your note rate for the full term so principal and interest payments do not change with index movements. Taxes and insurance in escrow can still adjust.",
-    photo: marketingPhotos.advisorMeeting,
   },
   keyFacts: [
     flatFeeFact,
@@ -695,7 +706,6 @@ export const armProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Rate structure",
     h1: "ARM vs. fixed: know how your payment can change.",
     lead: "Adjustable-rate mortgages (ARMs) typically offer a fixed-rate introductory period, then adjust on a schedule based on an index plus margin. Fixed-rate loans keep the same principal and interest for the life of the loan.",
-    photo: marketingPhotos.refiTable,
     secondaryCta: { href: "/loans/fixed", label: "Fixed-rate overview" },
   },
   keyFacts: [
@@ -752,7 +762,6 @@ export const rateAndTermRefiProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Refinance",
     h1: "Rate-and-term refinance without cash out at closing.",
     lead: "A rate-and-term refinance replaces your existing mortgage with a new loan to change the rate, amortization, or both. Closing costs and prepaids apply; cash back at closing is limited to minor amounts per guidelines.",
-    photo: marketingPhotos.refiTable,
   },
   keyFacts: [
     flatFeeFact,
@@ -811,7 +820,6 @@ export const cashOutRefiProgramTrust: ProgramTrustConfig = finishPage({
     eyebrow: "Equity access",
     h1: "Cash-out refinance when you need funds from home equity.",
     lead: "Cash-out refinancing pays off your existing mortgage and provides cash at closing based on available equity, credit, and program loan-to-value limits. Uses include debt payoff, renovations, or other goals you document.",
-    photo: marketingPhotos.refiTable,
   },
   keyFacts: [
     flatFeeFact,
