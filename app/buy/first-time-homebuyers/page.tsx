@@ -1,30 +1,7 @@
-import type { Metadata } from "next";
-import { ContentPage } from "@/components/ContentPage";
-import { pageHeroByPath } from "@/lib/pageHeroImages";
-import { MortgageCompanyIntro, EligibilityNote } from "@/lib/pageSnippets";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { firstTimeBuyerProcessTrust } from "@/lib/processTrustContent";
 
-export const metadata: Metadata = { title: "First-time homebuyers" };
+const { metadata, ProgramPage } = createProgramPage(firstTimeBuyerProcessTrust);
 
-export default function FirstTimePage() {
-  return (
-    <ContentPage
-      title="First-time homebuyers"
-      lead="Guidance and financing for buyers new to the mortgage process, without promising a specific rate or approval."
-      heroImage={pageHeroByPath["/buy/first-time-homebuyers"]}
-      cta={{ href: "/get-started", label: "Get Started" }}
-    >
-      <MortgageCompanyIntro />
-      <p>
-        First-time buyers often need extra clarity on documents, timelines, and programs. Our agents are
-        trained to explain next steps; loan officers and underwriters review your file against program
-        guidelines. FHA and conventional options may be available depending on your profile.
-      </p>
-      <h2>Helpful resources</h2>
-      <p>
-        Explore our learning center for mortgage basics, affordability, and closing costs. Calculators can
-        help you plan, not replace a Loan Estimate.
-      </p>
-      <EligibilityNote />
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;

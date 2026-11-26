@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AffordabilityCalculator } from "@/components/AffordabilityCalculator";
+import { MortgagePaymentCalculator } from "@/components/MortgagePaymentCalculator";
 import type { ProgramTrustConfig } from "@/lib/programTrustContent";
 import { ProgramDocumentChecklist } from "./ProgramDocumentChecklist";
 import { ProgramSubnav, type ProgramSubnavItem } from "./ProgramSubnav";
@@ -264,6 +266,26 @@ export function ProgramTrustPage({ config }: ProgramTrustPageProps) {
           </div>
         </div>
       </section>
+
+      {config.embedIllustrativeTool ? (
+        <section className="section" id="calculator">
+          <div className="wrap narrow">
+            <header className="section-head">
+              <p className="eyebrow">Illustrative example only</p>
+              <h2 className="h2">Try the calculator</h2>
+              <p className="lead">
+                This tool is for education only. It is not a loan offer, pre-approval, or rate quote. Actual payments and
+                affordability depend on underwriting, taxes, insurance, and program guidelines.
+              </p>
+            </header>
+            {config.embedIllustrativeTool === "mortgage-payment" ? (
+              <MortgagePaymentCalculator />
+            ) : (
+              <AffordabilityCalculator />
+            )}
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section-warm" id="fees">
         <div className="wrap">

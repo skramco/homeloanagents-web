@@ -1,16 +1,7 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { ContentPage } from "@/components/ContentPage";
+import { createProgramPage } from "@/components/marketing/ProgramTrustPage";
+import { calculatorsHubProcessTrust } from "@/lib/processTrustContent";
 
-export const metadata: Metadata = { title: "Calculators" };
+const { metadata, ProgramPage } = createProgramPage(calculatorsHubProcessTrust);
 
-export default function CalculatorsIndex() {
-  return (
-    <ContentPage title="Mortgage calculators" lead="Illustrative tools only, not loan offers or pre-approvals.">
-      <ul>
-        <li><Link href="/calculators/mortgage-payment">Mortgage payment calculator</Link></li>
-        <li><Link href="/calculators/affordability">Affordability calculator</Link></li>
-      </ul>
-    </ContentPage>
-  );
-}
+export { metadata };
+export default ProgramPage;
