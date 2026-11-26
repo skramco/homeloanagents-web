@@ -14,10 +14,8 @@ export default function LicensingPage() {
 
       <h2>Company &amp; loan officer NMLS</h2>
       <ul>
-        <li>
-          United Fidelity Funding (DBA HomeLoanAgents): NMLS #[UFF NMLS #]
-        </li>
-        <li>Designated loan officer: NMLS #[Mark NMLS #]</li>
+        <li>United Fidelity Funding (DBA HomeLoanAgents): NMLS #34381</li>
+        <li>Designated loan officer: Mark Ramirez, NMLS #1192984 (MLO)</li>
       </ul>
       <p>
         Verify licensure at{" "}
