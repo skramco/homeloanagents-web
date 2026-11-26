@@ -39,7 +39,7 @@ export const refiMega: MegaMenuColumn = {
   links: [
     { href: "/refinance/rate-and-term", title: "Rate-and-term refinance", description: "Change your rate, term or both" },
     { href: "/refinance/cash-out", title: "Cash-out refinance", description: "Turn some of your equity into cash" },
-    { href: "/learn/mortgage-process", title: "Is refinancing worth it?", description: "A break-even walkthrough, with no rate pitch" },
+    { href: "/refinance", title: "Is refinancing worth it?", description: "A break-even walkthrough, with no rate pitch" },
   ],
   feature: {
     eyebrow: "Refinance pricing",
