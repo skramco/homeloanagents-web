@@ -16,7 +16,7 @@ export default function TermsPage() {
       <p>
         Content is provided for general information about HomeLoanAgents. It is not legal, tax, or
         investment advice. Loan terms are only established through official disclosures and agreements
-        you sign with United Fidelity Funding, DBA HomeLoanAgents, when eligible.
+        you sign with United Fidelity Funding Corp. (trade name HomeLoanAgents), when eligible.
       </p>
       <p>Last updated: November 2026 (placeholder).</p>
     </article>

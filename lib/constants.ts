@@ -1,12 +1,22 @@
-export const TAGLINE =
+export const TAGLINE = "Where mortgage intelligence meets super intelligence.";
+
+export const TAGLINE_SUPPORTING =
   "AI agents. Human supervision. Transparent workflow, costs, and pricing.";
 
 export const AI_DISCLOSURE = "You'll be working with AI agents, supervised by people.";
 
-export const FOOTER_LEGAL =
-  "HomeLoanAgents is a DBA of United Fidelity Funding. NMLS #34381. Loan officer NMLS #1192984 (Mark Ramirez, MLO). Equal Housing Opportunity.";
-
-export const LAUNCH_STATES = ["California", "Texas", "Florida"];
-
 export const NMLS_CONSUMER_ACCESS =
   "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/34381";
+
+export const FLAT_ORIGINATION_FEE = 3500;
+
+export const FLAT_FEE_LABEL = "Flat $3,500 lender origination fee.";
+
+export const COMPANY_NMLS = "34381";
+export const MLO_NMLS = "1192984";
+export const MLO_NAME = "Mark Ramirez";
+
+export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas City, MO 64150";
+
+export const UFF_CONSUMER_PHONE = "(855) 953-2453";
+export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";

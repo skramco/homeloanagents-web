@@ -3,12 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const navLinks = [
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/licensing", label: "Licensing" },
-];
+import { primaryNav } from "@/lib/navigation";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -34,18 +29,32 @@ export function SiteHeader() {
         </Link>
 
         <nav className={`nav ${open ? "nav-open" : ""}`} aria-label="Main">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="nav-link"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <ul className="nav-list">
+            {primaryNav.map((group) =>
+              group.children ? (
+                <li key={group.label} className="nav-item has-children">
+                  <span className="nav-group-label">{group.label}</span>
+                  <ul className="nav-submenu">
+                    {group.children.map((child) => (
+                      <li key={child.href}>
+                        <Link href={child.href} className="nav-sublink" onClick={() => setOpen(false)}>
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={group.label} className="nav-item">
+                  <Link href={group.href!} className="nav-link" onClick={() => setOpen(false)}>
+                    {group.label}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
           <Link href="/get-started" className="btn btn-primary nav-cta" onClick={() => setOpen(false)}>
-            Get started
+            Get Started
           </Link>
         </nav>
 
