@@ -9,7 +9,7 @@ const footerCols = [
     links: [
       { href: "/buy", label: "Buying a home" },
       { href: "/buy/first-time-homebuyers", label: "First-time buyers" },
-      { href: "/buy/pre-approval", label: "Pre-approval" },
+      { href: "/buy/pre-approval", label: "Check your readiness" },
     ],
   },
   {

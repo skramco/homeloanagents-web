@@ -18,11 +18,11 @@ export const homeFaq = [
     a: "Flat $3,500 lender origination fee covers underwriting, processing, and the credit report, the same amount whether your loan is about $300,000 or $1,500,000. Third-party costs are separate and shown on your Loan Estimate.",
   },
   {
-    q: "Do you guarantee a specific rate or fastest closing?",
+    q: "Do you promise a specific rate or fastest closing?",
     a: "No. We focus on clear communication and efficient, supervised workflows designed to help files move faster, but timing and pricing depend on your loan, documentation, investors, and market conditions.",
   },
   {
     q: "What loan types do you offer?",
-    a: "We work with conventional, FHA, VA, USDA, jumbo, and other programs for many borrower profiles, including bank statement and self-employed scenarios where available. Eligibility is subject to underwriting; we do not guarantee approval.",
+    a: "We work with conventional, FHA, VA, USDA, jumbo, and other programs for many borrower profiles, including bank statement and self-employed scenarios where available. Eligibility is subject to underwriting.",
   },
 ];

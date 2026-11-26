@@ -12,7 +12,7 @@ export const primaryNav: NavGroup[] = [
     children: [
       { href: "/buy", label: "Buying a home", description: "Purchase overview" },
       { href: "/buy/first-time-homebuyers", label: "First-time homebuyers" },
-      { href: "/buy/pre-approval", label: "Pre-approval" },
+      { href: "/buy/pre-approval", label: "Check your readiness" },
     ],
   },
   {

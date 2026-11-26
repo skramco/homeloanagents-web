@@ -7,11 +7,11 @@ import {
 import { finishPage, type SiblingLink } from "./programTrustContent";
 
 const closingCompliance =
-  "HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, a licensed mortgage lender. This page is educational and not a commitment to lend. Rates, payments, and program availability vary and are not guaranteed.";
+  "HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, a licensed mortgage lender. This page is educational and not a commitment to lend. Rates, payments, and program availability vary and are subject to underwriting.";
 
 function buySiblings(current: string): SiblingLink[] {
   const links: SiblingLink[] = [
-    { href: "/buy/pre-approval", title: "Pre-approval", description: "Human-reviewed budget letter before you shop" },
+    { href: "/buy/pre-approval", title: "Check your readiness", description: "Human-reviewed budget letter before you shop" },
     {
       href: "/buy/first-time-homebuyers",
       title: "First-time buyers",
@@ -50,8 +50,8 @@ export const buyHubProcessTrust = finishPage({
   hero: {
     eyebrow: "Purchase",
     h1: "Buy a home with a supervised, agent-assisted mortgage process.",
-    lead: `Whether you are upgrading, relocating, or buying your first home, we structure purchase financing with clear status updates by ${BORROWER_CONTACT_CHANNELS}. We do not guarantee approvals, rates, or closing timelines.`,
-    secondaryCta: { href: "/buy/pre-approval", label: "Pre-approval overview" },
+    lead: `Whether you are upgrading, relocating, or buying your first home, we structure purchase financing with clear status updates by ${BORROWER_CONTACT_CHANNELS}. Rates, closing timelines, and credit outcomes depend on underwriting and documentation.`,
+    secondaryCta: { href: "/buy/pre-approval", label: "Readiness overview" },
   },
   keyFacts: [
     {
@@ -68,7 +68,7 @@ export const buyHubProcessTrust = finishPage({
     headline: "When our purchase workflow is a fit",
     lead: "We work best with borrowers who want transparent fees, organized document collection, and licensed professionals accountable for credit decisions.",
     bodyParagraphs: [
-      "You may be comparing loan types, finishing a pre-approval, or ready to make an offer. AI agents accelerate intake and checklist management; humans review exceptions and underwrite the file.",
+      "You may be comparing loan types, finishing a readiness review, or ready to make an offer. AI agents accelerate intake and checklist management; humans review exceptions and underwrite the file.",
       AI_DISCLOSURE,
       "Marketing pages do not quote rates or payments. Your Loan Estimate shows costs and terms after you start an application.",
     ],
@@ -82,13 +82,13 @@ export const buyHubProcessTrust = finishPage({
       { title: "Down payment", body: "Minimums depend on loan type, occupancy, and whether mortgage insurance applies." },
       { title: "Property type", body: "Single-family, condo, and multi-unit homes may qualify with different review steps." },
       { title: "Contract timing", body: "Purchase deadlines affect how quickly documents and appraisal must be completed." },
-      { title: "Pre-approval depth", body: "A pre-approval letter may help your offer; it is not a guarantee to lend at any price." },
+      { title: "Readiness depth", body: "A budget letter may help your offer; it is subject to underwriting and verification on the home you choose." },
     ],
     footnote:
-      "All purchase loans are subject to underwriting, appraisal, investor guidelines, and documentation. We do not guarantee approval, rates, terms, or closing timelines.",
+      "All purchase loans are subject to underwriting, appraisal, investor guidelines, and documentation. Rates, terms, and closing timelines depend on your file and market conditions.",
   },
   faqs: [
-    { q: "Do I need a pre-approval before I shop?", a: "Many sellers expect evidence you can finance the purchase. A pre-approval review may help you set a budget; it is not a guarantee to lend." },
+    { q: "Should I check readiness before I shop?", a: "Many sellers expect evidence you can finance the purchase. A readiness review may help you set a budget; final terms come from underwriting and your Loan Estimate." },
     { q: "How is your lender fee structured?", a: "We charge a $3,500 flat lender origination fee on purchase loans we originate, disclosed in Section A of your Loan Estimate." },
     { q: "Can agents see my documents?", a: "AI agents organize uploads in your secure file. Licensed staff access documents for underwriting and compliance." },
     { q: "Will I get rate quotes on this website?", a: "No. Rates and payments appear on formal disclosures after you apply, subject to lock policies and market conditions." },
@@ -106,19 +106,19 @@ export const preApprovalProcessTrust = finishPage({
   slug: "pre-approval",
   path: "/buy/pre-approval",
   metadata: {
-    title: "Pre-approval",
+    title: "Check your readiness",
     description:
-      "Understand pre-approval before you shop: income and asset verification, human review, flat lender fee, and what a pre-approval letter does and does not guarantee.",
+      "Understand readiness review before you shop: income and asset verification, human review, flat lender fee, and what a budget letter does and does not promise.",
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Buy a home", href: "/buy" },
-    { label: "Pre-approval" },
+    { label: "Check your readiness" },
   ],
   hero: {
     eyebrow: "Before you shop",
-    h1: "Pre-approval: know your budget range before you write an offer.",
-    lead: "A pre-approval review verifies income, assets, and credit as needed so you can house-hunt with a clearer picture. Final approval still requires a purchase contract, appraisal, and full underwriting. Pre-approval is not a guarantee to lend.",
+    h1: "Check your readiness: know your budget range before you write an offer.",
+    lead: "A readiness review verifies income, assets, and credit as needed so you can house-hunt with a clearer picture. Final underwriting still requires a purchase contract, appraisal, and full file review. A budget letter is subject to verification and is not a commitment to lend.",
     secondaryCta: { href: "/pricing", label: "See flat lender fee" },
   },
   keyFacts: [
@@ -128,22 +128,22 @@ export const preApprovalProcessTrust = finishPage({
       d: "Applies when you originate with us; disclosed on your Loan Estimate.",
       highlight: true,
     },
-    { k: "Letter", v: "Not final approval", d: "Shows a conditional budget range sellers may request with an offer." },
+    { k: "Letter", v: "Not final underwriting", d: "Shows a conditional budget range sellers may request with an offer." },
     { k: "Review", v: "Human supervision", d: "Licensed staff review the file before a letter is issued." },
     { k: "Credit", v: "Authorized pull", d: "Full applications include credit authorization explained before any pull." },
   ],
   fit: {
-    headline: "Who pre-approval helps",
-    lead: "Pre-approval fits buyers who want confidence about program fit and maximum price range before touring homes.",
+    headline: "Who readiness review helps",
+    lead: "Readiness review fits buyers who want a clearer picture of program fit and maximum price range before touring homes.",
     bodyParagraphs: [
-      "Sellers and agents often ask for a pre-approval letter with an offer. We review your documentation and credit within program guidelines, then issue a letter stating conditions.",
-      "If your scenario changes, job, debts, or scores, refresh the pre-approval before you raise your offer price.",
-      `We follow up by ${BORROWER_CONTACT_CHANNELS} with document requests and status. We do not promise instant approval.`,
+      "Sellers and agents often ask for a budget letter with an offer. We review your documentation and credit within program guidelines, then issue a letter stating conditions.",
+      "If your scenario changes, job, debts, or scores, refresh your readiness review before you raise your offer price.",
+      `We follow up by ${BORROWER_CONTACT_CHANNELS} with document requests and status. Timing depends on documentation and review.`,
     ],
     siblings: buySiblings("/buy/pre-approval"),
   },
   eligibility: {
-    headline: "What we verify for pre-approval",
+    headline: "What we verify for readiness review",
     cards: [
       { title: "Income", body: "Pay stubs, W-2s, tax returns, or business documentation depending on employment type." },
       { title: "Assets", body: "Bank and investment statements for down payment and reserves." },
@@ -153,16 +153,16 @@ export const preApprovalProcessTrust = finishPage({
       { title: "Property assumptions", body: "Letters often assume primary residence; investment or second-home rules differ." },
     ],
     footnote:
-      "Pre-approval letters are conditional and expire. Property, appraisal, and final underwriting may change or deny the loan.",
+      "Budget letters are conditional and expire. Property, appraisal, and final underwriting may change outcomes on your loan.",
   },
   faqs: [
-    { q: "Is pre-approval the same as final approval?", a: "No. Final approval requires a complete file, acceptable appraisal, and underwriter sign-off on your specific transaction." },
+    { q: "Is readiness review the same as final underwriting?", a: "No. Final underwriting requires a complete file, acceptable appraisal, and underwriter sign-off on your specific transaction." },
     { q: "How long is a letter valid?", a: "Expiration dates vary; credit, income, and program guidelines can also change. Refresh if your offer price or debts change." },
-    { q: "Will pre-approval hurt my credit?", a: "A full application includes a credit pull authorized by you. Exploring marketing content does not pull credit." },
-    { q: "Can I get pre-approved without a property?", a: "Yes. Letters often state a maximum purchase price and loan amount subject to finding an eligible property." },
+    { q: "Will readiness review hurt my credit?", a: "A full application includes a credit pull authorized by you. Exploring marketing content does not pull credit." },
+    { q: "Can I get a budget letter without a property?", a: "Yes. Letters often state a maximum purchase price and loan amount subject to finding an eligible property." },
     { q: "What is the lender fee?", a: "Our $3,500 flat origination fee is disclosed when you apply and receive a Loan Estimate." },
-    { q: "Who reviews my pre-approval?", a: "Licensed loan officers and underwriters supervise; AI agents organize documents." },
-    { q: "Do you guarantee the letter amount?", a: "No. The letter reflects current findings and may change if documentation, credit, or guidelines shift." },
+    { q: "Who reviews my readiness file?", a: "Licensed loan officers and underwriters supervise; AI agents organize documents." },
+    { q: "Is the letter amount fixed?", a: "No. The letter reflects current findings and may change if documentation, credit, or guidelines shift." },
   ],
   closingCompliance,
 });
@@ -173,7 +173,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
   metadata: {
     title: "First-time homebuyers",
     description:
-      "First-time buyer guide: milestones from pre-approval through closing, documents, flat lender fee, FAQs, and supervised AI-assisted processing.",
+      "First-time buyer guide: milestones from readiness review through closing, documents, flat lender fee, FAQs, and supervised AI-assisted processing.",
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -202,7 +202,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
     lead: "Expect document collection, disclosures, appraisal, and underwriting, not an instant approval button.",
     bodyParagraphs: [
       "Many first-time buyers use FHA or low-down conventional programs when guidelines allow. Mortgage insurance or FHA premiums may apply depending on structure.",
-      "Down payment assistance may exist locally; we do not guarantee availability. Your Loan Estimate shows cash needed to close.",
+      "Down payment assistance may exist locally; availability varies by program. Your Loan Estimate shows cash needed to close.",
       `We provide updates by ${BORROWER_CONTACT_CHANNELS} as your file moves from application to closing.`,
     ],
     siblings: buySiblings("/buy/first-time-homebuyers"),
@@ -218,7 +218,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
       { title: "Escrow basics", body: "Taxes and insurance are often collected monthly even when the note rate is fixed." },
     ],
     footnote:
-      "We do not guarantee approval, grants, rates, or closing timelines. Investor and program rules apply.",
+      "Grants, rates, and closing timelines depend on underwriting, investors, and program rules.",
   },
   faqs: [
     { q: "Do I have to be a true first-time buyer?", a: "Program definitions vary. Some government programs define first-time status by years since prior homeownership." },
@@ -266,7 +266,7 @@ export const howItWorksProcessTrust = finishPage({
     lead: "Borrowers who want faster organization without giving up human accountability for lending decisions.",
     bodyParagraphs: [
       AI_DISCLOSURE,
-      "We do not guarantee approvals, rates, terms, or closing timelines. Marketing content is educational; your Loan Estimate and Closing Disclosure govern your transaction.",
+      "Rates, terms, and closing timelines depend on your file and market conditions. Marketing content is educational; your Loan Estimate and Closing Disclosure govern your transaction.",
       "Agents may draft borrower communications about documents and milestones. Licensed staff review rate-related and credit-related messages before you see them, per our policies.",
     ],
     siblings: [
@@ -385,7 +385,7 @@ export const refinanceHubProcessTrust = finishPage({
   },
   faqs: [
     { q: "Is the lender fee the same on a refinance?", a: "Yes. We use a $3,500 flat lender origination fee on refinances we originate, plus third-party charges on your Loan Estimate." },
-    { q: "How do I compare break-even?", a: "Divide total closing costs by monthly payment savings on your Loan Estimate. Hold period matters; we do not guarantee savings." },
+    { q: "How do I compare break-even?", a: "Divide total closing costs by monthly payment savings on your Loan Estimate. Hold period matters; savings are not certain until you reach break-even." },
     { q: "Can I skip payments?", a: "You may skip one monthly payment timing, but prepaids and per-diem interest still apply." },
     { q: "What is the difference between cash-out and rate-and-term?", a: "Cash-out increases your loan balance to deliver funds at closing when allowed. Rate-and-term focuses on rate or term without large cash back." },
     { q: "Will you quote rates here?", a: "No. Formal disclosures show rate and APR after you apply." },
@@ -414,7 +414,7 @@ export const usdaProgramTrust = finishPage({
   hero: {
     eyebrow: "USDA Rural Development",
     h1: "USDA loans for eligible rural and suburban properties.",
-    lead: "USDA guaranteed loans support income-qualified borrowers in USDA-eligible areas. Benefits may include no down payment when guidelines and capacity are met. We originate USDA loans; USDA sets eligibility maps and income limits.",
+    lead: "USDA Rural Development loans support income-qualified borrowers in USDA-eligible areas. Benefits may include no down payment when guidelines and capacity are met. We originate USDA loans; USDA sets eligibility maps and income limits.",
     secondaryCta: { href: "/buy/first-time-homebuyers", label: "First-time buyer guide" },
   },
   keyFacts: [
@@ -426,20 +426,20 @@ export const usdaProgramTrust = finishPage({
     },
     { k: "Location", v: "Eligible areas", d: "USDA maps define eligible rural and suburban addresses." },
     { k: "Income", v: "Household limits", d: "Combined household income must fall within USDA caps for the area." },
-    { k: "Down payment", v: "Often $0", d: "When guidelines and capacity are met; not guaranteed." },
+    { k: "Down payment", v: "Often $0", d: "When guidelines and capacity are met; subject to underwriting." },
   ],
   fit: {
     headline: "When USDA may fit",
     lead: "USDA suits moderate-income households buying in eligible areas who want low or no down payment when program rules allow.",
     bodyParagraphs: [
       "Properties must be in USDA-eligible locations and meet occupancy requirements. Income calculations include all adult household earners in many cases.",
-      "USDA loans include upfront and annual guarantee fees separate from our lender fee. Your Loan Estimate lists each charge.",
-      "We are not a government agency. USDA Rural Development guarantees a portion of the loan; we underwrite and originate.",
+      "USDA loans include upfront and annual program fees separate from our lender fee. Your Loan Estimate lists each charge.",
+      "We are not a government agency. USDA Rural Development backs a portion of the loan; we underwrite and originate.",
     ],
     siblings: [
       { href: "/loans/conventional", title: "Conventional", description: "Agency loans outside USDA areas" },
       { href: "/loans/fha", title: "FHA", description: "Another low-down option in non-USDA areas" },
-      { href: "/buy/pre-approval", title: "Pre-approval", description: "Check budget before you shop" },
+      { href: "/buy/pre-approval", title: "Check your readiness", description: "Check budget before you shop" },
       { href: "/loans/non-qm", title: "Bank statement", description: "Alternative documentation when offered" },
     ].map((l) => ({ ...l, current: l.href === "/loans/usda" })),
   },
@@ -450,28 +450,28 @@ export const usdaProgramTrust = finishPage({
       { title: "Household income", body: "Income limits vary by county and household size." },
       { title: "Occupancy", body: "Generally must be your primary residence." },
       { title: "Credit", body: "USDA expects acceptable credit history; lenders apply overlays." },
-      { title: "Guarantee fees", body: "Upfront and annual fees apply per USDA rules in addition to lender and third-party costs." },
+      { title: "USDA program fees", body: "Upfront and annual fees apply per USDA rules in addition to lender and third-party costs." },
       { title: "Property condition", body: "Homes must meet safety and livability standards on appraisal." },
     ],
     footnote:
-      "USDA eligibility, income limits, and guarantee fees change with program rules. Approval is not guaranteed.",
+      "USDA eligibility, income limits, and program fees change with program rules. Outcomes depend on underwriting.",
   },
   programNotes: [
     {
       title: "Not a government website",
-      body: "United Fidelity Funding Corp. is a private lender. USDA Rural Development administers the guarantee program; we are not affiliated with USDA.",
+      body: "United Fidelity Funding Corp. is a private lender. USDA Rural Development administers the program; we are not affiliated with USDA.",
       variant: "honest",
     },
   ],
   fees: {
-    lead: "Our $3,500 flat lender origination fee applies to USDA loans we originate. USDA guarantee fees and third-party closing costs are separate line items on your Loan Estimate.",
+    lead: "Our $3,500 flat lender origination fee applies to USDA loans we originate. USDA program fees and third-party closing costs are separate line items on your Loan Estimate.",
   },
   faqs: [
     { q: "How do I check if an address is eligible?", a: "USDA publishes eligibility maps. We verify eligibility during your application; maps can change." },
-    { q: "Is there really no down payment?", a: "Many USDA loans allow zero down when income, credit, and property guidelines are met. Closing costs and guarantee fees may still require cash." },
-    { q: "What are USDA guarantee fees?", a: "Upfront and annual guarantee fees fund the program. They appear on your Loan Estimate separate from our lender fee." },
+    { q: "Is there really no down payment?", a: "Many USDA loans allow zero down when income, credit, and property guidelines are met. Closing costs and USDA program fees may still require cash." },
+    { q: "What are USDA program fees?", a: "Upfront and annual USDA fees fund the program. They appear on your Loan Estimate separate from our lender fee." },
     { q: "Can I use USDA on a refinance?", a: "USDA offers refinance options when guidelines are met; availability depends on your current loan and occupancy." },
-    { q: "Do you guarantee approval?", a: "No. USDA guarantee does not replace underwriting. We must verify income, credit, and property." },
+    { q: "Does USDA backing mean automatic underwriting clearance?", a: "No. USDA program rules do not replace underwriting. We must verify income, credit, and property." },
     { q: "Who makes the decision?", a: "A human underwriter at our company issues the credit decision." },
     {
       q: "How do I ask questions?",
@@ -523,7 +523,7 @@ export const nonQmProgramTrust = finishPage({
       { href: "/loans/jumbo", title: "Jumbo", description: "High-balance documentation-heavy loans" },
       { href: "/loans/conventional", title: "Conventional", description: "Full-doc path when tax returns qualify" },
       { href: "/loans/fha", title: "FHA", description: "Self-employed still need tax returns" },
-      { href: "/buy/pre-approval", title: "Pre-approval", description: "Start with a realistic budget review" },
+      { href: "/buy/pre-approval", title: "Check your readiness", description: "Start with a realistic budget review" },
     ].map((l) => ({ ...l, current: l.href === "/loans/non-qm" })),
   },
   eligibility: {
@@ -537,7 +537,7 @@ export const nonQmProgramTrust = finishPage({
       { title: "Compliance", body: "Ability-to-repay rules still apply; documentation must support repayment." },
     ],
     footnote:
-      "Non-QM programs vary by investor. Availability, pricing, and approval are not guaranteed.",
+      "Non-QM programs vary by investor. Availability, pricing, and outcomes depend on underwriting.",
   },
   programNotes: [
     {
@@ -564,7 +564,7 @@ export const calculatorsHubProcessTrust = finishPage({
   metadata: {
     title: "Mortgage calculators",
     description:
-      "Illustrative mortgage payment and affordability calculators. Educational tools only, not loan offers or pre-approvals.",
+      "Illustrative mortgage payment and affordability calculators. Educational tools only, not loan offers or readiness letters.",
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -573,12 +573,12 @@ export const calculatorsHubProcessTrust = finishPage({
   hero: {
     eyebrow: "Illustrative tools",
     h1: "Mortgage calculators for rough planning—not loan offers.",
-    lead: "Use these tools to explore hypothetical payments and budgets. They do not pull credit, guarantee approval, or quote rates. Your Loan Estimate is the official disclosure.",
+    lead: "Use these tools to explore hypothetical payments and budgets. They do not pull credit, issue readiness letters, or quote rates. Your Loan Estimate is the official disclosure.",
     secondaryCta: { href: "/learn", label: "Read mortgage guides" },
   },
   keyFacts: [
     { k: "Purpose", v: "Education", d: "Hypothetical math for planning conversations with your file team.", highlight: true },
-    { k: "Not a", v: "Pre-approval", d: "Starting a calculator does not apply you for a loan." },
+    { k: "Not a", v: "Readiness letter", d: "Starting a calculator does not apply you for a loan." },
     { k: "Rates", v: "You enter them", d: "Default numbers are placeholders, not advertised offers." },
     { k: "Next step", v: "Loan Estimate", d: "Formal disclosures show real payments and costs." },
   ],
@@ -635,7 +635,7 @@ export const mortgagePaymentCalculatorTrust = finishPage({
   hero: {
     eyebrow: "Illustrative example",
     h1: "Estimate a principal and interest payment.",
-    lead: "Type a home price, down payment, term, and hypothetical rate. The result is math only—not an approval, APR quote, or payment guarantee.",
+    lead: "Type a home price, down payment, term, and hypothetical rate. The result is math only—not an underwriting decision, APR quote, or promised payment.",
     secondaryCta: { href: "/calculators/affordability", label: "Affordability calculator" },
   },
   keyFacts: [
@@ -663,7 +663,7 @@ export const mortgagePaymentCalculatorTrust = finishPage({
       { title: "Escrow", body: "Most borrowers escrow taxes and insurance, changing the monthly bill." },
       { title: "MI & MIP", body: "Low-down programs may require monthly or upfront mortgage insurance." },
       { title: "APR", body: "APR reflects some costs and timing; this tool does not calculate APR." },
-      { title: "Locks", body: "Your note rate is not guaranteed until disclosed lock terms apply." },
+      { title: "Locks", body: "Your note rate is set only when disclosed lock terms apply." },
       { title: "DTI", body: "Underwriting compares payment to verified income and debts." },
       { title: "Reserves", body: "Assets after closing may be required even if the payment looks affordable." },
     ],
@@ -671,11 +671,11 @@ export const mortgagePaymentCalculatorTrust = finishPage({
   },
   embedIllustrativeTool: "mortgage-payment",
   faqs: [
-    { q: "Is this payment guaranteed?", a: "No. It is hypothetical principal and interest from your inputs." },
+    { q: "Is this payment exact?", a: "No. It is hypothetical principal and interest from your inputs." },
     { q: "Does it include our lender fee?", a: "No. Origination and other closing costs appear on a Loan Estimate, not in this monthly math." },
     { q: "What rate should I enter?", a: "Use a placeholder for planning. We do not publish live rates on marketing pages." },
     { q: "Why is my real payment higher?", a: "Taxes, insurance, mortgage insurance, and HOA dues are commonly added to P&I." },
-    { q: "Can this pre-approve me?", a: "No. Pre-approval requires application, credit authorization, and human review." },
+    { q: "Can this issue a readiness letter?", a: "No. A readiness letter requires application, credit authorization, and human review." },
   ],
   closingCompliance,
 });
@@ -706,14 +706,14 @@ export const affordabilityCalculatorTrust = finishPage({
   ],
   fit: {
     headline: "Pair the calculator with education",
-    lead: "Use results as a conversation starter before pre-approval, not as a maximum offer amount.",
+    lead: "Use results as a conversation starter before readiness review, not as a maximum offer amount.",
     bodyParagraphs: [
       "Read our affordability guide for how reserves, gift funds, and program choice change what you can finance.",
       "Your licensed loan team confirms numbers on your Loan Estimate after you apply.",
     ],
     siblings: [
       { href: "/calculators/mortgage-payment", title: "Payment calculator", description: "Test payment at a given price" },
-      { href: "/buy/pre-approval", title: "Pre-approval", description: "Human-reviewed budget letter" },
+      { href: "/buy/pre-approval", title: "Check your readiness", description: "Human-reviewed budget letter" },
       { href: "/learn/credit-score-basics", title: "Credit basics", description: "How scores affect options" },
     ].map((l) => ({ ...l, current: l.href === "/calculators/affordability" })),
   },
@@ -735,7 +735,7 @@ export const affordabilityCalculatorTrust = finishPage({
     { q: "What DTI do lenders use?", a: "Programs set front-end and back-end ratio limits with overlays; this tool uses a conservative illustrative approach." },
     { q: "Should I max out the result?", a: "Many borrowers stay below the illustrative cap to leave room for maintenance and savings." },
     { q: "Does it include the flat lender fee?", a: "Closing costs affect cash to close; this tool focuses on payment affordability, not fee lines." },
-    { q: "What's the next step?", a: "Explore pre-approval education or start an application when the portal launches." },
+    { q: "What's the next step?", a: "Explore readiness education or start an application when the portal launches." },
   ],
   closingCompliance,
 });

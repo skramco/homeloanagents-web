@@ -111,10 +111,10 @@ const flatFeeFact: KeyFact = {
 };
 
 const complianceFootnote =
-  "All programs are subject to underwriting, investor guidelines, property appraisal, and documentation. We do not guarantee approval, rates, terms, or closing timelines.";
+  "All programs are subject to underwriting, investor guidelines, property appraisal, and documentation. Rates, terms, and closing timelines depend on your file and market conditions.";
 
 const closingCompliance =
-  "HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, a licensed mortgage lender. This page is educational and not a commitment to lend. Rates, payments, and program availability vary and are not guaranteed.";
+  "HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, a licensed mortgage lender. This page is educational and not a commitment to lend. Rates, payments, and program availability vary and are subject to underwriting.";
 
 const standardDocumentGroups: DocumentChecklistGroup[] = [
   {
@@ -325,7 +325,7 @@ export function finishPage(seed: PageSeed): ProgramTrustConfig {
     },
     timeline: {
       headline: "Typical milestones",
-      lead: "Timelines vary with market conditions, appraisal scheduling, and how quickly documents are provided. This is a general map, not a guarantee.",
+      lead: "Timelines vary with market conditions, appraisal scheduling, and how quickly documents are provided. This is a general map, not a promise of timing.",
       steps: standardTimeline,
     },
     reviewers: {
@@ -496,7 +496,7 @@ export const fhaProgramTrust: ProgramTrustConfig = finishPage({
     { q: "What credit score do I need?", a: "FHA has published minimums, but lenders may set higher floors. We review your full file, not a single number." },
     { q: "Is the $3,500 fee the only cost?", a: `The ${flatFeeAmount} flat fee is our lender origination charge. Appraisal, title, recording, prepaids, and FHA UFMIP are separate line items on your Loan Estimate.` },
     { q: "Can I remove FHA mortgage insurance?", a: "FHA MIP rules differ from conventional PMI. For many FHA loans, MIP remains for the life of the loan unless you refinance out of FHA or meet specific legacy removal rules." },
-    { q: "Do you guarantee approval?", a: "No. FHA insurance does not guarantee loan approval; underwriting must still verify eligibility and property condition." },
+    { q: "Does FHA insurance replace underwriting?", a: "No. FHA insurance does not replace underwriting; we must still verify eligibility and property condition." },
   ],
   closingCompliance,
 });
@@ -513,7 +513,7 @@ export const vaProgramTrust: ProgramTrustConfig = finishPage({
   hero: {
     eyebrow: "VA benefit",
     h1: "VA loans for borrowers with eligible military service.",
-    lead: "VA loans are guaranteed by the U.S. Department of Veterans Affairs for qualifying borrowers. Benefits can include no down payment on many purchases and no monthly mortgage insurance, subject to program rules and lender guidelines.",
+    lead: "VA loans are backed by the U.S. Department of Veterans Affairs for qualifying borrowers. Benefits can include no down payment on many purchases and no monthly mortgage insurance, subject to program rules and lender guidelines.",
   },
   keyFacts: [
     {
@@ -568,7 +568,7 @@ export const vaProgramTrust: ProgramTrustConfig = finishPage({
     { q: "Do you charge $3,500 on every VA loan?", a: `We use a ${flatFeeAmount} flat lender origination fee on VA loans we originate, subject to program limits, state rules, and your specific Loan Estimate. Third-party and VA fees are listed separately.` },
     { q: "Can I reuse my VA benefit?", a: "Entitlement can be restored after paying off a VA loan and disposing of the property, or when another qualified veteran assumes your loan, subject to VA rules." },
     { q: "What is a VA IRRRL?", a: "An Interest Rate Reduction Refinance Loan streamlines refinancing an existing VA loan when guidelines are met. Credit and appraisal rules differ from a purchase." },
-    { q: "Who approves my VA loan?", a: "We originate the loan; the VA guarantees a portion against loss. A human underwriter at our company makes the credit decision." },
+    { q: "Who decides on my VA loan?", a: "We originate the loan; the VA backs a portion against loss. A human underwriter at our company makes the credit decision." },
     { q: "Are VA loans only for first-time buyers?", a: "No. Eligible borrowers may use the benefit multiple times when entitlement is available." },
     { q: "Will I pay monthly mortgage insurance?", a: "VA loans do not have monthly mortgage insurance like FHA or conventional PMI, though the funding fee and lender fees still apply." },
   ],
@@ -632,7 +632,7 @@ export const jumboProgramTrust: ProgramTrustConfig = finishPage({
   },
   faqs: [
     { q: "What is the conforming loan limit?", a: "FHFA publishes annual limits by county. Amounts above that threshold generally require jumbo or other non-conforming financing." },
-    { q: "Why do jumbo loans need more documentation?", a: "Investors who buy jumbo loans take property and recession risk without agency guarantees, so they require stronger proof of repayment ability." },
+    { q: "Why do jumbo loans need more documentation?", a: "Investors who buy jumbo loans take property and recession risk without agency backing, so they require stronger proof of repayment ability." },
     { q: "Is your fee still $3,500 on a jumbo?", a: `Yes. Our lender origination fee is ${flatFeeAmount} flat on jumbo loans we originate, not a percentage of the loan amount.` },
     { q: "Are jumbo rates always higher?", a: "Pricing depends on market conditions, credit, LTV, and investor appetite. Compare formal offers rather than assumptions." },
     { q: "Can I refinance into a jumbo?", a: "Yes, when your balance and equity meet investor guidelines for rate-and-term or cash-out refinances." },
@@ -668,7 +668,7 @@ export const fixedProgramTrust: ProgramTrustConfig = finishPage({
     bodyParagraphs: [
       "If you are comparing a fixed loan with an adjustable-rate mortgage, consider how long you will keep the loan and how payment changes would affect your budget.",
       "Shorter fixed terms build equity faster but carry higher monthly principal and interest than a 30-year loan at the same rate.",
-      "Your rate is not guaranteed until it is locked according to our process and disclosed on your Loan Estimate.",
+      "Your rate is set when it is locked according to our process and disclosed on your Loan Estimate.",
     ],
     siblings: loanSiblings("/loans/fixed"),
   },
@@ -739,18 +739,18 @@ export const armProgramTrust: ProgramTrustConfig = finishPage({
       { title: "Caps & floors", body: "Disclosures list initial adjustment, periodic, and lifetime caps so you can model payment risk." },
       { title: "Index & margin", body: "After the fixed period, your rate moves with the specified index plus a fixed margin disclosed upfront." },
       { title: "Conversion options", body: "Some ARMs allow conversion to fixed rates for a fee; availability varies by investor." },
-      { title: "Refinance timing", body: "Many borrowers plan to refinance before adjustments; there is no guarantee rates or equity will allow it." },
+      { title: "Refinance timing", body: "Many borrowers plan to refinance before adjustments; rates and equity may or may not allow it later." },
     ],
     footnote: complianceFootnote,
   },
   faqs: [
     { q: "What does 5/6 ARM mean?", a: "A common structure: the rate is fixed for five years, then can adjust every six months thereafter, subject to caps in your note." },
-    { q: "Can my payment go down?", a: "If indexes fall after the fixed period, your rate and payment could decrease, but there is no guarantee of future rate paths." },
+    { q: "Can my payment go down?", a: "If indexes fall after the fixed period, your rate and payment could decrease, but future rate paths are uncertain." },
     { q: "Is an ARM cheaper than fixed?", a: "Introductory ARM rates are often lower than fixed rates at the same time, but long-term cost depends on adjustments and how long you keep the loan." },
     { q: "Do you charge the same lender fee on ARMs?", a: `Yes. Our ${flatFeeAmount} flat lender origination fee applies to ARMs and fixed-rate loans we originate.` },
     { q: "How do I compare offers?", a: "Review the Loan Estimate, note rate, APR, caps, and projected payments. We do not provide rate quotes on this page." },
     { q: "Who explains caps and indexes?", a: "Your licensed loan officer shares program disclosures and adjustable-rate details by email or text before you lock." },
-    { q: "Can I refinance out of an ARM later?", a: "Refinancing may be available if you qualify and market conditions allow; it is not guaranteed before adjustments begin." },
+    { q: "Can I refinance out of an ARM later?", a: "Refinancing may be available if you qualify and market conditions allow; it is not certain before adjustments begin." },
     { q: "Which is better for a first-time buyer?", a: "Many first-time buyers prefer fixed rates for predictability, but the best choice depends on your timeline and budget stress tests." },
   ],
   closingCompliance,
@@ -839,7 +839,7 @@ export const cashOutRefiProgramTrust: ProgramTrustConfig = finishPage({
     lead: "Cash-out works when you have equity, a clear purpose, and a payment that fits your budget after closing.",
     bodyParagraphs: [
       "Consolidating higher-rate debt may reduce monthly obligations, but it converts unsecured debt into debt secured by your home.",
-      "Home improvements can add value, but projects are not guaranteed to return every dollar spent.",
+      "Home improvements can add value, but projects may not return every dollar spent.",
       "We do not recommend cash-out solely because rates moved; your Loan Estimate shows the true cost and payment.",
     ],
     siblings: refiSiblings("/refinance/cash-out"),

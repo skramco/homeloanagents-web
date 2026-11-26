@@ -20,7 +20,7 @@ export const buyMega: MegaMenuColumn = {
       title: "Conventional purchase",
       description: "The most common loan for buyers with steady credit",
     },
-    { href: "/buy/pre-approval", title: "Get pre-approved", description: "A human-reviewed pre-approval before you shop" },
+    { href: "/buy/pre-approval", title: "Check your readiness", description: "A person reviews where you stand before you shop" },
     { href: "/buy/first-time-homebuyers", title: "First-time buyers", description: "What to expect, step by step" },
     { href: "/loans/fha", title: "FHA loans", description: "Flexible credit and down payment guidelines" },
     { href: "/loans/va", title: "VA loans", description: "For eligible veterans, service members and surviving spouses" },

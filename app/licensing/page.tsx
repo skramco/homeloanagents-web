@@ -110,10 +110,10 @@ export default function LicensingPage() {
           HomeLoanAgents uses AI agents for portions of the loan workflow, supervised by people. Licensed staff
           remain responsible for supervised lending activities.
         </p>
-        <h2>No guarantee</h2>
+        <h2>Educational content</h2>
         <p>
-          Information on this site is for general education about our model. It does not constitute a commitment
-          to lend, a guarantee of approval, or a promise of any particular rate or savings.
+          Information on this site is for general education about our model. It does not constitute a commitment to
+          lend, a promise of a specific underwriting outcome, or a promise of any particular rate or savings.
         </p>
         <p>
           <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link>

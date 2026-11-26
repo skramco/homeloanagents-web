@@ -28,7 +28,7 @@ export function MortgagePaymentCalculator() {
     <div className="calculator">
       <p className="calculator-note">
         Estimate principal and interest only. Taxes, insurance, HOA, and mortgage insurance are not
-        included. This is not a quote or guarantee of rate or payment.
+        included. This is not a quote or promise of rate or payment.
       </p>
       <div className="calculator-grid">
         <label>
