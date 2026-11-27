@@ -23,8 +23,10 @@ export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas Ci
 
 /** Inbound voice agent line (HomeLoanAgents consumer contact). */
 export const UFF_CONSUMER_PHONE = "(417) 5-AGENTS (417-524-3687)";
-/** Shorter header label between xl and 2xl; full number stays in aria-label. */
+/** Shorter published label for the desktop header phone CTA. */
 export const UFF_CONSUMER_PHONE_COMPACT = "(417) 5-AGENTS";
+/** Dialable numeric format for header tooltip and accessibility. */
+export const UFF_CONSUMER_PHONE_DIAL = "417-524-3687";
 export const UFF_CONSUMER_PHONE_E164 = "+14175243687";
 export const UFF_CONSUMER_PHONE_TEL = "tel:+14175243687";
 
@@ -45,6 +47,10 @@ export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent anytime at $
 
 /** Header and primary phone CTAs: label plus published consumer number. */
 export const INBOUND_VOICE_AGENT_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE}`;
+
+/** Desktop site header: compact published number; full dial string on hover (title). */
+export const INBOUND_VOICE_AGENT_HEADER_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE_COMPACT}`;
+export const INBOUND_VOICE_AGENT_HEADER_ARIA_LABEL = `Call HomeLoanAgents at ${UFF_CONSUMER_PHONE_DIAL}`;
 
 export const BORROWER_COMMUNICATION_POLICY =
   "We communicate with clients by email or text. Prefer not to get texts? We'll follow up by email. If you call our inbound voice agent and decline texting, we use email instead. The only time you ever get a call from us is an automated voice message, in an AI-generated voice, to your phone (only if you agreed when you applied) when your loan is officially locked and when it officially closes. You can call our inbound line anytime with questions or concerns; it is answered by our voice agent.";
