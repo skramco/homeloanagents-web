@@ -1,4 +1,4 @@
-import { UFF_CONSUMER_PHONE, UFF_PRINCIPAL_OFFICE } from "./constants";
+import { UFF_CORPORATE_PHONE_OF_RECORD, UFF_PRINCIPAL_OFFICE } from "./constants";
 import {
   enabledLicensedStateCodes,
   licensedStatesDisplayList,
@@ -94,7 +94,7 @@ const allStateLicenseBlocks: StateLicenseBlock[] = [
     stateCode: "CO",
     title: "Colorado",
     licenseLines: [
-      `Colorado: United Fidelity Funding Corp., Mortgage Company Registration, NMLS #34381. Responsible party: Mark Ramirez, NMLS #1192984, ${UFF_CONSUMER_PHONE}. Regulated by the Division of Real Estate.`,
+      `Colorado: United Fidelity Funding Corp., Mortgage Company Registration, NMLS #34381. Responsible party: Mark Ramirez, NMLS #1192984, ${UFF_CORPORATE_PHONE_OF_RECORD}. Regulated by the Division of Real Estate.`,
     ],
     loanOfficerLine: loanOfficerLines.CO,
   },
@@ -166,7 +166,7 @@ const allStateLicenseBlocks: StateLicenseBlock[] = [
     stateCode: "NV",
     title: "Nevada",
     licenseLines: [
-      `Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. NMC-1197589, issued by the Nevada Division of Mortgage Lending. NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CONSUMER_PHONE}.`,
+      `Nevada: United Fidelity Funding Corp., Nevada Mortgage Company License No. NMC-1197589, issued by the Nevada Division of Mortgage Lending. NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CORPORATE_PHONE_OF_RECORD}.`,
     ],
     loanOfficerLine: loanOfficerLines.NV,
   },
@@ -175,7 +175,7 @@ const allStateLicenseBlocks: StateLicenseBlock[] = [
     stateCode: "NJ",
     title: "New Jersey",
     licenseLines: [
-      `New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License, NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CONSUMER_PHONE}. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.`,
+      `New Jersey: United Fidelity Funding Corp., Residential Mortgage Lender License, NMLS #34381. ${UFF_PRINCIPAL_OFFICE} · ${UFF_CORPORATE_PHONE_OF_RECORD}. Licensed by the N.J. Department of Banking and Insurance. NMLS #34381.`,
     ],
     loanOfficerLine: loanOfficerLines.NJ,
   },

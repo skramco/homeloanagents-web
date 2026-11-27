@@ -4,6 +4,8 @@ import {
   INBOUND_VOICE_AGENT_CTA,
   UFF_CONSUMER_PHONE,
   UFF_CONSUMER_PHONE_TEL,
+  UFF_CORPORATE_PHONE_OF_RECORD,
+  UFF_CORPORATE_PHONE_TEL,
 } from "@/lib/constants";
 
 type UffPhoneLinkProps = { className?: string; voiceAgent?: boolean; style?: CSSProperties };
@@ -21,14 +23,24 @@ export function UffPhoneLink({ className, voiceAgent, style }: UffPhoneLinkProps
   );
 }
 
+const PHONE_LINK_TARGETS = [
+  { display: UFF_CORPORATE_PHONE_OF_RECORD, tel: UFF_CORPORATE_PHONE_TEL },
+  { display: UFF_CONSUMER_PHONE, tel: UFF_CONSUMER_PHONE_TEL },
+] as const;
+
 /** Turns display phone strings in copy into tel links (for plain-text license lines). */
 export function withUffPhoneLinks(text: string): ReactNode {
-  const parts = text.split(UFF_CONSUMER_PHONE);
-  if (parts.length === 1) return text;
-  return parts.map((part, i) => (
-    <Fragment key={i}>
-      {part}
-      {i < parts.length - 1 ? <UffPhoneLink /> : null}
-    </Fragment>
-  ));
+  for (const { display, tel } of PHONE_LINK_TARGETS) {
+    const parts = text.split(display);
+    if (parts.length === 1) continue;
+    return parts.map((part, i) => (
+      <Fragment key={i}>
+        {part}
+        {i < parts.length - 1 ? (
+          <a href={tel}>{display}</a>
+        ) : null}
+      </Fragment>
+    ));
+  }
+  return text;
 }

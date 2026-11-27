@@ -74,7 +74,7 @@ export function MarketingFooter() {
                 <Link href="/licensing">About &amp; licensing</Link>
               </li>
               <li>
-                <a href="tel:+18559532453">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -106,6 +106,7 @@ export function MarketingFooter() {
             </a>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
+            <Link href="/sms-terms">SMS terms</Link>
             <Link href="/licensing">Licensing</Link>
           </div>
         </div>

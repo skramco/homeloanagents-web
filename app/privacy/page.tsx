@@ -121,12 +121,14 @@ export default function PrivacyPage() {
 
       <h2>Text messages</h2>
       <p>
-        If you agree on a call to receive texts, we text you about your request. Message frequency varies. Message and
-        data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. We do not sell or
-        share your mobile number or text-messaging consent with third parties or affiliates for their marketing.
+        If you agree on a call or on our website to receive texts, we text you about your request. Message frequency
+        varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for
+        help. Mobile phone numbers and SMS opt-in data are never shared with or sold to third parties for marketing or
+        promotional purposes.
       </p>
       <p>
-        See our <Link href="/terms">terms of use</Link> for more detail on text messaging.
+        See our <Link href="/sms-terms">SMS terms</Link> and <Link href="/terms">terms of use</Link> for more detail on
+        text messaging.
       </p>
 
       <h2>Security</h2>

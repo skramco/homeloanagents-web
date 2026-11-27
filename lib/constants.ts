@@ -18,8 +18,16 @@ export const MLO_NAME = "Mark Ramirez";
 
 export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas City, MO 64150";
 
-export const UFF_CONSUMER_PHONE = "(855) 953-2453";
-export const UFF_CONSUMER_PHONE_TEL = "tel:+18559532453";
+/** Inbound voice agent line (HomeLoanAgents consumer contact). */
+export const UFF_CONSUMER_PHONE = "(417) 5-AGENTS (417-524-3687)";
+/** Shorter header label between xl and 2xl; full number stays in aria-label. */
+export const UFF_CONSUMER_PHONE_COMPACT = "(417) 5-AGENTS";
+export const UFF_CONSUMER_PHONE_E164 = "+14175243687";
+export const UFF_CONSUMER_PHONE_TEL = "tel:+14175243687";
+
+/** UFF corporate number of record on file with some state regulators (not the inbound voice line). */
+export const UFF_CORPORATE_PHONE_OF_RECORD = "(855) 953-2453";
+export const UFF_CORPORATE_PHONE_TEL = "tel:+18559532453";
 
 /** Day-to-day outbound borrower updates (not live phone calls). */
 export const BORROWER_CONTACT_CHANNELS = "email or text";
@@ -28,9 +36,9 @@ export const BORROWER_OUTBOUND_SUMMARY =
   "We reach you by email or text for updates—no live calls to reach you.";
 
 /** CTA copy for the inbound line, answered by our voice agent. */
-export const INBOUND_VOICE_AGENT_LABEL = "Questions? Call our voice agent anytime";
+export const INBOUND_VOICE_AGENT_LABEL = "Call anytime";
 
-export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent with questions, ${UFF_CONSUMER_PHONE}`;
+export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent anytime at ${UFF_CONSUMER_PHONE}`;
 
 /** Header and primary phone CTAs: label plus published consumer number. */
 export const INBOUND_VOICE_AGENT_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE}`;
