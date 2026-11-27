@@ -251,7 +251,7 @@ export default function PrivacyPage() {
       </p>
 
       <p>
-        <strong>Updates.</strong> We review this policy at least once a year. Last updated: November 27, 2026 (draft).
+        <strong>Updates.</strong> We review this policy at least once a year.
       </p>
 
       <h2>Contact</h2>
