@@ -91,6 +91,8 @@ p{margin:0}
 .nav-link .chev{width:10px;height:10px;transition:transform var(--dur)}
 .nav-link[aria-expanded="true"] .chev{transform:rotate(180deg)}
 .header-cta{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.header-cta .header-sign-in{font-weight:600;font-size:.9375rem;color:var(--ink-800);text-decoration:none;padding:0 6px;white-space:nowrap;flex-shrink:0}
+.header-cta .header-sign-in:hover{color:var(--ink-900);text-decoration:underline}
 .header-cta .tel,.header-tel{font-weight:600;font-size:.9375rem;color:var(--ink-800);text-decoration:none;padding:0 6px}
 .header-tel{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0}
 .header-tel-icon{width:16px;height:16px;flex:none;color:var(--emerald-600)}

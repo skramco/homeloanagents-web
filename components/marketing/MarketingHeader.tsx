@@ -144,6 +144,9 @@ export function MarketingHeader() {
           </ul>
           <div className="header-cta">
             <HeaderInboundPhoneLink />
+            <Link className="header-sign-in" href="/get-started">
+              Sign in
+            </Link>
             <Link className="btn btn-primary btn-sm" href="/get-started">
               Get started
             </Link>
@@ -188,6 +191,9 @@ export function MarketingHeader() {
           About &amp; licensing <span aria-hidden>→</span>
         </Link>
         <div className="d-cta">
+          <Link className="btn btn-ghost btn-lg" href="/get-started" onClick={() => setMenuOpen(false)}>
+            Sign in
+          </Link>
           <Link className="btn btn-primary btn-lg" href="/get-started" onClick={() => setMenuOpen(false)}>
             Get started
           </Link>

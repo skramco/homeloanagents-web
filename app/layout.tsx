@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { MarketingFooter } from "@/components/marketing/MarketingFooter";
 import { MarketingHeader } from "@/components/marketing/MarketingHeader";
-import { MarketingUtilityBar } from "@/components/marketing/MarketingUtilityBar";
 import { fraunces, interTight, jetbrainsMono } from "@/lib/fonts";
 import { TAGLINE } from "@/lib/constants";
 import "./globals.css";
@@ -39,7 +38,6 @@ export default function RootLayout({
           Skip to content
         </a>
         <div className="site-shell">
-          <MarketingUtilityBar />
           <MarketingHeader />
           <main className="site-main" id="main">
             {children}
