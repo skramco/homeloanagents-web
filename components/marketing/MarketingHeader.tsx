@@ -7,6 +7,7 @@ import { buyMega, drawerSections, loansMega, primaryNavSimple, refiMega } from "
 import { HeaderInboundPhoneLink } from "@/components/HeaderInboundPhoneLink";
 import { UffPhoneLink } from "@/components/UffPhone";
 import { HeaderScrollEffect } from "./HeaderScrollEffect";
+import { FeeGate } from "@/components/marketing/FeeDisclosure";
 
 function Chevron() {
   return (
@@ -42,8 +43,7 @@ function MegaPanel({ id, column }: { id: string; column: typeof buyMega }) {
       {column.feature ? (
         <div className="mega-feature">
           <span className="eyebrow">{column.feature.eyebrow}</span>
-          <strong>{column.feature.amount}</strong>
-          <p>{column.feature.body}</p>
+          <FeeGate mode={id === "m-refi" ? "mega-refi" : "mega-buy"} />
           <Link href={column.feature.href}>{column.feature.hrefLabel}</Link>
         </div>
       ) : null}

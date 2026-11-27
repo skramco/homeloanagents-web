@@ -11,6 +11,8 @@ import {
 } from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
 import { programPhotoByPath, type ProgramTilePath } from "@/lib/programTilePhotos";
+import { FeeCalculator } from "@/components/marketing/FeeCalculator";
+import { FeeGate } from "@/components/marketing/FeeDisclosure";
 
 const MLO_NMLS_URL = "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/1192984";
 
@@ -46,8 +48,9 @@ export function HomePage() {
             <p className="lead">
               HomeLoanAgents is a mortgage lender for buying and refinancing. Specialized AI agents organize and check
               your file around the clock, licensed mortgage pros and human underwriters review every loan, and our lender
-              origination fee is <strong>flat</strong>, not a percentage of your loan, whether you borrow $300k or $1.5M.
+              origination fee is <strong>flat</strong>, not a percentage of your loan.
             </p>
+            <FeeGate mode="hero-follow" />
             <IntentTabs />
           </div>
           <div className="hero-visual">
@@ -62,7 +65,7 @@ export function HomePage() {
             </div>
             <div className="float-fee">
               <span className="ff-label">Lender origination fee</span>
-              <span className="ff-amt">Flat</span>
+              <FeeGate mode="float-fee" />
               <span className="ff-sub">Not a percentage of your loan.</span>
             </div>
             <SampleFileFeed />
@@ -92,7 +95,7 @@ export function HomePage() {
           <div className="proof-item">
             <div>
               <b>One flat lender fee</b>
-              <span>Flat, any loan size</span>
+              <FeeGate mode="proof" />
             </div>
           </div>
           <div className="proof-item">
@@ -127,12 +130,7 @@ export function HomePage() {
               <Link className="link-arrow" href="/pricing">
                 The full fee breakdown <span>→</span>
               </Link>
-              <div className="p-art">
-                <span className="p-big">Flat</span>
-                <span className="p-cap">Same flat fee on a $300k loan</span>
-                <span className="p-big">Flat</span>
-                <span className="p-cap">Same flat fee on a $1.5M loan</span>
-              </div>
+              <FeeGate mode="pillar-art" />
             </article>
             <article className="pillar p-ai">
               <span className="p-num mono">02</span>
@@ -194,6 +192,7 @@ export function HomePage() {
               See what&apos;s included and what isn&apos;t <span className="arr">→</span>
             </Link>
           </div>
+          <FeeCalculator />
         </div>
       </section>
 
@@ -400,7 +399,7 @@ function HomeVsSection() {
     ["Contact details required before you see anything personal or useful", "See our fee, our process and who reviews your file first. No form needed to read any of it."],
     ['Consent to autodialed or AI marketing calls bundled into the "Continue" button', "Marketing consent is its own unchecked box. Saying no doesn't stop your application."],
     ["Headline rates that quietly assume discount points", "No teaser rates on this site. If you choose to buy points, they're itemized on your Loan Estimate as your choice."],
-    ["Origination charges that rise with your loan amount", "One flat lender fee on any loan size, shown on your Loan Estimate."],
+    ["Origination charges that rise with your loan amount", ""],
     ['A hand-off to an unnamed "loan expert"', "A named, licensed loan officer with a verifiable NMLS ID, and a human underwriter on every file."],
   ];
   return (
@@ -422,9 +421,7 @@ function HomeVsSection() {
           {rows.map(([left, right]) => (
             <div className="vs-row" key={left}>
               <p>{left}</p>
-              <p>
-                <b>{right}</b>
-              </p>
+              <p>{right ? <b>{right}</b> : <FeeGate mode="vs-fee" />}</p>
             </div>
           ))}
         </div>

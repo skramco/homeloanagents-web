@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { FeeGate } from "@/components/marketing/FeeDisclosure";
 import { FLAT_FEE_LABEL } from "@/lib/constants";
-import { flatFeeAmountLabel, flatFeeCoverageParagraph, flatFeeWhyParagraph } from "@/lib/pricingCopy";
+import { flatFeeCoverageParagraph, flatFeeWhyParagraph } from "@/lib/pricingCopy";
 
 type FlatFeeCalloutProps = {
   showWhy?: boolean;
@@ -12,7 +13,9 @@ export function FlatFeeCallout({ showWhy = true, compact = false }: FlatFeeCallo
     <div className={`pricing-highlight flat-fee-callout ${compact ? "flat-fee-callout--compact" : ""}`}>
       <div className="pricing-box pricing-box--featured">
         <h3>Lender origination fee</h3>
-        <p className="pricing-fee">{flatFeeAmountLabel}</p>
+        <p className="pricing-fee">
+          <FeeGate mode="callout-amount" />
+        </p>
         <p className="text-muted" style={{ margin: 0 }}>
           {FLAT_FEE_LABEL} Covers underwriting, processing, and the credit report.
         </p>
@@ -21,6 +24,7 @@ export function FlatFeeCallout({ showWhy = true, compact = false }: FlatFeeCallo
         <div className="flat-fee-explainer">
           <p>{flatFeeWhyParagraph}</p>
           <p style={{ marginBottom: 0 }}>{flatFeeCoverageParagraph}</p>
+          <FeeGate mode="callout-extra" />
           {!compact ? (
             <p className="text-muted" style={{ marginTop: "1rem", fontSize: "0.875rem", marginBottom: 0 }}>
               Compare your Loan Estimate and Closing

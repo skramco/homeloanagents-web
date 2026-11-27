@@ -207,6 +207,25 @@ body.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
 .fc-result b{color:#fff}
 .fee-calc.light .fc-result b{color:var(--ink-900)}
 .fc-note{margin-top:14px;font-size:var(--fs-xs);opacity:.75;line-height:1.5}
+.fc-heading{font-size:1.15rem;line-height:1.35;margin:0 0 16px;letter-spacing:-0.02em}
+.fee-disclosure-surface{background:#fff;color:#595959;border-radius:10px;padding:10px 12px;margin-top:10px}
+.fee-disclosure-inline,.fee-disclosure-panel{font-size:0.75rem;line-height:1.4;color:#595959}
+.fee-disclosure-surface .fee-disclosure-inline{margin:0}
+.fee-disclosure-inline a,.fee-disclosure-toggle,.fee-disclosure-link{color:#1a4fa0;text-decoration:underline;font-size:0.75rem}
+.fee-amount-link{color:inherit;text-decoration:underline}
+.fee-disclosure-toggle{background:none;border:0;padding:0;cursor:pointer;font-weight:600;text-align:left}
+.fee-disclosure-toggle:focus-visible,.fee-disclosure-inline a:focus-visible,.fee-disclosure-link:focus-visible,.fee-amount-link:focus-visible{outline:2px solid #1a4fa0;outline-offset:2px}
+.fee-disclosure-panel{margin-top:12px}
+.fee-disclosure-panel[hidden]{display:none}
+.fee-disclosure-panel h3{font-size:1rem;color:#222;margin:0 0 8px}
+.fee-disclosure-panel p{margin:0 0 10px}
+.fee-disclosure-panel .apr{font-weight:700}
+.fee-disclosure-panel .apr th,.fee-disclosure-panel .apr td{font-weight:700;font-size:1em}
+.fee-example-block{margin-top:16px}
+.fee-example-table{font-size:0.75rem;line-height:1.4;color:#595959}
+.mega .mega-feature .fee-disclosure-surface a,.big-fee .fee-disclosure-surface a,.fee-calc .fee-disclosure-surface a{color:#1a4fa0;display:inline;font-weight:400;padding:0}
+.mega .mega-feature a.fee-amount-link{color:#fff;display:inline;padding:0}
+@media print{.fee-disclosure-panel[hidden]{display:block !important}}
 
 /* Illustrative table */
 .tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:var(--fs-sm);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden}
