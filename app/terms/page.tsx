@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { UFF_CONSUMER_PHONE, UFF_PRINCIPAL_OFFICE } from "@/lib/constants";
+import {
+  UFF_CONSUMER_PHONE,
+  UFF_CONSUMER_PHONE_TEL,
+  UFF_PRINCIPAL_OFFICE,
+} from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms",
@@ -53,42 +57,22 @@ export default function TermsPage() {
 
       <h2>How we contact you</h2>
       <p>
-        We communicate with clients by <strong>email or text</strong> for status, documents, and scheduling. We do not
-        use outbound live sales calls.
-      </p>
-      <p>
-        The only calls clients receive from us are <strong>recorded voice messages from Mark Ramirez</strong> at two
-        milestones: when the loan is officially locked and when it officially closes. We make no other calls.
+        We communicate with clients by email or text for status, documents and scheduling. We do not make outbound
+        sales calls. The only calls we place are two automated voice messages, delivered in an AI-generated voice, to
+        tell you when your loan is locked and when it closes. We place those calls only if you agree to them when you
+        apply, and agreeing is optional and not a condition of your loan. You can stop them at any time by replying STOP
+        to our texts, calling <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a> or emailing{" "}
+        <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a>.
       </p>
 
       <h2>Text messaging</h2>
       <p>
-        HomeLoanAgents (United Fidelity Funding Corp., NMLS #34381) sends texts only to people who agree during a call to
-        our inbound voice agent. Texts are about your request, such as scheduling a conversation with your loan officer.
-        Texts never include loan terms, rates, or account details.
-      </p>
-      <ul>
-        <li>
-          <strong>Consent.</strong> On each inbound call, our voice agent asks whether it is OK for Mark to text you at
-          your number about your question. Message and data rates may apply. Reply STOP to opt out anytime. Only callers
-          who agree are texted.
-        </li>
-        <li>
-          <strong>If you decline texting.</strong> We follow up by email instead.
-        </li>
-        <li>
-          <strong>Frequency.</strong> Message frequency varies with your transaction and requests.
-        </li>
-        <li>
-          <strong>STOP and HELP.</strong> Reply <strong>STOP</strong> to cancel; you will receive one confirmation and
-          no further marketing or follow-up texts unless you consent again. Reply <strong>HELP</strong> for help.
-        </li>
-        <li>
-          <strong>Carriers.</strong> Carriers are not liable for delayed or undelivered messages.
-        </li>
-      </ul>
-      <p>
-        Privacy: <Link href="/privacy">https://homeloanagents.com/privacy</Link>
+        HomeLoanAgents (United Fidelity Funding Corp., NMLS #34381) texts only people who opt in, either by checking the
+        SMS consent box on our website or by agreeing on a call with our voice assistant. Texts are about your request,
+        such as documents, status and scheduling with your loan officer. Texts do not include rates, loan terms or
+        account details. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for
+        help. Carriers are not liable for delayed or undelivered messages. Consent is not a condition of any purchase or
+        loan. Full details are in our <Link href="/sms-terms">SMS Terms</Link> and <Link href="/privacy">Privacy Policy</Link>.
       </p>
 
       <h2>Intellectual property</h2>

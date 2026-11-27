@@ -24,9 +24,10 @@ export function SmsConsentCheckbox({ checked, onChange, id = "sms-consent" }: Sm
         onChange={(e) => onChange(e.target.checked)}
       />
       <span className="lead-form-sms-consent-text">
-        By checking this box, I agree to receive text messages from HomeLoanAgents, a DBA of United Fidelity
-        Funding (NMLS #34381), about my home loan inquiry, application status, documents, and appointments. Message
-        frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a
+        By checking this box, I agree to receive text messages from HomeLoanAgents, a d/b/a of United Fidelity
+        Funding Corp. (NMLS #34381), at the mobile number I provided, about my home loan inquiry, application status,
+        requested documents and appointments. Messages may be sent using automated technology. Message frequency
+        varies. Msg &amp; data rates may apply. Reply HELP for help or STOP to opt out at any time. Consent is not a
         condition of any purchase or loan. See our <Link href="/privacy">Privacy Policy</Link> and{" "}
         <Link href="/sms-terms">SMS Terms</Link>.
       </span>

@@ -122,13 +122,11 @@ export default function PrivacyPage() {
       <h2>Text messages</h2>
       <p>
         If you agree on a call or on our website to receive texts, we text you about your request. Message frequency
-        varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for
-        help. Mobile phone numbers and SMS opt-in data are never shared with or sold to third parties for marketing or
-        promotional purposes.
-      </p>
-      <p>
-        See our <Link href="/sms-terms">SMS terms</Link> and <Link href="/terms">terms of use</Link> for more detail on
-        text messaging.
+        varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. We do not sell, rent or share
+        mobile phone numbers or SMS opt-in data with third parties or affiliates for marketing or promotional purposes.
+        Text messaging originator opt-in data and consent are excluded from every information-sharing category in this
+        policy and will not be shared with any third party, except with the messaging service providers that deliver our
+        texts on our behalf. See our <Link href="/sms-terms">SMS Terms</Link> and <Link href="/terms">Terms of Use</Link>.
       </p>
 
       <h2>Security</h2>
