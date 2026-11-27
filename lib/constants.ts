@@ -34,9 +34,9 @@ export const BORROWER_OUTBOUND_SUMMARY =
   "We reach you by email or text for updates—no live calls to reach you.";
 
 /** CTA copy for the inbound line, answered by our voice agent. */
-export const INBOUND_VOICE_AGENT_LABEL = "Questions? Call our voice agent anytime";
+export const INBOUND_VOICE_AGENT_LABEL = "Call anytime";
 
-export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent with questions, ${UFF_CONSUMER_PHONE}`;
+export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent anytime at ${UFF_CONSUMER_PHONE}`;
 
 /** Header and primary phone CTAs: label plus published consumer number. */
 export const INBOUND_VOICE_AGENT_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE}`;
