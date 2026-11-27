@@ -13,7 +13,7 @@ export const NMLS_CONSUMER_ACCESS =
 
 export const FLAT_ORIGINATION_FEE = 3500;
 
-export const FLAT_FEE_LABEL = "Flat $3,500 lender origination fee.";
+export const FLAT_FEE_LABEL = "Flat lender origination fee.";
 
 export const COMPANY_NMLS = "34381";
 export const MLO_NMLS = "1192984";

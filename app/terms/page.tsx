@@ -12,23 +12,16 @@ export const metadata: Metadata = {
   description: "Terms of use for homeloanagents.com, including SMS terms.",
 };
 
-const DRAFT_NOTICE =
-  "Draft pending counsel and compliance review." as const;
-
 export default function TermsPage() {
   return (
     <article className="prose-page">
-      <p className="policy-draft-notice" role="note">
-        <strong>{DRAFT_NOTICE}</strong>
-      </p>
-
       <h1>Terms of use</h1>
       <p>
         These terms govern your use of homeloanagents.com and related HomeLoanAgents services operated by United
         Fidelity Funding Corp., NMLS #34381, {UFF_PRINCIPAL_OFFICE} (&quot;we,&quot; &quot;us,&quot; or
         &quot;UFF&quot;). HomeLoanAgents is a trade name of UFF.
       </p>
-      <p>Last updated: November 26, 2026 (draft).</p>
+      <p>Last updated: November 27, 2026.</p>
 
       <h2>Educational site; not advice</h2>
       <p>

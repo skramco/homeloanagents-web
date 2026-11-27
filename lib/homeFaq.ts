@@ -15,7 +15,7 @@ export const homeFaq = [
   },
   {
     q: "What does the flat origination fee include?",
-    a: "Flat $3,500 lender origination fee covers underwriting, processing, and the credit report, the same amount whether your loan is about $300,000 or $1,500,000. Third-party costs are separate and shown on your Loan Estimate.",
+    a: "Our flat lender origination fee covers underwriting, processing, and the credit report, the same amount whether your loan is about $300,000 or $1,500,000. Third-party costs are separate and shown on your Loan Estimate.",
   },
   {
     q: "Do you promise a specific rate or fastest closing?",

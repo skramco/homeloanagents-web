@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <p>
         HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, {UFF_PRINCIPAL_OFFICE}.
       </p>
-      <p>Last updated: November 26, 2026 (draft).</p>
+      <p>Last updated: November 27, 2026 (draft).</p>
 
       <h2>What we collect</h2>
       <p>
@@ -51,6 +51,10 @@ export default function PrivacyPage() {
 
       {/* TODO(UFF): replace with Reg P model form (review 4.5) once UFF confirms answers, or link UFF's official GLBA notice PDF. */}
       <h2>How we share it (GLBA privacy notice)</h2>
+      <p>
+        This is a summary. United Fidelity Funding Corp.&apos;s official privacy notice is provided with your loan
+        application.
+      </p>
       <p>
         Federal law gives you the right to limit some but not all sharing. Federal law also requires us to tell you how
         we collect, share, and protect your personal information. Please read this notice carefully to understand what
@@ -247,7 +251,7 @@ export default function PrivacyPage() {
       </p>
 
       <p>
-        <strong>Updates.</strong> We review this policy at least once a year. Last updated: November 27, 2026 (draft).
+        <strong>Updates.</strong> We review this policy at least once a year.
       </p>
 
       <h2>Contact</h2>

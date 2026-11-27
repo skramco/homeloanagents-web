@@ -9,7 +9,7 @@ export function buildGenericRecapHtml(firstName: string | null): string {
 <p><strong>What we discussed</strong></p>
 <ul>
   <li>Your mortgage goals and timeline</li>
-  <li>How the HomeLoanAgents process works, including our flat $3,500 lender origination fee structure</li>
+  <li>How the HomeLoanAgents process works, including our flat lender origination fee structure</li>
   <li>General document types you may need later in the application</li>
 </ul>
 <p><strong>Recommended next steps</strong></p>

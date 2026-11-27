@@ -20,7 +20,7 @@ function buySiblings(current: string): SiblingLink[] {
     { href: "/loans/conventional", title: "Conventional", description: "Agency purchase guidelines" },
     { href: "/loans/fha", title: "FHA", description: "Flexible down payment paths" },
     { href: "/loans/va", title: "VA", description: "Benefit for eligible service members" },
-    { href: "/pricing", title: "Flat lender fee", description: "See our $3,500 origination fee context" },
+    { href: "/pricing", title: "Flat lender fee", description: "See how our flat lender origination fee works" },
   ];
   return links.map((link) => ({ ...link, current: link.href === current }));
 }
@@ -41,7 +41,7 @@ export const buyHubProcessTrust = finishPage({
   metadata: {
     title: "Buy a home",
     description:
-      "Purchase mortgages with AI agents that organize your file and licensed loan officers and underwriters who review and decide. Flat $3,500 lender origination fee, documents, FAQs, and next steps.",
+      "Purchase mortgages with AI agents that organize your file and licensed loan officers and underwriters who review and decide. Flat lender origination fee, documents, FAQs, and next steps.",
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -56,7 +56,7 @@ export const buyHubProcessTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Covers underwriting, processing, and the credit report on loans we originate.",
       highlight: true,
     },
@@ -89,7 +89,7 @@ export const buyHubProcessTrust = finishPage({
   },
   faqs: [
     { q: "Should I check readiness before I shop?", a: "Many sellers expect evidence you can finance the purchase. A readiness review may help you set a budget; final terms come from underwriting and your Loan Estimate." },
-    { q: "How is your lender fee structured?", a: "We charge a $3,500 flat lender origination fee on purchase loans we originate, disclosed in Section A of your Loan Estimate." },
+    { q: "How is your lender fee structured?", a: "We charge a Flat lender origination fee on purchase loans we originate, disclosed in Section A of your Loan Estimate." },
     { q: "Can agents see my documents?", a: "AI agents organize uploads in your secure file. Licensed staff access documents for underwriting and compliance." },
     { q: "Will I get rate quotes on this website?", a: "No. Rates and payments appear on formal disclosures after you apply, subject to lock policies and market conditions." },
     { q: "Who makes the approval decision?", a: "A human underwriter issues the credit decision after reviewing income, assets, credit, and property." },
@@ -124,7 +124,7 @@ export const preApprovalProcessTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Applies when you originate with us; disclosed on your Loan Estimate.",
       highlight: true,
     },
@@ -160,7 +160,7 @@ export const preApprovalProcessTrust = finishPage({
     { q: "How long is a letter valid?", a: "Expiration dates vary; credit, income, and program guidelines can also change. Refresh if your offer price or debts change." },
     { q: "Will readiness review hurt my credit?", a: "A full application includes a credit pull authorized by you. Exploring marketing content does not pull credit." },
     { q: "Can I get a budget letter without a property?", a: "Yes. Letters often state a maximum purchase price and loan amount subject to finding an eligible property." },
-    { q: "What is the lender fee?", a: "Our $3,500 flat origination fee is disclosed when you apply and receive a Loan Estimate." },
+    { q: "What is the lender fee?", a: "Our Flat origination fee is disclosed when you apply and receive a Loan Estimate." },
     { q: "Who reviews my readiness file?", a: "Licensed loan officers and underwriters supervise; AI agents organize documents." },
     { q: "Is the letter amount fixed?", a: "No. The letter reflects current findings and may change if documentation, credit, or guidelines shift." },
   ],
@@ -189,7 +189,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Same flat origination fee on loans we originate, regardless of loan size.",
       highlight: true,
     },
@@ -225,7 +225,7 @@ export const firstTimeBuyerProcessTrust = finishPage({
     { q: "How much do I need for a down payment?", a: "Minimums range from 0% on some VA loans to 3% or more on conventional and FHA when guidelines are met." },
     { q: "What is private mortgage insurance?", a: "When required, it protects the lender if you default. FHA uses mortgage insurance premiums with different rules than conventional PMI." },
     { q: "Can I use gift money?", a: "Gift funds are often allowed when documented with a gift letter and donor statements." },
-    { q: "How does the flat fee help first-time buyers?", a: "A $3,500 flat lender origination fee is not tied to loan size, which may help on larger loans; compare full Loan Estimates for smaller balances." },
+    { q: "How does the flat fee help first-time buyers?", a: "A Flat lender origination fee is not tied to loan size, which may help on larger loans; compare full Loan Estimates for smaller balances." },
     { q: "Will agents replace my loan officer?", a: "No. Agents organize tasks; licensed mortgage professionals supervise and decide." },
     { q: "Where can I learn more?", a: "Visit our Learn hub for guides on credit, closing costs, and affordability." },
   ],
@@ -238,7 +238,7 @@ export const howItWorksProcessTrust = finishPage({
   metadata: {
     title: "How it works",
     description:
-      `How HomeLoanAgents combines AI workflow agents with licensed loan officers and underwriters: documents, disclosures, flat $3,500 lender fee, and borrower updates by ${BORROWER_CONTACT_CHANNELS}.`,
+      `How HomeLoanAgents combines AI workflow agents with licensed loan officers and underwriters: documents, disclosures, flat lender fee, and borrower updates by ${BORROWER_CONTACT_CHANNELS}.`,
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -253,7 +253,7 @@ export const howItWorksProcessTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Underwriting, processing, and lender-ordered credit report on loans we originate.",
       highlight: true,
     },
@@ -272,7 +272,7 @@ export const howItWorksProcessTrust = finishPage({
     siblings: [
       { href: "/buy", title: "Buy a home", description: "Purchase path overview" },
       { href: "/refinance", title: "Refinance", description: "Refinance path overview" },
-      { href: "/pricing", title: "Flat lender fee", description: "How our $3,500 fee works" },
+      { href: "/pricing", title: "Flat lender fee", description: "How our flat lender fee works" },
       { href: "/learn", title: "Learn hub", description: "Mortgage guides without rate pitches" },
     ],
   },
@@ -319,7 +319,7 @@ export const howItWorksProcessTrust = finishPage({
   faqs: [
     { q: "Do AI agents approve loans?", a: "No. Agents organize workflow. Human underwriters make lending decisions." },
     { q: "How will you contact me?", a: BORROWER_COMMUNICATION_POLICY },
-    { q: "Is the origination fee a percentage?", a: "No. Our lender origination fee is $3,500 flat on loans we originate, subject to your Loan Estimate." },
+    { q: "Is the origination fee a percentage?", a: "No. Our lender origination fee is flat on loans we originate, subject to your Loan Estimate." },
     {
       q: "Can I see file status?",
       a: `Your borrower portal experience will show milestones when launched; until then, updates arrive by ${BORROWER_CONTACT_CHANNELS}.`,
@@ -337,7 +337,7 @@ export const refinanceHubProcessTrust = finishPage({
   metadata: {
     title: "Refinance",
     description:
-      "Refinance overview: rate-and-term vs. cash-out, flat $3,500 lender fee, documents, supervised AI processing, and educational break-even thinking without advertised rates.",
+      "Refinance overview: rate-and-term vs. cash-out, flat lender fee, documents, supervised AI processing, and educational break-even thinking without advertised rates.",
   },
   breadcrumbs: [
     { label: "Home", href: "/" },
@@ -352,7 +352,7 @@ export const refinanceHubProcessTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Same flat origination on refinances we originate.",
       highlight: true,
     },
@@ -384,7 +384,7 @@ export const refinanceHubProcessTrust = finishPage({
       "Refinancing is subject to underwriting and appraisal. Savings and break-even depend on your costs, rate, and how long you keep the loan.",
   },
   faqs: [
-    { q: "Is the lender fee the same on a refinance?", a: "Yes. We use a $3,500 flat lender origination fee on refinances we originate, plus third-party charges on your Loan Estimate." },
+    { q: "Is the lender fee the same on a refinance?", a: "Yes. We use a Flat lender origination fee on refinances we originate, plus third-party charges on your Loan Estimate." },
     { q: "How do I compare break-even?", a: "Divide total closing costs by monthly payment savings on your Loan Estimate. Hold period matters; savings are not certain until you reach break-even." },
     { q: "Can I skip payments?", a: "You may skip one monthly payment timing, but prepaids and per-diem interest still apply." },
     { q: "What is the difference between cash-out and rate-and-term?", a: "Cash-out increases your loan balance to deliver funds at closing when allowed. Rate-and-term focuses on rate or term without large cash back." },
@@ -420,7 +420,7 @@ export const usdaProgramTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Our origination charge on USDA loans we originate.",
       highlight: true,
     },
@@ -464,7 +464,7 @@ export const usdaProgramTrust = finishPage({
     },
   ],
   fees: {
-    lead: "Our $3,500 flat lender origination fee applies to USDA loans we originate. USDA program fees and third-party closing costs are separate line items on your Loan Estimate.",
+    lead: "Our Flat lender origination fee applies to USDA loans we originate. USDA program fees and third-party closing costs are separate line items on your Loan Estimate.",
   },
   faqs: [
     { q: "How do I check if an address is eligible?", a: "USDA publishes eligibility maps. We verify eligibility during your application; maps can change." },
@@ -503,7 +503,7 @@ export const nonQmProgramTrust = finishPage({
   keyFacts: [
     {
       k: "Lender fee",
-      v: "$3,500 flat",
+      v: "Flat",
       d: "Flat origination on non-QM loans we originate.",
       highlight: true,
     },
@@ -550,7 +550,7 @@ export const nonQmProgramTrust = finishPage({
     { q: "Is non-QM the same as hard money?", a: "No. We originate residential mortgage loans subject to ability-to-repay and investor guidelines, not bridge hard-money marketing." },
     { q: "Can I use only bank statements?", a: "Some programs allow statement-based income calculation when deposits are consistent and business expenses are documented." },
     { q: "Are rates higher than conventional?", a: "Pricing depends on credit, LTV, and investor overlays. Compare Loan Estimates rather than assumptions." },
-    { q: "What is the lender fee?", a: "Our $3,500 flat lender origination fee applies to non-QM loans we originate when we offer them." },
+    { q: "What is the lender fee?", a: "Our Flat lender origination fee applies to non-QM loans we originate when we offer them." },
     { q: "Do AI agents approve non-QM files?", a: "No. Agents organize documents; human underwriters decide." },
     { q: "Can W-2 employees use this page?", a: "W-2 borrowers usually use full-documentation conventional, FHA, or VA programs instead." },
     { q: "How do I know if a program is available?", a: `Start an application or ask by ${BORROWER_CONTACT_CHANNELS}; availability changes with investors.` },
@@ -594,7 +594,7 @@ export const calculatorsHubProcessTrust = finishPage({
       { href: "/calculators/mortgage-payment", title: "Payment calculator", description: "Principal and interest estimator" },
       { href: "/calculators/affordability", title: "Affordability calculator", description: "Rough budget from income and debts" },
       { href: "/learn/how-much-house-can-i-afford", title: "Affordability guide", description: "How lenders think about DTI" },
-      { href: "/pricing", title: "Flat lender fee", description: "Our $3,500 origination fee" },
+      { href: "/pricing", title: "Flat lender fee", description: "Our flat lender origination fee" },
     ].map((l) => ({ ...l, current: l.href === "/calculators" })),
   },
   eligibility: {
@@ -614,7 +614,7 @@ export const calculatorsHubProcessTrust = finishPage({
     { q: "Will using a calculator apply me?", a: "No. Apply through Get started when available; calculators run entirely in your browser." },
     { q: "Can I get a Loan Estimate from a calculator?", a: "No. A Loan Estimate requires an application and disclosures." },
     { q: "Why include calculators at all?", a: "They help you sanity-check budget conversations before you share documents." },
-    { q: "What lender fee should I assume?", a: "Our flat lender origination fee is $3,500 on loans we originate; third-party costs are additional." },
+    { q: "What lender fee should I assume?", a: "Our flat lender origination fee applies on loans we originate; third-party costs are additional and appear on your Loan Estimate." },
     { q: "Who can explain my results?", a: `Licensed staff can help by ${BORROWER_CONTACT_CHANNELS} after you start a file.` },
   ],
   closingCompliance,
@@ -642,7 +642,7 @@ export const mortgagePaymentCalculatorTrust = finishPage({
     { k: "Includes", v: "P&I only", d: "Taxes, insurance, HOA, and mortgage insurance are extra.", highlight: true },
     { k: "Rate", v: "Your input", d: "Not sourced from live pricing." },
     { k: "Offer", v: "Not a loan", d: "Education only." },
-    { k: "Lender fee", v: "$3,500 flat", d: "Disclosed separately on a real Loan Estimate." },
+    { k: "Lender fee", v: "Flat", d: "Disclosed separately on a real Loan Estimate." },
   ],
   fit: {
     headline: "How to use this tool",
@@ -702,7 +702,7 @@ export const affordabilityCalculatorTrust = finishPage({
     { k: "Method", v: "Simplified DTI", d: "Conservative illustration, not underwriting.", highlight: true },
     { k: "Income", v: "Gross estimate", d: "Lenders use verified taxable income rules." },
     { k: "Debts", v: "You list them", d: "Missing debts skew results." },
-    { k: "Lender fee", v: "$3,500 flat", d: "Disclosed on your Loan Estimate when you apply." },
+    { k: "Lender fee", v: "Flat", d: "Disclosed on your Loan Estimate when you apply." },
   ],
   fit: {
     headline: "Pair the calculator with education",

@@ -27,8 +27,8 @@ export const buyMega: MegaMenuColumn = {
   ],
   feature: {
     eyebrow: "One lender fee",
-    amount: "$3,500",
-    body: "Flat lender origination fee covering underwriting, processing and the credit report. Same on a $300k or $1.5M loan.",
+    amount: "Flat",
+    body: "One flat lender origination fee covering underwriting, processing and the credit report. The same dollar amount on a $300k or a $1.5M loan.",
     href: "/pricing",
     hrefLabel: "See the full fee breakdown →",
   },
@@ -43,7 +43,7 @@ export const refiMega: MegaMenuColumn = {
   ],
   feature: {
     eyebrow: "Refinance pricing",
-    amount: "$3,500",
+    amount: "Flat",
     body: "The same flat lender fee applies when you refinance. Third-party costs are itemized on your Loan Estimate.",
     href: "/pricing",
     hrefLabel: "How the fee works →",

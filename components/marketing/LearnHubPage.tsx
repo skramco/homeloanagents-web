@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { learnHubArticles } from "@/lib/learnGuideContent";
-import { FLAT_ORIGINATION_FEE } from "@/lib/constants";
-
 export function LearnHubPage() {
-  const flatFee = `$${FLAT_ORIGINATION_FEE.toLocaleString()}`;
-
   return (
     <>
       <section className="p-hero">
@@ -43,7 +39,7 @@ export function LearnHubPage() {
             <Link href="/learn/how-a-flat-origination-fee-works" className="card lift">
               <span className="eyebrow">Pricing &amp; fees</span>
               <h3>How a flat origination fee works</h3>
-              <p className="muted">Our {flatFee} flat lender fee, illustrative comparisons, and what stays separate on your Loan Estimate.</p>
+              <p className="muted">Our flat lender fee, how pricing differs by structure, and what stays separate on your Loan Estimate.</p>
               <span className="text-link">Read guide →</span>
             </Link>
             <Link href="/learn/mortgage-process" className="card lift">
