@@ -70,6 +70,7 @@ export function SiteFooter() {
           </a>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
+          <Link href="/sms-terms">SMS terms</Link>
         </div>
 
         <FooterDisclosure />

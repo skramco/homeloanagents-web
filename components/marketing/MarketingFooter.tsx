@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FooterDisclosure } from "@/components/FooterDisclosure";
-import { NMLS_CONSUMER_ACCESS, UFF_CONSUMER_PHONE_TEL } from "@/lib/constants";
+import { NMLS_CONSUMER_ACCESS } from "@/lib/constants";
 
 const year = new Date().getFullYear();
 
@@ -74,7 +74,7 @@ export function MarketingFooter() {
                 <Link href="/licensing">About &amp; licensing</Link>
               </li>
               <li>
-                <a href={UFF_CONSUMER_PHONE_TEL}>Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -106,6 +106,7 @@ export function MarketingFooter() {
             </a>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
+            <Link href="/sms-terms">SMS terms</Link>
             <Link href="/licensing">Licensing</Link>
           </div>
         </div>
