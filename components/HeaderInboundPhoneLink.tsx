@@ -1,7 +1,7 @@
 import {
-  INBOUND_VOICE_AGENT_ARIA_LABEL,
-  INBOUND_VOICE_AGENT_CTA,
-  UFF_CONSUMER_PHONE_COMPACT,
+  INBOUND_VOICE_AGENT_HEADER_ARIA_LABEL,
+  INBOUND_VOICE_AGENT_HEADER_CTA,
+  UFF_CONSUMER_PHONE_DIAL,
   UFF_CONSUMER_PHONE_TEL,
 } from "@/lib/constants";
 
@@ -26,17 +26,17 @@ function PhoneIcon() {
 
 type HeaderInboundPhoneLinkProps = { className?: string };
 
-/** Header phone CTA: full sentence at 2xl+, icon + number between xl and 2xl. */
+/** Desktop header phone CTA: compact label at all breakpoints; full number in title on hover. */
 export function HeaderInboundPhoneLink({ className }: HeaderInboundPhoneLinkProps) {
   return (
     <a
       href={UFF_CONSUMER_PHONE_TEL}
       className={className ? `header-tel ${className}` : "header-tel tel"}
-      aria-label={INBOUND_VOICE_AGENT_ARIA_LABEL}
+      aria-label={INBOUND_VOICE_AGENT_HEADER_ARIA_LABEL}
+      title={UFF_CONSUMER_PHONE_DIAL}
     >
       <PhoneIcon />
-      <span className="header-tel-full">{INBOUND_VOICE_AGENT_CTA}</span>
-      <span className="header-tel-compact">{UFF_CONSUMER_PHONE_COMPACT}</span>
+      <span>{INBOUND_VOICE_AGENT_HEADER_CTA}</span>
     </a>
   );
 }
