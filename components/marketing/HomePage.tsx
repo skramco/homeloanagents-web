@@ -253,7 +253,11 @@ function WhoColumns() {
           ["IN", "Intake agent", "Turns your application into a clean, complete file and flags anything a person should ask you about."],
           ["DC", "Document agent", "Matches each upload to your checklist, spots missing pages and tells you exactly what's still needed."],
           ["IA", "Income & asset agent", "Drafts income and asset worksheets from your documents for a mortgage pro to verify."],
-          ["ST", "Status agent", "Keeps you updated in plain English, any time of day, on what's done and what's next."],
+          [
+            "ST",
+            "Status agent",
+            "Keeps you updated in simple terms, any time of day, on what's done and what's next.",
+          ],
         ].map(([av, title, body]) => (
           <div className="role" key={title}>
             <div className="who">
@@ -440,7 +444,7 @@ function HomeLearnSection() {
         <div className="section-head split-head">
           <div>
             <span className="eyebrow">Learn</span>
-            <h2 className="h2">Plain-English guides, no rate pitch.</h2>
+            <h2 className="h2">Clear guides, no rate pitch.</h2>
           </div>
           <Link className="btn btn-ghost" href="/learn">
             All guides <span className="arr">→</span>

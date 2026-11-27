@@ -14,6 +14,7 @@ type SmsConsentCheckboxProps = {
  */
 export function SmsConsentCheckbox({ checked, onChange, id = "sms-consent" }: SmsConsentCheckboxProps) {
   return (
+    <>
     <label className="lead-form-sms-consent" htmlFor={id}>
       <input
         id={id}
@@ -32,6 +33,11 @@ export function SmsConsentCheckbox({ checked, onChange, id = "sms-consent" }: Sm
         <Link href="/sms-terms">SMS Terms</Link>.
       </span>
     </label>
+    <p className="lead-form-notice-at-collection">
+      We use what you share to respond to your request. We do not sell or share your personal information. California
+      residents: see our <Link href="/privacy#california">Notice at Collection</Link>.
+    </p>
+    </>
   );
 }
 

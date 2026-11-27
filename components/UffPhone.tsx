@@ -8,9 +8,22 @@ import {
   UFF_CORPORATE_PHONE_TEL,
 } from "@/lib/constants";
 
-type UffPhoneLinkProps = { className?: string; voiceAgent?: boolean; style?: CSSProperties };
+type UffPhoneLinkProps = {
+  className?: string;
+  voiceAgent?: boolean;
+  /** Licensee phone on file with regulators (855), not the inbound consumer line. */
+  corporate?: boolean;
+  style?: CSSProperties;
+};
 
-export function UffPhoneLink({ className, voiceAgent, style }: UffPhoneLinkProps) {
+export function UffPhoneLink({ className, voiceAgent, corporate, style }: UffPhoneLinkProps) {
+  if (corporate) {
+    return (
+      <a href={UFF_CORPORATE_PHONE_TEL} className={className} style={style}>
+        {UFF_CORPORATE_PHONE_OF_RECORD}
+      </a>
+    );
+  }
   return (
     <a
       href={UFF_CONSUMER_PHONE_TEL}

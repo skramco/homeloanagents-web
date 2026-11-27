@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LegalContactBlock } from "@/components/legal/LegalContactBlock";
 import {
   UFF_CONSUMER_PHONE,
   UFF_CONSUMER_PHONE_TEL,
@@ -115,18 +116,8 @@ export default function TermsPage() {
       </p>
 
       <h2>Contact</h2>
-      <p>
-        Questions about these terms:
-      </p>
-      <ul>
-        <li>
-          Email:{" "}
-          <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a> (draft contact — counsel to
-          confirm)
-        </li>
-        <li>Phone: {UFF_CONSUMER_PHONE} (draft — new HomeLoanAgents line to be confirmed at launch)</li>
-        <li>Mail: United Fidelity Funding Corp., Attn: Terms, {UFF_PRINCIPAL_OFFICE}</li>
-      </ul>
+      <p>Questions about these terms:</p>
+      <LegalContactBlock mailAttn="Terms" />
       <p>
         <Link href="/">Return to home</Link> · <Link href="/privacy">Privacy policy</Link>
       </p>

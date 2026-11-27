@@ -5,6 +5,9 @@ export const TAGLINE_SUPPORTING =
 
 export const AI_DISCLOSURE = "You'll be working with AI agents, supervised by people.";
 
+export const FORM_AI_DISCLOSURE =
+  "You'll be working with AI agents, supervised by people. Our phone line and parts of our process use AI; a licensed loan officer reviews your options and a human underwriter makes every credit decision.";
+
 export const NMLS_CONSUMER_ACCESS =
   "https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/34381";
 
@@ -42,7 +45,7 @@ export const INBOUND_VOICE_AGENT_ARIA_LABEL = `Call our voice agent anytime at $
 export const INBOUND_VOICE_AGENT_CTA = `${INBOUND_VOICE_AGENT_LABEL} · ${UFF_CONSUMER_PHONE}`;
 
 export const BORROWER_COMMUNICATION_POLICY =
-  "We communicate with clients by email or text. Prefer not to get texts? We'll follow up by email. If you call our inbound voice agent and decline texting, we use email instead. The only time you ever get a call from us is a recorded voice message to your phone when your loan is officially locked and when it officially closes. You can call our inbound line anytime with questions or concerns; it is answered by our voice agent.";
+  "We communicate with clients by email or text. Prefer not to get texts? We'll follow up by email. If you call our inbound voice agent and decline texting, we use email instead. The only time you ever get a call from us is an automated voice message, in an AI-generated voice, to your phone (only if you agreed when you applied) when your loan is officially locked and when it officially closes. You can call our inbound line anytime with questions or concerns; it is answered by our voice agent.";
 
 export const BORROWER_CONTACT_CHANNELS_DETAIL =
   "Outbound status and follow-up by email or text; inbound questions on our voice-agent line anytime.";

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { UFF_CONSUMER_PHONE, UFF_PRINCIPAL_OFFICE } from "@/lib/constants";
+import { LegalContactBlock } from "@/components/legal/LegalContactBlock";
+import {
+  UFF_CORPORATE_PHONE_OF_RECORD,
+  UFF_CORPORATE_PHONE_TEL,
+  UFF_PRINCIPAL_OFFICE,
+} from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy",
@@ -44,6 +49,7 @@ export default function PrivacyPage() {
         application you choose to submit, meet legal obligations, and prevent fraud.
       </p>
 
+      {/* TODO(UFF): replace with Reg P model form (review 4.5) once UFF confirms answers, or link UFF's official GLBA notice PDF. */}
       <h2>How we share it (GLBA privacy notice)</h2>
       <p>
         Federal law gives you the right to limit some but not all sharing. Federal law also requires us to tell you how
@@ -70,7 +76,7 @@ export default function PrivacyPage() {
         <tbody>
           <tr>
             <td>
-              For our everyday business purposes — such as to process your transactions, maintain your account(s),
+              For our everyday business purposes: such as to process your transactions, maintain your account(s),
               respond to court orders and legal investigations, or report to credit bureaus
             </td>
             <td>Yes</td>
@@ -78,7 +84,7 @@ export default function PrivacyPage() {
           </tr>
           <tr>
             <td>
-              For our marketing purposes — to offer our products and services to you (by mail, email, or other channels
+              For our marketing purposes: to offer our products and services to you (by mail, email, or other channels
               we control)
             </td>
             <td>Yes</td>
@@ -90,12 +96,12 @@ export default function PrivacyPage() {
             <td>We do not share</td>
           </tr>
           <tr>
-            <td>For our affiliates&apos; everyday business purposes — information about your transactions and experiences</td>
+            <td>For our affiliates&apos; everyday business purposes: information about your transactions and experiences</td>
             <td>No</td>
             <td>We do not share</td>
           </tr>
           <tr>
-            <td>For our affiliates&apos; everyday business purposes — information about your creditworthiness</td>
+            <td>For our affiliates&apos; everyday business purposes: information about your creditworthiness</td>
             <td>No</td>
             <td>We do not share</td>
           </tr>
@@ -136,8 +142,8 @@ export default function PrivacyPage() {
 
       <h2>Retention</h2>
       <p>
-        We keep call recordings, transcripts, and consent records for the period set by our counsel and compliance
-        policy, and loan records as the law requires.
+        We keep call recordings, transcripts and consent records for the periods listed in our California privacy notice
+        below, and loan records as long as the law requires.
       </p>
 
       <h2>Your choices and state rights</h2>
@@ -151,27 +157,102 @@ export default function PrivacyPage() {
         their marketing or with affiliates except as allowed by law, there is no additional opt-out for those
         categories.
       </p>
+
+      <h2 id="california">California privacy notice (including notice at collection)</h2>
       <p>
-        <strong>State privacy rights.</strong> Residents of certain states may have additional rights regarding access,
-        deletion, or correction of personal information. Counsel will complete state-specific notices (including
-        California) before publication.
+        This section applies to California residents and supplements the rest of this policy. It does not apply to
+        personal information we collect under the Gramm-Leach-Bliley Act (for example, information in a loan
+        application), which is covered by our GLBA notice above, or to other information exempt under the California
+        Consumer Privacy Act (CCPA).
       </p>
 
-      <h2>Contact</h2>
       <p>
-        Questions about this policy or to exercise your choices:
+        <strong>What we collect and why.</strong> In the last 12 months we collected these categories of personal
+        information:
       </p>
       <ul>
         <li>
-          Email:{" "}
-          <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a> (draft contact — counsel to
-          confirm)
+          <em>Identifiers</em> (name, phone number, email, IP address): to respond to your request, contact you as you
+          choose, prevent fraud and keep records.
         </li>
         <li>
-          Phone: {UFF_CONSUMER_PHONE} (draft — new HomeLoanAgents line to be confirmed at launch)
+          <em>Customer records</em> (contact details you give us): same purposes.
         </li>
-        <li>Mail: United Fidelity Funding Corp., Attn: Privacy, {UFF_PRINCIPAL_OFFICE}</li>
+        <li>
+          <em>Audio and electronic information</em> (call recordings and transcripts): so our licensed team can follow
+          up, for quality, and to keep compliance records.
+        </li>
+        <li>
+          <em>Internet or network activity</em> (device and log data our hosting providers collect when you visit): to
+          operate and secure the site.
+        </li>
+        <li>
+          <em>Inquiry details</em> (property state, your goal, timing and notes you share): to route and answer your
+          request.
+        </li>
+        <li>
+          <em>Sensitive personal information</em> (Social Security number and financial account or income details): only
+          if you apply, and only to process your application and meet legal obligations.
+        </li>
       </ul>
+
+      <p>
+        <strong>Sources.</strong> You, our voice assistant and website forms, and our service providers. If you apply:
+        credit bureaus and other parties as described in our GLBA notice.
+      </p>
+
+      <p>
+        <strong>Disclosures.</strong> We disclose these categories to service providers and contractors (website hosting
+        and forms, voice and messaging technology, document storage and loan origination systems) for the business
+        purposes above, under contracts that limit their use. We disclose information to regulators and others when the
+        law requires.
+      </p>
+
+      <p>
+        <strong>No sale or sharing.</strong> We do not sell personal information or share it for cross-context behavioral
+        advertising, and we have not done so in the last 12 months. We do not knowingly sell or share the personal
+        information of consumers under 16. Because we do not sell or share, we do not offer a &quot;Do Not Sell or
+        Share&quot; link and do not currently process opt-out preference signals such as Global Privacy Control; if that
+        changes, we will honor them. We use sensitive personal information only for purposes permitted by Cal. Code Regs.
+        tit. 11, section 7027(m), so we do not offer a right to limit its use.
+      </p>
+
+      <p>
+        <strong>How long we keep it.</strong> Inquiry and contact records for people who do not apply: [24 months] after
+        our last contact. Call recordings and transcripts: [24 months] after the call, unless needed for a loan file,
+        complaint or legal hold. SMS and call consent and opt-out records: [5 years] after your last message. Loan files
+        and records: as long as federal and state law require (at least 3 years, longer in some states). We may keep
+        information longer when the law requires or to resolve disputes.
+      </p>
+
+      <p>
+        <strong>Your rights.</strong> You may ask us to: tell you what personal information we collected, used and
+        disclosed about you (right to know and access); delete it; correct it; and opt out of sale or sharing (we do not
+        sell or share). We will not discriminate against you for using these rights.
+      </p>
+
+      <p>
+        <strong>How to make a request.</strong> Call us toll-free at{" "}
+        <a href={UFF_CORPORATE_PHONE_TEL}>{UFF_CORPORATE_PHONE_OF_RECORD}</a> or email{" "}
+        <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a> with the subject &quot;California
+        privacy request.&quot; We confirm receipt within 10 business days and respond within 45 calendar days. If we
+        need more time (up to 45 more days), we will tell you why. We verify requests by matching information you give us
+        with what we hold. An authorized agent may submit a request for you with your signed permission; we may ask you to
+        verify your identity directly.
+      </p>
+
+      <p>
+        <strong>Do Not Track.</strong> Our site does not respond to browser Do Not Track signals. We do not allow third
+        parties to collect information about your online activity on our site across other sites.
+      </p>
+
+      <p>
+        <strong>Updates.</strong> We review this policy at least once a year. Last updated: November 27, 2026 (draft).
+      </p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy or to exercise your choices:</p>
+      <LegalContactBlock mailAttn="Privacy" />
       <p>
         <Link href="/">Return to home</Link> · <Link href="/terms">Terms of use</Link>
       </p>
