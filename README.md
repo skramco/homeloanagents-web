@@ -110,6 +110,6 @@ Copy from [`.env.example`](./.env.example):
 | --- | --- |
 | `XAI_WEBHOOK_SECRET` | Verify Standard Webhooks / shared-secret posts to `/api/webhooks/xai/call-ended` |
 | `XAI_API_KEY` | Optional recap copy via `https://api.x.ai/v1/chat/completions` (safe generic template if missing) |
-| `RESEND_API_KEY` | Send from `hello@homeloanagents.com` |
+| `RESEND_API_KEY` | Send from `notifications@mail.homeloanagents.com` (verified Resend domain `mail.homeloanagents.com`), with Reply-To `support@homeloanagents.com` |
 | `SUPABASE_URL` | UFF Loans Supabase project URL |
 | `SUPABASE_SERVICE_ROLE_KEY` | Server-only writes to `call_leads` |

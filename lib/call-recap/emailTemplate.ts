@@ -41,7 +41,7 @@ export function buildRecapEmailDocument(recapHtml: string, recipientName: string
                 <p style="margin:0;">
                   You received this recap because you shared your email during a call with our voice assistant.
                   To opt out of future recap emails, reply to this message with &quot;unsubscribe&quot; or email
-                  <a href="mailto:hello@homeloanagents.com" style="color:#0f4c81;">hello@homeloanagents.com</a>.
+                  <a href="mailto:support@homeloanagents.com" style="color:#0f4c81;">support@homeloanagents.com</a>.
                 </p>
               </td>
             </tr>

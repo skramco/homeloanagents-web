@@ -102,9 +102,9 @@ export async function POST(request: Request) {
 
   const { error: sendError } = await resend.emails.send(
     {
-      from: "HomeLoanAgents <hello@homeloanagents.com>",
+      from: "HomeLoanAgents <notifications@mail.homeloanagents.com>",
       to: [email],
-      replyTo: "hello@homeloanagents.com",
+      replyTo: "support@homeloanagents.com",
       subject: firstName
         ? `${firstName}, your HomeLoanAgents call recap`
         : "Your HomeLoanAgents call recap",
