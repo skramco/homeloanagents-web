@@ -1,7 +1,7 @@
 import {
   INBOUND_VOICE_AGENT_ARIA_LABEL,
   INBOUND_VOICE_AGENT_CTA,
-  UFF_CONSUMER_PHONE,
+  UFF_CONSUMER_PHONE_COMPACT,
   UFF_CONSUMER_PHONE_TEL,
 } from "@/lib/constants";
 
@@ -36,7 +36,7 @@ export function HeaderInboundPhoneLink({ className }: HeaderInboundPhoneLinkProp
     >
       <PhoneIcon />
       <span className="header-tel-full">{INBOUND_VOICE_AGENT_CTA}</span>
-      <span className="header-tel-compact">{UFF_CONSUMER_PHONE}</span>
+      <span className="header-tel-compact">{UFF_CONSUMER_PHONE_COMPACT}</span>
     </a>
   );
 }

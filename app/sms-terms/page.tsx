@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  UFF_CONSUMER_PHONE,
-  UFF_CONSUMER_PHONE_TEL,
-  UFF_PRINCIPAL_OFFICE,
-} from "@/lib/constants";
+import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL, UFF_PRINCIPAL_OFFICE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "SMS terms",

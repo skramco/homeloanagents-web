@@ -23,6 +23,8 @@ export const UFF_PRINCIPAL_OFFICE = "1300 NW Briarcliff Pkwy, Ste 275, Kansas Ci
 
 /** Inbound voice agent line (HomeLoanAgents consumer contact). */
 export const UFF_CONSUMER_PHONE = "(417) 5-AGENTS (417-524-3687)";
+/** Shorter header label between xl and 2xl; full number stays in aria-label. */
+export const UFF_CONSUMER_PHONE_COMPACT = "(417) 5-AGENTS";
 export const UFF_CONSUMER_PHONE_E164 = "+14175243687";
 export const UFF_CONSUMER_PHONE_TEL = "tel:+14175243687";
 
