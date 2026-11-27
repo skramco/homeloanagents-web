@@ -8,20 +8,14 @@ export const metadata: Metadata = {
     "Text messaging program terms for HomeLoanAgents loan updates from United Fidelity Funding Corp., NMLS #34381.",
 };
 
-const DRAFT_NOTICE = "Draft pending counsel and compliance review." as const;
-
 export default function SmsTermsPage() {
   return (
     <article className="prose-page">
-      <p className="policy-draft-notice" role="note">
-        <strong>{DRAFT_NOTICE}</strong>
-      </p>
-
       <h1>SMS terms</h1>
       <p>
         HomeLoanAgents is a trade name of United Fidelity Funding Corp., NMLS #34381, {UFF_PRINCIPAL_OFFICE}.
       </p>
-      <p>Last updated: November 27, 2026 (draft).</p>
+      <p>Last updated: November 27, 2026.</p>
 
       <h2>Program name</h2>
       <p>HomeLoanAgents loan updates.</p>

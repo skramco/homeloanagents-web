@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { IntentTabs } from "@/components/marketing/IntentTabs";
 import { SampleFileFeed } from "@/components/marketing/SampleFileFeed";
 import { UffPhoneLink } from "@/components/UffPhone";
@@ -8,7 +7,6 @@ import {
   BORROWER_COMMUNICATION_POLICY,
   BORROWER_CONTACT_CHANNELS,
   COMPANY_NMLS,
-  FLAT_ORIGINATION_FEE,
   NMLS_CONSUMER_ACCESS,
 } from "@/lib/constants";
 import { marketingPhotos } from "@/lib/marketingPhotos";
@@ -48,8 +46,7 @@ export function HomePage() {
             <p className="lead">
               HomeLoanAgents is a mortgage lender for buying and refinancing. Specialized AI agents organize and check
               your file around the clock, licensed mortgage pros and human underwriters review every loan, and our lender
-              origination fee is a flat <strong>${FLAT_ORIGINATION_FEE.toLocaleString("en-US")}</strong>, whether you
-              borrow $300k or $1.5M.
+              origination fee is <strong>flat</strong>, not a percentage of your loan, whether you borrow $300k or $1.5M.
             </p>
             <IntentTabs />
           </div>
@@ -65,8 +62,8 @@ export function HomePage() {
             </div>
             <div className="float-fee">
               <span className="ff-label">Lender origination fee</span>
-              <span className="ff-amt">${FLAT_ORIGINATION_FEE.toLocaleString("en-US")}</span>
-              <span className="ff-sub">Flat. Not a percentage of your loan.</span>
+              <span className="ff-amt">Flat</span>
+              <span className="ff-sub">Not a percentage of your loan.</span>
             </div>
             <SampleFileFeed />
           </div>
@@ -95,7 +92,7 @@ export function HomePage() {
           <div className="proof-item">
             <div>
               <b>One flat lender fee</b>
-              <span>${FLAT_ORIGINATION_FEE.toLocaleString("en-US")}, any loan size</span>
+              <span>Flat, any loan size</span>
             </div>
           </div>
           <div className="proof-item">
@@ -124,17 +121,17 @@ export function HomePage() {
               <span className="p-num mono">01</span>
               <h3>One fee you can see from here</h3>
               <p>
-                Our lender origination fee is a flat ${FLAT_ORIGINATION_FEE.toLocaleString("en-US")} and covers
-                underwriting, processing and the credit report. It doesn&apos;t grow with your loan amount.
+                Our lender origination fee is flat and covers underwriting, processing and the credit report. It
+                doesn&apos;t grow with your loan amount.
               </p>
               <Link className="link-arrow" href="/pricing">
                 The full fee breakdown <span>→</span>
               </Link>
               <div className="p-art">
-                <span className="p-big">$3,500</span>
-                <span className="p-cap">on a $300k loan</span>
-                <span className="p-big">$3,500</span>
-                <span className="p-cap">on a $1.5M loan</span>
+                <span className="p-big">Flat</span>
+                <span className="p-cap">Same flat fee on a $300k loan</span>
+                <span className="p-big">Flat</span>
+                <span className="p-cap">Same flat fee on a $1.5M loan</span>
               </div>
             </article>
             <article className="pillar p-ai">
@@ -185,19 +182,18 @@ export function HomePage() {
               The work is similar on a big loan. <span className="serif-accent em-light">So is our fee.</span>
             </h2>
             <p className="lead muted">
-              Percentage-based origination charges grow with your loan amount. Ours doesn&apos;t. Drag the slider to see
-              an illustrative comparison, including where a percentage fee would cost less.
+              Percentage-based origination charges grow with your loan amount. Ours doesn&apos;t. The dollar amount is on
+              your Loan Estimate before you commit.
             </p>
             <ul className="check-list">
               <li>Covers underwriting, processing and your credit report</li>
-              <li>Same $3,500 on purchase and refinance loans</li>
+              <li>Same flat fee on purchase and refinance loans</li>
               <li>Shown in the Origination Charges section of your Loan Estimate</li>
             </ul>
             <Link className="btn btn-mint btn-lg" href="/pricing">
               See what&apos;s included and what isn&apos;t <span className="arr">→</span>
             </Link>
           </div>
-          <FeeCalculator />
         </div>
       </section>
 
@@ -404,7 +400,7 @@ function HomeVsSection() {
     ["Contact details required before you see anything personal or useful", "See our fee, our process and who reviews your file first. No form needed to read any of it."],
     ['Consent to autodialed or AI marketing calls bundled into the "Continue" button', "Marketing consent is its own unchecked box. Saying no doesn't stop your application."],
     ["Headline rates that quietly assume discount points", "No teaser rates on this site. If you choose to buy points, they're itemized on your Loan Estimate as your choice."],
-    ["Origination charges that rise with your loan amount", "One flat $3,500 lender fee on any loan size, shown before you apply."],
+    ["Origination charges that rise with your loan amount", "One flat lender fee on any loan size, shown on your Loan Estimate."],
     ['A hand-off to an unnamed "loan expert"', "A named, licensed loan officer with a verifiable NMLS ID, and a human underwriter on every file."],
   ];
   return (
@@ -478,7 +474,7 @@ function HomeLearnSection() {
 function HomeFaqSection() {
   const faqs = [
     ["Are you a lender or a marketplace?", "We're a mortgage lender. HomeLoanAgents is a DBA of United Fidelity Funding Corp., NMLS #34381. We don't shop your information to a list of other lenders."],
-    ["What does the $3,500 fee cover?", "Our flat lender origination fee covers underwriting, processing and the credit report. Third-party services (such as appraisal, title and settlement), government recording fees, prepaid items and escrow deposits are separate and itemized on your Loan Estimate."],
+    ["What does the flat lender fee cover?", "Our flat lender origination fee covers underwriting, processing and the credit report. Third-party services (such as appraisal, title and settlement), government recording fees, prepaid items and escrow deposits are separate and itemized on your Loan Estimate."],
     ["Does AI decide whether I'm ready to close?", "No. AI agents gather, organize and check documents and draft worksheets. A human underwriter reviews your complete file and makes the credit decision."],
     ["Will starting online affect my credit?", "Exploring and starting online doesn't affect your credit score. If you apply, we'll tell you before a credit report is pulled as part of underwriting."],
     ["How fast can I close?", "Our process is designed to move faster because agents work on your file in parallel and around the clock. We don't promise a closing date, because timing also depends on your documents, the property, the appraisal and title."],

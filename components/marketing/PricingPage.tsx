@@ -1,32 +1,22 @@
 import Link from "next/link";
-import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { MarketingLicensingBlock } from "@/components/marketing/MarketingLicensingBlock";
 import { UffPhoneLink } from "@/components/UffPhone";
-import { BORROWER_CONTACT_CHANNELS, FLAT_ORIGINATION_FEE } from "@/lib/constants";
-
-const comparisonRows = [
-  ["$300,000", "$3,000", "$3,500", "1% is $500 less"],
-  ["$350,000", "$3,500", "$3,500", "Same"],
-  ["$500,000", "$5,000", "$3,500", "Flat is $1,500 less"],
-  ["$750,000", "$7,500", "$3,500", "Flat is $4,000 less"],
-  ["$1,000,000", "$10,000", "$3,500", "Flat is $6,500 less"],
-  ["$1,500,000", "$15,000", "$3,500", "Flat is $11,500 less"],
-];
+import { BORROWER_CONTACT_CHANNELS } from "@/lib/constants";
 
 const taskRows = [
   ["Organizing your application and flagging questions", "Intake agent", "Loan officer"],
   ["Checking documents for completeness", "Document agent", "Mortgage pro"],
   ["Drafting income and asset worksheets", "Income & asset agent", "Mortgage pro / Underwriter"],
   ["Ordering the appraisal and title work", "Mortgage pro", "Loan officer"],
-  ["Recommending a loan and explaining options", "Loan officer", "—"],
-  ["Credit decision and conditions", "Human underwriter", "—"],
-  ["Loan Estimate and Closing Disclosure", "Loan officer", "—"],
+  ["Recommending a loan and explaining options", "Loan officer", "None"],
+  ["Credit decision and conditions", "Human underwriter", "None"],
+  ["Loan Estimate and Closing Disclosure", "Loan officer", "None"],
   ["Status updates, any time of day", "Status agent", "Loan officer"],
 ];
 
 export function PricingPage() {
   return (
-  <>
+    <>
       <section className="price-hero on-deep">
         <div className="wrap">
           <nav className="crumbs" aria-label="Breadcrumb">
@@ -41,16 +31,16 @@ export function PricingPage() {
                 One lender fee. <span className="serif-accent em-light">Any loan size.</span>
               </h1>
               <p className="lead">
-                Our lender origination fee is a flat ${FLAT_ORIGINATION_FEE.toLocaleString("en-US")}. It covers
-                underwriting, processing and your credit report, and it doesn&apos;t grow with your loan amount.
-                Here&apos;s everything it includes, everything it doesn&apos;t, and how it compares.
+                Our lender origination fee is flat. It covers underwriting, processing and your credit report, and it
+                doesn&apos;t grow with your loan amount. Here&apos;s everything it includes, everything it doesn&apos;t,
+                and how we work with you.
               </p>
               <div className="hero-actions">
                 <Link className="btn btn-mint btn-lg" href="/get-started">
                   Get started <span className="arr">→</span>
                 </Link>
-                <a className="btn btn-ghost btn-lg" href="#compare">
-                  See the comparison
+                <a className="btn btn-ghost btn-lg" href="#covers">
+                  What the fee covers
                 </a>
               </div>
             </div>
@@ -58,16 +48,16 @@ export function PricingPage() {
               <span className="fc-label" style={{ color: "var(--emerald-300)" }}>
                 Flat lender origination fee
               </span>
-              <span className="amt">${FLAT_ORIGINATION_FEE.toLocaleString("en-US")}</span>
+              <span className="amt">Flat</span>
               <span className="sub">Underwriting · Processing · Credit report</span>
               <div className="same">
                 <div>
-                  <small>On a $300,000 loan</small>
-                  <b>$3,500</b>
+                  <small>Same flat fee on a $300,000 loan</small>
+                  <b>Flat</b>
                 </div>
                 <div>
-                  <small>On a $1,500,000 loan</small>
-                  <b>$3,500</b>
+                  <small>Same flat fee on a $1,500,000 loan</small>
+                  <b>Flat</b>
                 </div>
               </div>
               <span className="fine">
@@ -114,7 +104,7 @@ export function PricingPage() {
             </p>
             <ul className="check-list">
               <li>
-                <b>Section A</b> holds what the lender charges. Ours: one $3,500 origination fee, plus points only if you
+                <b>Section A</b> holds what the lender charges. Ours: one flat origination fee, plus points only if you
                 choose them.
               </li>
               <li>
@@ -129,37 +119,6 @@ export function PricingPage() {
             </Link>
           </div>
           <LoanEstimateIllustration />
-        </div>
-      </section>
-
-      <section className="section section-warm" id="compare">
-        <div className="wrap">
-          <div className="section-head">
-            <span className="eyebrow">Flat vs percentage</span>
-            <h2 className="h2">An honest comparison.</h2>
-            <p className="lead muted">
-              Some lenders charge origination as a percentage of the loan amount. Here&apos;s how a hypothetical 1% fee
-              compares with our flat fee, including the loan sizes where 1% would cost less.
-            </p>
-          </div>
-          <div className="split" style={{ alignItems: "start" }}>
-            <FeeCalculator light />
-            <div className="prose">
-              <ComparisonTable />
-              <p className="fine">
-                Illustrative example only. Not an offer or a quote. Hypothetical 1% origination fee vs. our flat $3,500
-                lender origination fee. Excludes points, third-party costs and prepaids.
-              </p>
-              <div className="callout honest">
-                <b>When a flat fee costs more</b>
-                <span className="small">
-                  Below $350,000, a 1% origination fee would be lower than $3,500. Some lenders also charge little or no
-                  origination fee and make it up in the rate. The fair comparison is the full Loan Estimate: Section A,
-                  the rate, the APR and total closing costs.
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -215,8 +174,8 @@ function PricingCovers() {
   return (
     <>
       <div className="section-head">
-        <span className="eyebrow">What $3,500 covers</span>
-        <h2 className="h2">Our part of the work, in one number.</h2>
+        <span className="eyebrow">What the flat fee covers</span>
+        <h2 className="h2">Our part of the work, in one place.</h2>
         <p className="lead muted">No separate underwriting, processing or credit report charges from us. They&apos;re all inside the flat fee.</p>
       </div>
       <div className="cover-grid">
@@ -266,7 +225,7 @@ function LoanEstimateIllustration() {
         <h4>A. Origination Charges</h4>
         <div className="le-line hl">
           <span>Origination fee (HomeLoanAgents flat lender fee)</span>
-          <span className="num">$3,500</span>
+          <span className="num">Disclosed on your Loan Estimate</span>
         </div>
         <div className="le-line">
           <span>Points (% of loan amount)</span>
@@ -291,33 +250,6 @@ function LoanEstimateIllustration() {
   );
 }
 
-function ComparisonTable() {
-  return (
-    <div className="tbl-wrap">
-      <table className="tbl">
-        <thead>
-          <tr>
-            <th>Loan amount</th>
-            <th className="num">1% fee</th>
-            <th className="num">Flat fee</th>
-            <th className="num">Difference</th>
-          </tr>
-        </thead>
-        <tbody>
-          {comparisonRows.map((row) => (
-            <tr key={row[0]}>
-              <td>{row[0]}</td>
-              <td className="num">{row[1]}</td>
-              <td className="num">{row[2]}</td>
-              <td className={`num${row[3].startsWith("Flat") ? " hl" : ""}`}>{row[3]}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 function TaskTable() {
   return (
     <div className="tbl-wrap">
@@ -336,7 +268,13 @@ function TaskTable() {
               <td>
                 <span className={`who-tag ${row[1].includes("agent") ? "ai" : "hu"}`}>{row[1]}</span>
               </td>
-              <td>{row[2] === "—" ? "—" : <span className="who-tag hu">{row[2]}</span>}</td>
+              <td>
+                {row[2] === "None" ? (
+                  "None"
+                ) : (
+                  <span className="who-tag hu">{row[2]}</span>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -347,7 +285,7 @@ function TaskTable() {
 
 function WhyReasons() {
   const reasons = [
-    ["A fee you see first", "$3,500, published here, before you share any contact details."],
+    ["A fee you see first", "Our flat lender fee is published here, before you share any contact details."],
     ["A person decides", "A human underwriter makes every credit decision. AI never approves or denies a loan."],
     ["A name and a license", "Your loan officer is named, with an NMLS ID you can verify yourself."],
     ["No teaser rates", "We don't advertise rates that assume points. Your terms come on your Loan Estimate."],
@@ -370,8 +308,8 @@ function WhyReasons() {
 function PricingFaqs() {
   const faqs = [
     ["Why a flat fee instead of a percentage?", "Underwriting and processing a $1.5M loan takes about the same work as a $300k loan. AI agents make that work more efficient, so we price it as one flat fee instead of charging more just because a loan is bigger."],
-    ["Is a flat fee always cheaper?", "No. On loan amounts below $350,000, a 1% origination fee would be less than $3,500, and some lenders charge little or no origination fee but price it into the rate. Compare full Loan Estimates, not just one line."],
-    ["Are there any other lender charges?", "We don't charge separately for underwriting, processing or the credit report; those are inside the $3,500. Discount points appear only if you choose to buy them. Third-party costs and prepaids are separate and itemized."],
+    ["Is a flat fee always cheaper?", "No. On smaller loan amounts, percentage-based origination fees from other lenders may be lower, and some lenders charge little or no origination fee but price it into the rate. Compare full Loan Estimates, not just one line."],
+    ["Are there any other lender charges?", "We don't charge separately for underwriting, processing or the credit report; those are inside the flat fee. Discount points appear only if you choose to buy them. Third-party costs and prepaids are separate and itemized."],
     ["When do I pay the fee?", "The origination fee is part of your closing costs. Some third-party costs, like an appraisal, may be collected earlier; we'll disclose them before you're asked to pay."],
     ["Is the fee the same for a refinance?", "Yes. The same flat lender origination fee applies to purchase and refinance loans, subject to any limits a loan program sets."],
     ["Does using AI mean less care with my file?", "No. Agents handle repetitive checks and drafting; mortgage pros verify the work and a human underwriter makes the decision. The goal is more attention on judgment, not less."],

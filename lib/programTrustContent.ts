@@ -1,4 +1,3 @@
-import { FLAT_ORIGINATION_FEE } from "./constants";
 import { marketingPhotos } from "./marketingPhotos";
 import { programPhotoByPath, type ProgramTilePath } from "./programTilePhotos";
 
@@ -101,11 +100,11 @@ export type ProgramTrustConfig = {
   embedIllustrativeTool?: "mortgage-payment" | "affordability";
 };
 
-const flatFeeAmount = `$${FLAT_ORIGINATION_FEE.toLocaleString()}`;
+const flatFeeAmount = "Flat";
 
 const flatFeeFact: KeyFact = {
   k: "Lender fee",
-  v: `${flatFeeAmount} flat`,
+  v: flatFeeAmount,
   d: "Covers underwriting, processing, and the credit report on loans we originate.",
   highlight: true,
 };
@@ -418,7 +417,7 @@ export const conventionalProgramTrust: ProgramTrustConfig = finishPage({
     },
     {
       q: "Do you charge a percentage origination fee?",
-      a: `No. Our lender origination fee is ${flatFeeAmount} flat, disclosed on your Loan Estimate. It is not based on your loan size.`,
+      a: "No. Our lender origination fee is flat, disclosed on your Loan Estimate. It is not based on your loan size.",
     },
     {
       q: "Is private mortgage insurance required?",
@@ -494,7 +493,7 @@ export const fhaProgramTrust: ProgramTrustConfig = finishPage({
     { q: "Can FHA be used on a refinance?", a: "Yes. FHA offers streamline and full credit qualifying refinances when guidelines are met and the loan is FHA-insured." },
     { q: "Are FHA rates lower than conventional?", a: "Rates change daily and depend on your profile. Compare Loan Estimates for the same loan amount and structure rather than relying on marketing claims." },
     { q: "What credit score do I need?", a: "FHA has published minimums, but lenders may set higher floors. We review your full file, not a single number." },
-    { q: "Is the $3,500 fee the only cost?", a: `The ${flatFeeAmount} flat fee is our lender origination charge. Appraisal, title, recording, prepaids, and FHA UFMIP are separate line items on your Loan Estimate.` },
+    { q: "Is the flat lender fee the only cost?", a: `Our ${flatFeeAmount.toLowerCase()} lender origination charge is disclosed in Section A of your Loan Estimate. Appraisal, title, recording, prepaids, and FHA UFMIP are separate line items on your Loan Estimate.` },
     { q: "Can I remove FHA mortgage insurance?", a: "FHA MIP rules differ from conventional PMI. For many FHA loans, MIP remains for the life of the loan unless you refinance out of FHA or meet specific legacy removal rules." },
     { q: "Does FHA insurance replace underwriting?", a: "No. FHA insurance does not replace underwriting; we must still verify eligibility and property condition." },
   ],
@@ -554,18 +553,18 @@ export const vaProgramTrust: ProgramTrustConfig = finishPage({
     },
     {
       title: "Lender fee and program limits",
-      body: `Our ${flatFeeAmount} flat lender origination fee applies to VA loans we originate, but total cash to close still depends on VA funding fees, third-party charges, and any program or entitlement limits on your transaction. Your Loan Estimate lists each charge.`,
+      body: "Our flat lender origination fee applies to VA loans we originate, but total cash to close still depends on VA funding fees, third-party charges, and any program or entitlement limits on your transaction. Your Loan Estimate lists each charge.",
     },
   ],
   fees: {
-    lead: `We charge a ${flatFeeAmount} flat lender origination fee on VA loans we originate. The VA funding fee is a separate government charge that may be financed or paid at closing and is subject to exemption rules.`,
+    lead: "We charge a flat lender origination fee on VA loans we originate. The VA funding fee is a separate government charge that may be financed or paid at closing and is subject to exemption rules.",
     footnote:
       "VA funding fee percentages depend on service type, down payment, and whether this is your first use of the benefit. Exempt veterans may not pay a funding fee.",
   },
   faqs: [
     { q: "Is there really no down payment?", a: "Many eligible borrowers purchase with no down payment when entitlement covers the sales price and underwriting approves the file. Higher prices or partial entitlement may require cash down." },
     { q: "What is the VA funding fee?", a: "A one-time fee that helps sustain the VA loan program. It may be added to the loan amount or paid at closing. Some borrowers are exempt based on disability status." },
-    { q: "Do you charge $3,500 on every VA loan?", a: `We use a ${flatFeeAmount} flat lender origination fee on VA loans we originate, subject to program limits, state rules, and your specific Loan Estimate. Third-party and VA fees are listed separately.` },
+    { q: "Is the lender fee the same on every VA loan?", a: `We use a flat lender origination fee on VA loans we originate, subject to program limits, state rules, and your specific Loan Estimate. Third-party and VA fees are listed separately.` },
     { q: "Can I reuse my VA benefit?", a: "Entitlement can be restored after paying off a VA loan and disposing of the property, or when another qualified veteran assumes your loan, subject to VA rules." },
     { q: "What is a VA IRRRL?", a: "An Interest Rate Reduction Refinance Loan streamlines refinancing an existing VA loan when guidelines are met. Credit and appraisal rules differ from a purchase." },
     { q: "Who decides on my VA loan?", a: "We originate the loan; the VA backs a portion against loss. A human underwriter at our company makes the credit decision." },
@@ -619,7 +618,7 @@ export const jumboProgramTrust: ProgramTrustConfig = finishPage({
     footnote: complianceFootnote,
   },
   fees: {
-    lead: `Jumbo loans often carry percentage-based origination fees at other lenders. Our ${flatFeeAmount} flat lender fee is the same whether your balance is modestly above conforming or in the multi-million range.`,
+    lead: "Jumbo loans often carry percentage-based origination fees at other lenders. Our flat lender fee is the same whether your balance is modestly above conforming or in the multi-million range.",
     illustrativeComparison: {
       caption: "Illustrative comparison only. Actual charges on your Loan Estimate may differ based on program, state, and third-party providers.",
       rows: [
@@ -633,7 +632,7 @@ export const jumboProgramTrust: ProgramTrustConfig = finishPage({
   faqs: [
     { q: "What is the conforming loan limit?", a: "FHFA publishes annual limits by county. Amounts above that threshold generally require jumbo or other non-conforming financing." },
     { q: "Why do jumbo loans need more documentation?", a: "Investors who buy jumbo loans take property and recession risk without agency backing, so they require stronger proof of repayment ability." },
-    { q: "Is your fee still $3,500 on a jumbo?", a: `Yes. Our lender origination fee is ${flatFeeAmount} flat on jumbo loans we originate, not a percentage of the loan amount.` },
+    { q: "Is your lender fee still flat on a jumbo?", a: `Yes. Our lender origination fee is flat on jumbo loans we originate, not a percentage of the loan amount.` },
     { q: "Are jumbo rates always higher?", a: "Pricing depends on market conditions, credit, LTV, and investor appetite. Compare formal offers rather than assumptions." },
     { q: "Can I refinance into a jumbo?", a: "Yes, when your balance and equity meet investor guidelines for rate-and-term or cash-out refinances." },
     { q: "Do you portfolio jumbo loans?", a: "Loans may be sold to investors or held according to our operating model; your note and servicing transfer disclosures explain what to expect." },
@@ -747,7 +746,7 @@ export const armProgramTrust: ProgramTrustConfig = finishPage({
     { q: "What does 5/6 ARM mean?", a: "A common structure: the rate is fixed for five years, then can adjust every six months thereafter, subject to caps in your note." },
     { q: "Can my payment go down?", a: "If indexes fall after the fixed period, your rate and payment could decrease, but future rate paths are uncertain." },
     { q: "Is an ARM cheaper than fixed?", a: "Introductory ARM rates are often lower than fixed rates at the same time, but long-term cost depends on adjustments and how long you keep the loan." },
-    { q: "Do you charge the same lender fee on ARMs?", a: `Yes. Our ${flatFeeAmount} flat lender origination fee applies to ARMs and fixed-rate loans we originate.` },
+    { q: "Do you charge the same lender fee on ARMs?", a: "Yes. Our flat lender origination fee applies to ARMs and fixed-rate loans we originate." },
     { q: "How do I compare offers?", a: "Review the Loan Estimate, note rate, APR, caps, and projected payments. We do not provide rate quotes on this page." },
     { q: "Who explains caps and indexes?", a: "Your licensed loan officer shares program disclosures and adjustable-rate details by email or text before you lock." },
     { q: "Can I refinance out of an ARM later?", a: "Refinancing may be available if you qualify and market conditions allow; it is not certain before adjustments begin." },
@@ -806,7 +805,7 @@ export const rateAndTermRefiProgramTrust: ProgramTrustConfig = finishPage({
     { q: "How is this different from cash-out?", a: "Rate-and-term is for changing rate or length without meaningful cash back. Cash-out refinances let you tap equity when LTV guidelines allow." },
     { q: "What is a break-even point?", a: "When cumulative monthly savings equal closing costs. It depends on your rate, term, fees, and how long you keep the loan." },
     { q: "Will I skip payments?", a: "Refinances include per-diem interest and prepaid items; you may skip one monthly payment but not all housing costs." },
-    { q: "Is the lender fee still flat?", a: `Yes. Refinances use the same ${flatFeeAmount} flat lender origination fee, plus third-party charges on your Loan Estimate.` },
+    { q: "Is the lender fee still flat?", a: "Yes. Refinances use the same flat lender origination fee, plus third-party charges on your Loan Estimate." },
     { q: "Can I refinance from FHA to conventional?", a: "Sometimes, to remove mortgage insurance or change terms when equity and credit meet guidelines." },
     { q: "Does starting a refi application affect my credit?", a: "A full application includes credit authorization. Exploring options online first does not pull credit." },
     { q: "How long does a refi take?", a: "Timelines vary with appraisal turnaround, title work, and document collection. Your file shows status as it moves." },
@@ -860,7 +859,7 @@ export const cashOutRefiProgramTrust: ProgramTrustConfig = finishPage({
     { q: "How much cash can I take out?", a: "It depends on appraised value, existing liens, program LTV limits, and closing costs. Your Loan Estimate shows cash to borrower." },
     { q: "Is cash-out the same as a HELOC?", a: "No. Cash-out replaces your first mortgage with a new loan. A HELOC is a separate line of credit; licensed mortgage professionals help you compare options by email or text when you apply." },
     { q: "Are there tax implications?", a: "We do not provide tax advice. Consult a tax professional about deductibility of mortgage interest on cash-out proceeds." },
-    { q: "What is the lender fee?", a: `Our ${flatFeeAmount} flat origination fee applies to cash-out refinances we originate, in addition to third-party closing costs.` },
+    { q: "What is the lender fee?", a: "Our flat origination fee applies to cash-out refinances we originate, in addition to third-party closing costs." },
     { q: "Can I use cash-out on an investment property?", a: "Some programs allow it with lower LTV limits and stricter reserves. Availability varies by investor." },
     { q: "Will my payment go up?", a: "Often yes, because the loan balance increases. Rate changes can offset or add to that effect." },
     { q: "How soon can I do cash-out after a purchase?", a: "Seasoning rules vary by program; we confirm timelines when we know your occupancy and prior closing date." },

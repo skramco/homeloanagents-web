@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FeeCalculator } from "@/components/marketing/FeeCalculator";
 import { UffPhoneLink } from "@/components/UffPhone";
 import { BORROWER_CONTACT_CHANNELS, MLO_NMLS, MLO_NAME } from "@/lib/constants";
 
@@ -10,7 +9,7 @@ const MLO_NMLS_URL = `https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDI
 export const metadata: Metadata = {
   title: "How a flat origination fee works",
   description:
-    "What a mortgage origination fee pays for, how flat and percentage pricing compare, when a flat fee costs more, and how to compare Loan Estimates.",
+    "What a mortgage origination fee pays for, how flat and percentage pricing differ, when a flat fee costs more, and how to compare Loan Estimates.",
 };
 
 export default function Page() {
@@ -38,7 +37,7 @@ export default function Page() {
             <span>
               <b>HomeLoanAgents Learn</b>
               <br />
-              Updated Nov 25, 2026 · 6 min read
+              Updated Nov 27, 2026 · 6 min read
             </span>
           </div>
         </div>
@@ -49,7 +48,6 @@ export default function Page() {
           <b>In this guide</b>
           <a href="#what">What it is</a>
           <a href="#types">Percentage vs flat</a>
-          <a href="#example">An illustrative example</a>
           <a href="#more">When flat costs more</a>
           <a href="#not">What it doesn&apos;t cover</a>
           <a href="#compare">Comparing offers</a>
@@ -87,7 +85,7 @@ export default function Page() {
               fee.
             </li>
             <li>
-              <b>As a flat fee.</b> One amount regardless of loan size. Ours is $3,500, covering underwriting, processing
+              <b>As a flat fee.</b> One amount regardless of loan size. Ours is flat, covering underwriting, processing
               and the credit report.
             </li>
             <li>
@@ -101,20 +99,13 @@ export default function Page() {
             work, not the loan size.
           </p>
 
-          <h2 id="example">An illustrative example</h2>
-          <p>Here&apos;s how a hypothetical 1% origination fee compares with a flat $3,500 fee. Move the slider to try other loan amounts.</p>
-          <FeeCalculator light />
-          <p style={{ marginTop: 22 }}>
-            At $750,000, 1% is $7,500, which is $4,000 more than the flat fee in this example. At $1,500,000, 1% is
-            $15,000, or $11,500 more.
-          </p>
-
           <h2 id="more">When a flat fee costs more</h2>
           <div className="callout honest">
             <b>We&apos;d rather say it up front</b>
             <span>
-              On a $300,000 loan, a 1% fee is $3,000, or $500 <i>less</i> than a $3,500 flat fee. The two are equal at
-              $350,000. Below that, percentage pricing can cost less.
+              On smaller loan amounts, percentage-based origination fees from other lenders may cost less than a flat fee.
+              Some lenders also charge little or no origination fee and make it up in the rate. The fair comparison is the
+              full Loan Estimate.
             </span>
           </div>
           <p>
@@ -159,7 +150,7 @@ export default function Page() {
             </li>
             <li>
               <b>Ask what&apos;s included.</b> With us, underwriting, processing and the credit report are inside the
-              $3,500.
+              flat lender origination fee.
             </li>
           </ol>
 
@@ -167,7 +158,7 @@ export default function Page() {
           <ul>
             <li>Origination fees pay for the lender&apos;s work; they&apos;re in Section A of your Loan Estimate.</li>
             <li>Percentage fees scale with loan size. A flat fee doesn&apos;t.</li>
-            <li>In our illustrative example, a flat $3,500 fee costs less than a 1% fee above $350,000 and more below it.</li>
+            <li>Compare full Loan Estimates side by side: origination charges, points, rate, APR and total costs.</li>
             <li>The best comparison is the full Loan Estimate: fee, points, rate, APR and total costs.</li>
           </ul>
 
@@ -182,7 +173,7 @@ export default function Page() {
         <aside className="a-side">
           <div className="side-cta on-deep">
             <span className="eyebrow">Our fee</span>
-            <h3>$3,500 flat, any loan size</h3>
+            <h3>Flat lender fee, any loan size</h3>
             <p className="small" style={{ color: "var(--text-on-deep-muted)" }}>
               See what it covers and which costs are separate.
             </p>

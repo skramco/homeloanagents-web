@@ -1,4 +1,4 @@
-import { BORROWER_CONTACT_CHANNELS, FLAT_ORIGINATION_FEE } from "./constants";
+import { BORROWER_CONTACT_CHANNELS } from "./constants";
 
 export type LearnGuideBlock =
   | { type: "h2"; id: string; title: string; paragraphs: string[] }
@@ -21,7 +21,7 @@ export type LearnGuideConfig = {
   sideCta: { eyebrow: string; title: string; body: string; href: string; linkLabel: string };
 };
 
-const flatFee = `$${FLAT_ORIGINATION_FEE.toLocaleString()}`;
+const flatFeeLabel = "flat";
 
 export const mortgageProcessGuide: LearnGuideConfig = {
   path: "/learn/mortgage-process",
@@ -64,7 +64,7 @@ export const mortgageProcessGuide: LearnGuideConfig = {
       title: "Initial disclosures and Loan Estimate",
       paragraphs: [
         "Regulated disclosures explain your loan terms, costs, and consumer rights. The Loan Estimate lists lender charges (Section A), third-party fees, prepaids, and cash to close.",
-        `Our lender origination fee is ${flatFee} flat on loans we originate, disclosed in Section A alongside any optional discount points you choose.`,
+        `Our lender origination fee is ${flatFeeLabel} flat on loans we originate, disclosed in Section A alongside any optional discount points you choose.`,
       ],
     },
     {
@@ -111,7 +111,7 @@ export const mortgageProcessGuide: LearnGuideConfig = {
   ],
   sideCta: {
     eyebrow: "Flat fee",
-    title: `${flatFee} lender origination`,
+    title: `${flatFeeLabel} lender origination`,
     body: "See what the flat fee covers and which costs stay separate.",
     href: "/learn/how-a-flat-origination-fee-works",
     linkLabel: "How the fee works →",
@@ -229,7 +229,7 @@ export const closingCostsGuide: LearnGuideConfig = {
   ],
   tldr: [
     "Section A includes lender origination and optional discount points.",
-        `Our lender origination fee is ${flatFee} flat when we originate your loan.`,
+        `Our lender origination fee is ${flatFeeLabel} flat when we originate your loan.`,
     "Appraisal, title, recording, prepaids, and program fees are separate lines.",
   ],
   blocks: [
@@ -239,7 +239,7 @@ export const closingCostsGuide: LearnGuideConfig = {
       title: "Section A: origination charges",
       paragraphs: [
         "Origination pays for the lender's work to process and underwrite. Points, if you choose them, also appear here.",
-        `We use a ${flatFee} flat lender origination fee covering underwriting, processing, and the lender-ordered credit report on loans we originate.`,
+        `We use a ${flatFeeLabel} flat lender origination fee covering underwriting, processing, and the lender-ordered credit report on loans we originate.`,
       ],
     },
     {
@@ -285,7 +285,7 @@ export const closingCostsGuide: LearnGuideConfig = {
   ],
   sideCta: {
     eyebrow: "Our fee",
-    title: `${flatFee} flat origination`,
+    title: `${flatFeeLabel} flat origination`,
     body: "Illustrative examples on the pricing page show how flat compares to percentage fees.",
     href: "/pricing",
     linkLabel: "See pricing →",
