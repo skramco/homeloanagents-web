@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { UFF_CONSUMER_PHONE, UFF_PRINCIPAL_OFFICE } from "@/lib/constants";
+import { UFF_CONSUMER_PHONE, UFF_CONSUMER_PHONE_TEL, UFF_PRINCIPAL_OFFICE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "SMS terms",
@@ -48,7 +48,7 @@ export default function SmsTermsPage() {
       <h2>Support contact</h2>
       <ul>
         <li>
-          Phone: <a href="tel:+12136685711">{UFF_CONSUMER_PHONE}</a>
+          Phone: <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>
         </li>
         <li>
           Email: <a href="mailto:hello@homeloanagents.com">hello@homeloanagents.com</a>
