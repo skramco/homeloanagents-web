@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
+import { UFF_CONSUMER_PHONE_E164 } from "../constants";
 import { deriveCallId, parseCallEndedPayload } from "./parseCallEndedPayload";
 
 describe("parseCallEndedPayload", () => {
@@ -9,7 +10,7 @@ describe("parseCallEndedPayload", () => {
     const parsed = parseCallEndedPayload(
       {
         call_id: "call-abc",
-        phone: "+12135550100",
+        phone: UFF_CONSUMER_PHONE_E164,
         name: "Alex",
         email: "alex@example.com",
         transcript: "Discussed refinance goals and document list.",
@@ -39,7 +40,7 @@ describe("parseCallEndedPayload", () => {
   it("derives call_id from email, phone, and UTC date when missing", () => {
     const parsed = parseCallEndedPayload(
       {
-        phone: "+12135550100",
+        phone: UFF_CONSUMER_PHONE_E164,
         email: "alex@example.com",
         transcript: "Summary",
       },
@@ -47,7 +48,7 @@ describe("parseCallEndedPayload", () => {
     );
     assert(parsed);
     assert.equal(parsed.callIdDerived, true);
-    assert.equal(parsed.callId, deriveCallId("alex@example.com", "+12135550100", fixedNow));
+    assert.equal(parsed.callId, deriveCallId("alex@example.com", UFF_CONSUMER_PHONE_E164, fixedNow));
   });
 
   it("rejects unknown shapes", () => {

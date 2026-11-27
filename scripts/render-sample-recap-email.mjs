@@ -10,7 +10,7 @@ const recapHtml = `
 <ol>
   <li>When you are ready, begin at <a href="https://homeloanagents.com/get-started">homeloanagents.com/get-started</a>.</li>
   <li>Gather government ID, recent pay stubs, W-2s or 1099s, federal tax returns, and bank statements.</li>
-  <li>Reply here or call our inbound voice agent with any follow-up questions.</li>
+  <li>Reply here or call our inbound voice agent at <a href="tel:+14175243687">(417) 5-AGENTS (417-524-3687)</a> with any follow-up questions.</li>
 </ol>
 <p>This summary is for your records only and is not a loan offer or commitment to lend.</p>
 `.trim();

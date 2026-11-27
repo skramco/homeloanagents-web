@@ -72,7 +72,7 @@ Example flat body (Builder tool):
 ```json
 {
   "call_id": "00000000-0000-0000-0000-000000000000",
-  "phone": "+12136685711",
+  "phone": "+14175243687",
   "email": "borrower@example.com",
   "name": "Alex Rivera",
   "transcript": "Borrower asked about our flat fee and which documents to gather for a refinance application."
@@ -87,7 +87,7 @@ curl -sS -X POST "http://localhost:3000/api/webhooks/xai/call-ended" \
   -H "Content-Type: application/json" \
   -d '{
     "call_id": "test-call-1",
-    "phone": "+12135550100",
+    "phone": "+14175243687",
     "email": "you@example.com",
     "name": "Alex Rivera",
     "transcript": "Discussed starting an application and gathering pay stubs and tax returns."
