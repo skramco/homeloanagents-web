@@ -95,7 +95,7 @@ export default function Page() {
           </ul>
           <p>None of these is automatically right or wrong. What matters is that you can see what you&apos;re paying and compare it.</p>
           <p className="pull">
-            The work to underwrite a $1.5 million loan is about the same as for a $300,000 loan. A flat fee prices the
+            The work to underwrite a $600,000 loan is about the same as for a $300,000 loan. A flat fee prices the
             work, not the loan size.
           </p>
 
@@ -173,7 +173,7 @@ export default function Page() {
         <aside className="a-side">
           <div className="side-cta on-deep">
             <span className="eyebrow">Our fee</span>
-            <h3>Flat lender fee, any loan size</h3>
+            <h3>Flat lender fee</h3>
             <p className="small" style={{ color: "var(--text-on-deep-muted)" }}>
               See what it covers and which costs are separate.
             </p>

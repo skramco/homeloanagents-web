@@ -28,7 +28,7 @@ export const buyMega: MegaMenuColumn = {
   feature: {
     eyebrow: "One lender fee",
     amount: "Flat",
-    body: "One flat lender origination fee covering underwriting, processing and the credit report. The same dollar amount on a $300k or a $1.5M loan.",
+    body: "One flat lender origination fee covering underwriting, processing and the credit report.",
     href: "/pricing",
     hrefLabel: "See the full fee breakdown →",
   },

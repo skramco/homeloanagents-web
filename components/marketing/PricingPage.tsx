@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FeeCalculator } from "@/components/marketing/FeeCalculator";
+import { FeeGate } from "@/components/marketing/FeeDisclosure";
 import { MarketingLicensingBlock } from "@/components/marketing/MarketingLicensingBlock";
 import { UffPhoneLink } from "@/components/UffPhone";
 import { BORROWER_CONTACT_CHANNELS } from "@/lib/constants";
@@ -28,7 +30,7 @@ export function PricingPage() {
             <div className="ph-copy">
               <span className="eyebrow">Pricing &amp; why us</span>
               <h1 className="h1">
-                One lender fee. <span className="serif-accent em-light">Any loan size.</span>
+                One lender fee. <span className="serif-accent em-light">Not a percentage.</span>
               </h1>
               <p className="lead">
                 Our lender origination fee is flat. It covers underwriting, processing and your credit report, and it
@@ -48,18 +50,12 @@ export function PricingPage() {
               <span className="fc-label" style={{ color: "var(--emerald-300)" }}>
                 Flat lender origination fee
               </span>
-              <span className="amt">Flat</span>
+              <span className="amt">
+                <FeeGate mode="pricing-amt" />
+              </span>
               <span className="sub">Underwriting · Processing · Credit report</span>
-              <div className="same">
-                <div>
-                  <small>Same flat fee on a $300,000 loan</small>
-                  <b>Flat</b>
-                </div>
-                <div>
-                  <small>Same flat fee on a $1,500,000 loan</small>
-                  <b>Flat</b>
-                </div>
-              </div>
+              <FeeGate mode="pricing-same" />
+              <FeeGate mode="pricing-disclosure" />
               <span className="fine">
                 Loan amounts shown are examples. Not an offer to lend. Third-party costs and prepaids are separate.
               </span>
@@ -67,6 +63,8 @@ export function PricingPage() {
           </div>
         </div>
       </section>
+
+      <FeeCalculator light panelDefaultOpen anchorExample framed />
 
       <section className="section" id="covers">
         <div className="wrap">
@@ -104,8 +102,7 @@ export function PricingPage() {
             </p>
             <ul className="check-list">
               <li>
-                <b>Section A</b> holds what the lender charges. Ours: one flat origination fee, plus points only if you
-                choose them.
+                <b>Section A</b> <FeeGate mode="section-a" />
               </li>
               <li>
                 <b>Sections B and C</b> are third-party services; C lists the ones you can shop for.
@@ -307,7 +304,7 @@ function WhyReasons() {
 
 function PricingFaqs() {
   const faqs = [
-    ["Why a flat fee instead of a percentage?", "Underwriting and processing a $1.5M loan takes about the same work as a $300k loan. AI agents make that work more efficient, so we price it as one flat fee instead of charging more just because a loan is bigger."],
+    ["Why a flat fee instead of a percentage?", "Underwriting and processing a $600k loan takes about the same work as a $300k loan. AI agents make that work more efficient, so we price it as one flat fee instead of charging more just because a loan is bigger."],
     ["Is a flat fee always cheaper?", "No. On smaller loan amounts, percentage-based origination fees from other lenders may be lower, and some lenders charge little or no origination fee but price it into the rate. Compare full Loan Estimates, not just one line."],
     ["Are there any other lender charges?", "We don't charge separately for underwriting, processing or the credit report; those are inside the flat fee. Discount points appear only if you choose to buy them. Third-party costs and prepaids are separate and itemized."],
     ["When do I pay the fee?", "The origination fee is part of your closing costs. Some third-party costs, like an appraisal, may be collected earlier; we'll disclose them before you're asked to pay."],

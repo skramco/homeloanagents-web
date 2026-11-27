@@ -618,21 +618,12 @@ export const jumboProgramTrust: ProgramTrustConfig = finishPage({
     footnote: complianceFootnote,
   },
   fees: {
-    lead: "Jumbo loans often carry percentage-based origination fees at other lenders. Our flat lender fee is the same whether your balance is modestly above conforming or in the multi-million range.",
-    illustrativeComparison: {
-      caption: "Illustrative comparison only. Actual charges on your Loan Estimate may differ based on program, state, and third-party providers.",
-      rows: [
-        { label: "Hypothetical $1.2M loan at 1% origination (other lender)", value: "$12,000" },
-        { label: `Our flat lender origination fee (illustrative)`, value: flatFeeAmount },
-        { label: "Illustrative difference", value: "$8,500" },
-      ],
-    },
+    lead: "Jumbo loans are for amounts above the conforming limit. Lender fees on jumbo loans depend on the investor and your file, and they are itemized on your Loan Estimate.",
     footnote: "The illustrative table uses rounded figures for education. Your Loan Estimate is the binding disclosure of lender and third-party charges.",
   },
   faqs: [
     { q: "What is the conforming loan limit?", a: "FHFA publishes annual limits by county. Amounts above that threshold generally require jumbo or other non-conforming financing." },
     { q: "Why do jumbo loans need more documentation?", a: "Investors who buy jumbo loans take property and recession risk without agency backing, so they require stronger proof of repayment ability." },
-    { q: "Is your lender fee still flat on a jumbo?", a: `Yes. Our lender origination fee is flat on jumbo loans we originate, not a percentage of the loan amount.` },
     { q: "Are jumbo rates always higher?", a: "Pricing depends on market conditions, credit, LTV, and investor appetite. Compare formal offers rather than assumptions." },
     { q: "Can I refinance into a jumbo?", a: "Yes, when your balance and equity meet investor guidelines for rate-and-term or cash-out refinances." },
     { q: "Do you portfolio jumbo loans?", a: "Loans may be sold to investors or held according to our operating model; your note and servicing transfer disclosures explain what to expect." },
