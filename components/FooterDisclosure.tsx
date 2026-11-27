@@ -21,7 +21,7 @@ export function FooterDisclosure() {
         <a href={NMLS_CONSUMER_ACCESS} target="_blank" rel="noopener noreferrer">
           www.nmlsconsumeraccess.org
         </a>
-        ). {UFF_PRINCIPAL_OFFICE}. <UffPhoneLink />. Loan officer: {MLO_NAME}, NMLS #{MLO_NMLS} (
+        ). {UFF_PRINCIPAL_OFFICE}. <UffPhoneLink corporate />. Loan officer: {MLO_NAME}, NMLS #{MLO_NMLS} (
         <a href={MLO_NMLS_URL} target="_blank" rel="noopener noreferrer">
           NMLS Consumer Access
         </a>

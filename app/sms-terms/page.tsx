@@ -24,47 +24,55 @@ export default function SmsTermsPage() {
       <p>Last updated: November 27, 2026 (draft).</p>
 
       <h2>Program name</h2>
-      <p>HomeLoanAgents loan updates</p>
+      <p>HomeLoanAgents loan updates.</p>
 
-      <h2>What messages cover</h2>
+      <h2>What you will receive</h2>
       <p>
-        If you opt in on our website or agree on a call, we may send text messages about your home loan inquiry,
-        application status, requested documents, and scheduling for appointments with your loan team. Texts are related
-        to your mortgage request with us, not third-party marketing.
+        If you opt in on our website or agree on a call with our voice assistant, HomeLoanAgents (United Fidelity
+        Funding Corp.) will text you at the mobile number you provided about your home loan inquiry, application
+        status, requested documents and scheduling with your loan officer, Mark Ramirez, NMLS #1192984. These texts are
+        informational. We do not send marketing or promotional texts in this program, and we never share your number
+        for others to text you.
+      </p>
+
+      <h2>How you opt in</h2>
+      <p>
+        On our website, by checking the unchecked SMS consent box on our contact, get-started or loan-review forms. On
+        a call, by saying yes when our voice assistant asks whether Mark may text you at your number. After you opt in,
+        we send one confirmation text.
       </p>
 
       <h2>Message frequency</h2>
-      <p>Message frequency varies with your transaction and requests.</p>
+      <p>Message frequency varies with your loan and your requests.</p>
 
-      <h2>Message and data rates</h2>
-      <p>Message and data rates may apply. Check with your mobile carrier for details on your plan.</p>
+      <h2>Cost</h2>
+      <p>Msg &amp; data rates may apply. Check with your mobile carrier for details on your plan.</p>
 
-      <h2>How to opt out and get help</h2>
+      <h2>Opt out</h2>
       <p>
-        Reply <strong>STOP</strong> to cancel text messages from this program. After you send STOP, we send one
-        confirmation and stop marketing and follow-up texts unless you opt in again. Reply <strong>HELP</strong> for help.
+        Reply STOP to any message to stop texts from this program. We also accept QUIT, END, REVOKE, OPT OUT, CANCEL or
+        UNSUBSCRIBE, or you can tell us on a call at{" "}
+        <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a> or email{" "}
+        <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a>. We will send one text confirming your
+        opt-out and then no further texts unless you opt in again. To opt back in, reply START.
       </p>
 
-      <h2>Support contact</h2>
-      <ul>
-        <li>
-          Phone: <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a>
-        </li>
-        <li>
-          Email: <a href="mailto:hello@homeloanagents.com">hello@homeloanagents.com</a>
-        </li>
-      </ul>
+      <h2>Help</h2>
+      <p>
+        Reply HELP for help, call <a href={UFF_CONSUMER_PHONE_TEL}>{UFF_CONSUMER_PHONE}</a> or email{" "}
+        <a href="mailto:support@homeloanagents.com">support@homeloanagents.com</a>.
+      </p>
 
       <h2>Carriers</h2>
       <p>Carriers are not liable for delayed or undelivered messages.</p>
 
-      <h2>Consent</h2>
-      <p>Consent is not a condition of any purchase or loan.</p>
+      <h2>Consent is optional</h2>
+      <p>Consent to texts is not a condition of any purchase or loan. If you do not want texts, we follow up by email.</p>
 
       <h2>Privacy</h2>
       <p>
-        See our <Link href="/privacy">privacy policy</Link> for how we handle personal information, including mobile
-        numbers and SMS opt-in choices.
+        We do not sell, rent or share mobile numbers or SMS opt-in data with third parties or affiliates for marketing
+        or promotional purposes. See our <Link href="/privacy">Privacy Policy</Link> and <Link href="/terms">Terms of Use</Link>.
       </p>
 
       <p>

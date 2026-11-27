@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PhoneLeadForm } from "@/components/forms/PhoneLeadForm";
+import { FORM_AI_DISCLOSURE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Request a loan review",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function QuotePage() {
   return (
     <article className="prose-page lead-form-page">
+      <p className="lead-form-disclosure">{FORM_AI_DISCLOSURE}</p>
       <PhoneLeadForm
         kind="quote"
         heading="Request a loan review"

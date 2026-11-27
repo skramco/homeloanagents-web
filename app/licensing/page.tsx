@@ -51,7 +51,7 @@ export default function LicensingPage() {
           </a>
         </p>
         <p>
-          Principal office: {header.address} · <UffPhoneLink />
+          Principal office: {header.address} · <UffPhoneLink corporate />
         </p>
         <p>
           Loan officer: {header.loName}, MLO, NMLS #{header.loNmls} ·{" "}
