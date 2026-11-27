@@ -67,6 +67,16 @@ function DisclosureSurface({ children }: { children: ReactNode }) {
   return <div className="fee-disclosure-surface">{children}</div>;
 }
 
+/** Closed <details> keeps the disclosure text in the DOM so it stays crawlable. */
+function CollapsedFeeTerms({ children }: { children: ReactNode }) {
+  return (
+    <details className="fee-disclosure-details">
+      <summary className="fee-disclosure-toggle">View terms & disclosures</summary>
+      {children}
+    </details>
+  );
+}
+
 const conformingClaim = "One flat lender origination fee on conventional conforming loans from $100,000";
 
 export function FeeGate({ mode }: { mode: FeeGateMode }) {
@@ -159,7 +169,12 @@ function FeeGateConfirmed({ mode }: { mode: FeeGateMode }) {
           <p className="fee-disclosure-inline">
             Same <FeeLink>{fee}</FeeLink> on a $300k or $600k loan.
           </p>
-          <FeeInlineDisclosure />
+          <CollapsedFeeTerms>
+            <FeeInlineDisclosure />
+          </CollapsedFeeTerms>
+          <p className="fee-disclosure-inline">
+            <FeeLink>See representative example and APR</FeeLink>
+          </p>
         </DisclosureSurface>
       );
     case "float-fee":
@@ -169,7 +184,9 @@ function FeeGateConfirmed({ mode }: { mode: FeeGateMode }) {
             {fee}
           </FeeLink>
           <DisclosureSurface>
-            <FeeInlineDisclosure variant="tight" />
+            <CollapsedFeeTerms>
+              <FeeInlineDisclosure variant="tight" />
+            </CollapsedFeeTerms>
           </DisclosureSurface>
         </>
       );

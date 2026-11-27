@@ -214,6 +214,9 @@ body.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
 .fee-disclosure-inline a,.fee-disclosure-toggle,.fee-disclosure-link{color:#1a4fa0;text-decoration:underline;font-size:0.75rem}
 .fee-amount-link{color:inherit;text-decoration:underline}
 .fee-disclosure-toggle{background:none;border:0;padding:0;cursor:pointer;font-weight:600;text-align:left}
+.fee-disclosure-details{margin-top:8px}
+.fee-disclosure-details .fee-disclosure-inline{margin-top:8px}
+.fee-disclosure-surface > .fee-disclosure-inline + .fee-disclosure-details + .fee-disclosure-inline{margin-top:8px}
 .fee-disclosure-toggle:focus-visible,.fee-disclosure-inline a:focus-visible,.fee-disclosure-link:focus-visible,.fee-amount-link:focus-visible{outline:2px solid #1a4fa0;outline-offset:2px}
 .fee-disclosure-panel{margin-top:12px}
 .fee-disclosure-panel[hidden]{display:none}
