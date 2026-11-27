@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify form detection</title>
+  </head>
+  <body>
+    <!-- Static skeleton for Netlify Forms build-time detection (see components/forms/PhoneLeadForm.tsx). -->
+    <form name="borrower-lead" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="borrower-lead" />
+      <input type="text" name="lead_type" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="goal" />
+      <input type="text" name="property_state" />
+      <textarea name="message"></textarea>
+      <input type="text" name="sms_consent" />
+      <input type="text" name="sms_consent_at" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
