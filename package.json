@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test lib/webhooks/*.test.ts"
+    "test": "node --import tsx --test lib/webhooks/*.test.ts lib/call-recap/*.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.2",
