@@ -1,6 +1,11 @@
 import { Resend } from "resend";
-import { buildRecapEmailDocument } from "@/lib/call-recap/emailTemplate";
-import { generateRecapHtml } from "@/lib/call-recap/generateRecap";
+import {
+  RECAP_SUBJECT,
+  buildRecapEmailDocument,
+  buildRecapPlainText,
+} from "@/lib/call-recap/emailTemplate";
+import { generateRecap } from "@/lib/call-recap/generateRecap";
+import { planRecapSend } from "@/lib/call-recap/guardrails";
 import { getSupabaseAdmin, type CallLeadRow } from "@/lib/supabase/admin";
 import { parseCallEndedPayload } from "@/lib/webhooks/parseCallEndedPayload";
 import { verifyXaiWebhookRequest } from "@/lib/webhooks/verifyXaiWebhook";
@@ -61,7 +66,11 @@ export async function POST(request: Request) {
     return Response.json({ status: "already_sent", call_id: callId }, { status: 200 });
   }
 
-  const recapHtml = await generateRecapHtml({ name, callSummary });
+  const generated = await generateRecap({ name, callSummary });
+  const sendPlan = planRecapSend(generated.aiText);
+  const summary = generated.blockedTerm || sendPlan.action === "block"
+    ? generated.aiText
+    : buildRecapPlainText(generated.fields, name);
 
   const upsertPayload = {
     call_id: callId,
@@ -69,7 +78,7 @@ export async function POST(request: Request) {
     email,
     name,
     transcript: callSummary,
-    summary: recapHtml,
+    summary,
     recap_sent_at: null as string | null,
   };
 
@@ -82,6 +91,15 @@ export async function POST(request: Request) {
   if (upsertError || !saved) {
     console.error("call_leads upsert failed", upsertError);
     return Response.json({ error: "Database error" }, { status: 500 });
+  }
+
+  if (generated.blockedTerm || sendPlan.action === "block") {
+    const term = generated.blockedTerm ?? (sendPlan.action === "block" ? sendPlan.term : "guardrail");
+    console.error("call recap blocked_by_guardrail", { term, content: generated.aiText, call_id: callId });
+    return Response.json(
+      { status: "blocked_by_guardrail", call_id: callId, matched_term: term },
+      { status: 200 },
+    );
   }
 
   if (!email) {
@@ -97,18 +115,17 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(resendKey);
-  const html = buildRecapEmailDocument(recapHtml, name);
-  const firstName = name?.split(/\s+/)[0];
+  const html = buildRecapEmailDocument(generated.fields, name);
+  const text = buildRecapPlainText(generated.fields, name);
 
   const { error: sendError } = await resend.emails.send(
     {
       from: "HomeLoanAgents <notifications@mail.homeloanagents.com>",
       to: [email],
       replyTo: "support@homeloanagents.com",
-      subject: firstName
-        ? `${firstName}, your HomeLoanAgents call recap`
-        : "Your HomeLoanAgents call recap",
+      subject: RECAP_SUBJECT,
       html,
+      text,
     },
     { idempotencyKey: `call-recap/${callId}` },
   );
